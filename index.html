@@ -68,18 +68,20 @@ h2{font-size:22px;margin:8px 0 16px}
 .stat{display:inline-block;margin:6px;padding:12px 20px;border:2px solid var(--y);border-radius:16px;font-weight:900;font-size:20px;color:#d99c00}
 .cf{position:fixed;top:-20px;width:10px;height:14px;z-index:30;animation:fall linear forwards;pointer-events:none}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
-#adm{border:2px solid var(--l);border-bottom-width:4px;border-radius:12px;background:#fff;font:800 13px Nunito,sans-serif;color:#777;padding:4px 10px;margin-right:8px;cursor:pointer}
+#adm,#snd{border:2px solid var(--l);border-bottom-width:4px;border-radius:12px;background:#fff;font:800 13px Nunito,sans-serif;color:#777;padding:4px 10px;margin-right:8px;cursor:pointer}
 #ab{padding:8px 20px;overflow:auto;flex:1}#ab label{display:block;font-weight:900;margin:16px 0 6px}
 #ab select{width:100%;padding:12px;border:2px solid var(--l);border-radius:12px;font:700 16px Nunito,sans-serif;background:#fff}
 #ab .chk{display:flex;gap:8px;align-items:center;font-weight:800}#ab .chk input{width:20px;height:20px}
+#top{gap:8px}#top>span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#top>span:last-child{white-space:nowrap;flex-shrink:0}
+#snd{padding:3px 9px;font-size:16px}.bar #snd2{font-size:22px}
 </style>
 </head>
 <body>
-<div id="top"><span>🌍 English Adventure</span><span><button id="adm">⚙️ Admin</button>⭐ <span id="xp">0</span> XP</span></div>
+<div id="top"><span>🌍 English Adventure</span><span><button id="snd" aria-label="Ses efektleri">🔔</button><button id="adm">⚙️ Admin</button>⭐ <span id="xp">0</span> XP</span></div>
 <main id="map"><p style="margin-top:60px;font-weight:800">Yükleniyor...</p></main>
 
 <section id="quiz" hidden>
-  <div class="bar"><button id="x" aria-label="Kapat">✕</button><div class="prog"><i id="pi"></i></div></div>
+  <div class="bar"><button id="x" aria-label="Kapat">✕</button><div class="prog"><i id="pi"></i></div><button id="snd2" aria-label="Ses efektleri">🔔</button></div>
   <div id="q"></div>
   <footer id="ft"><div id="msg"></div><button class="big" id="btn">KONTROL ET</button></footer>
 </section>
@@ -114,7 +116,8 @@ let P=JSON.parse(localStorage.getItem('lr2')||'{"done":{},"wrong":{},"xp":0}');
 const save=()=>{localStorage.setItem('lr2',JSON.stringify(P));$('#xp').textContent=P.xp};
 
 /* ---------- Ses efektleri: sounds/*.mp3 varsa onlar, yoksa yerleşik sesler ---------- */
-function sfx(n){const a=new Audio('sounds/'+n+'.mp3');a.play().catch(()=>beep(n))}
+let SND=localStorage.getItem('lr_snd')!=='0';   // doğru/yanlış/alkış efektleri
+function sfx(n){if(!SND)return;const a=new Audio('sounds/'+n+'.mp3');a.play().catch(()=>beep(n))}
 function beep(n){try{const c=new(window.AudioContext||webkitAudioContext)(),t=c.currentTime;
  if(n=='applause'){const b=c.createBuffer(1,c.sampleRate*2,c.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.max(0,1-i/d.length)*(Math.random()>.7?1:.15);const s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start();return}
  (n=='correct'?[660,880]:[200,150]).forEach((h,i)=>{const o=c.createOscillator(),g=c.createGain();o.type=n=='correct'?'sine':'sawtooth';o.frequency.value=h;g.gain.setValueAtTime(.2,t+i*.15);g.gain.exponentialRampToValueAtTime(.001,t+i*.15+.3);o.connect(g);g.connect(c.destination);o.start(t+i*.15);o.stop(t+i*.15+.3)})}catch(e){}}
@@ -189,13 +192,15 @@ function choice(q){let sel=-1;
   if(ok&&q.speakAfter){sfx('correct');return show({type:'speak',prompt:'Doğru! Şimdi sesli söyle 👇',display:q.options[q.answer],accepted:[q.options[q.answer]]})}
   fb(ok,ok?'':'Doğru cevap: '+q.options[q.answer])}}
 
-function arrange(q){let placed=[];const T=shuf(q.tokens.map((t,i)=>({t,i})));
+function arrange(q){let placed=[];
+ const tl=q.tokenLang||(q.prompt?'tr-TR':'en-US');   // prompt doluysa kelimeler Türkçe, boşsa İngilizce
+ const speakTok=t=>{const w=t.replace(/^[.,!?;:…]+|[.,!?;:…]+$/g,'').trim();if(w&&/[\p{L}\p{N}]/u.test(w))say(w,tl)};const T=shuf(q.tokens.map((t,i)=>({t,i})));
  $('#q').innerHTML=`${tag(q)}<h2>${q.hint||''}</h2>${q.audio?'<button class="spk">🔊</button>':''}<h2 style="color:var(--bd)">${q.prompt||''}</h2><div class="zone"></div><div class="bank"></div>`;
  if(q.audio)spk(q.audio);
  const draw=()=>{$('.zone').innerHTML=placed.map(o=>`<button class="tk">${o.t}</button>`).join('');
   $('.bank').innerHTML=T.map(o=>`<button class="tk ${placed.includes(o)?'used':''}">${o.t}</button>`).join('');
-  $('.zone').querySelectorAll('.tk').forEach((b,k)=>b.onclick=()=>{placed.splice(k,1);draw()});
-  $('.bank').querySelectorAll('.tk').forEach((b,k)=>b.onclick=()=>{if(!placed.includes(T[k])){placed.push(T[k]);draw()}});
+  $('.zone').querySelectorAll('.tk').forEach((b,k)=>b.onclick=()=>{speakTok(placed[k].t);placed.splice(k,1);draw()});
+  $('.bank').querySelectorAll('.tk').forEach((b,k)=>b.onclick=()=>{if(!placed.includes(T[k])){speakTok(T[k].t);placed.push(T[k]);draw()}});
   setBtn('KONTROL ET',chk,!placed.length)};
  function chk(){const ok=placed.map(o=>o.t).join(' ')==q.answer.join(' ');fb(ok,ok?'':'Doğrusu: '+q.answer.join(' '));document.querySelectorAll('.tk').forEach(b=>b.disabled=true)}
  draw()}
@@ -235,6 +240,11 @@ function finish(){$('#quiz').hidden=true;let xp=0;
  save();$('#done').hidden=false;sfx('applause');confetti();lot()}
 $('#dbtn').onclick=()=>{$('#done').hidden=true;renderMap()};
 $('#x').onclick=()=>{if(confirm('Dersten çıkmak istiyor musun?')){speechSynthesis&&speechSynthesis.cancel();$('#quiz').hidden=true;renderMap()}};
+
+/* ---------- Ses efektleri aç/kapa ---------- */
+const updSnd=()=>document.querySelectorAll('#snd,#snd2').forEach(b=>{b.textContent=SND?'🔔':'🔕';b.title=SND?'Ses efektleri açık':'Ses efektleri kapalı'});
+const togSnd=()=>{SND=!SND;localStorage.setItem('lr_snd',SND?'1':'0');updSnd();if(SND)sfx('correct')};
+$('#snd').onclick=$('#snd2').onclick=togSnd;updSnd();
 
 /* ---------- Admin ---------- */
 const qLabel=(q,i)=>`${q.id||i+1} · ${q.type} · `+String(q.prompt||q.display||(q.audio&&q.audio.text)||(q.tokens||[]).join(' ')||(q.pairs&&q.pairs[0].left)||'').slice(0,38);
