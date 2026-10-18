@@ -214,7 +214,7 @@ function speak(q){const SR=window.SpeechRecognition||window.webkitSpeechRecognit
  $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2><div class="center">${q.audio?'<button class="spk">🔊</button>':''}${pic(q)}${q.display?`<h2 style="color:var(--bd)">${q.display}</h2>`:''}${SR?'<button class="mic" id="mic">🎤</button><div class="said" id="said">Mikrofona dokun ve konuş</div>':'<p>⚠️ Bu tarayıcı mikrofonu desteklemiyor. Chrome kullan.</p>'}<button class="skip">Şimdi konuşamıyorum • Geç</button></div>`;
  $('.skip').onclick=skipq;
  if(q.audio)spk(q.audio,1);
- const norm=s=>s.toLowerCase().replace(/[’‘]/g,"'").replace(/\bcan ?not\b/g,"can't").replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
+ const norm=s=>s.replace(/İ/g,'I').toLowerCase().replace(/[’‘]/g,"'").replace(/\bcan ?not\b/g,"can't").replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
  const score=(h,e)=>{const H=norm(h),E=norm(e);return E.length?E.filter(w=>H.includes(w)).length/E.length:0};
  setBtn('',null,1,1);
  if(!SR)return setBtn('GEÇ',skipq);
