@@ -1,0 +1,1764 @@
+{
+ "unit": 2,
+ "title": "Family & Feelings",
+ "color": "#1cb0f6",
+ "emoji": "👨‍👩‍👧‍👦",
+ "sections": [
+  {
+   "id": "s1",
+   "title": "Resim Eşleştirme",
+   "emoji": "🖼️",
+   "questions": [
+    {
+     "id": "q1_1",
+     "type": "choice",
+     "prompt": "Görseldeki aile bireyini seçiniz.",
+     "image": "images/father.jpg",
+     "emoji": "👨",
+     "options": [
+      "Mother",
+      "Father",
+      "Brother",
+      "Sister"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_2",
+     "type": "choice",
+     "prompt": "Görseldeki duygu durumunu seçiniz.",
+     "image": "images/happy.jpg",
+     "emoji": "😊",
+     "options": [
+      "Sad",
+      "Angry",
+      "Happy",
+      "Tired"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_3",
+     "type": "choice",
+     "prompt": "Görseldeki aile büyüğünü seçiniz.",
+     "image": "images/grandmother.jpg",
+     "emoji": "👵",
+     "options": [
+      "Grandmother",
+      "Grandfather",
+      "Aunt",
+      "Sister"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_4",
+     "type": "choice",
+     "prompt": "Görseldeki hissi seçiniz.",
+     "image": "images/hungry.jpg",
+     "emoji": "🥪",
+     "options": [
+      "Thirsty",
+      "Hungry",
+      "Cold",
+      "Scared"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_5",
+     "type": "choice",
+     "prompt": "Görseldeki aile üyesini seçiniz.",
+     "image": "images/baby.jpg",
+     "emoji": "👶",
+     "options": [
+      "Uncle",
+      "Cousin",
+      "Baby",
+      "Brother"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_6",
+     "type": "choice",
+     "prompt": "Görseldeki fiziksel özelliği seçiniz.",
+     "image": "images/tall_man.jpg",
+     "emoji": "🧍‍♂️",
+     "options": [
+      "Short",
+      "Tall",
+      "Slim",
+      "Young"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_7",
+     "type": "choice",
+     "prompt": "Görseldeki duygu durumunu seçiniz.",
+     "image": "images/tired.jpg",
+     "emoji": "🥱",
+     "options": [
+      "Energetic",
+      "Tired",
+      "Angry",
+      "Happy"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_8",
+     "type": "choice",
+     "prompt": "Görseldeki aile üyesini seçiniz.",
+     "image": "images/uncle.jpg",
+     "emoji": "👨‍🦱",
+     "options": [
+      "Uncle",
+      "Aunt",
+      "Father",
+      "Grandfather"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_9",
+     "type": "choice",
+     "prompt": "Görseldeki hissi seçiniz.",
+     "image": "images/thirsty.jpg",
+     "emoji": "🧃",
+     "options": [
+      "Hungry",
+      "Thirsty",
+      "Sad",
+      "Hot"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_10",
+     "type": "choice",
+     "prompt": "Görseldeki aile büyüğünü seçiniz.",
+     "image": "images/grandfather.jpg",
+     "emoji": "👴",
+     "options": [
+      "Grandfather",
+      "Brother",
+      "Uncle",
+      "Father"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_11",
+     "type": "choice",
+     "prompt": "Görseldeki kız kardeşi seçiniz.",
+     "image": "images/sister.jpg",
+     "emoji": "👧",
+     "options": [
+      "Brother",
+      "Sister",
+      "Mother",
+      "Aunt"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_12",
+     "type": "choice",
+     "prompt": "Görseldeki kızgın duygu durumunu seçiniz.",
+     "image": "images/angry.jpg",
+     "emoji": "😡",
+     "options": [
+      "Happy",
+      "Surprised",
+      "Angry",
+      "Sad"
+     ],
+     "answer": 2
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "title": "Çeviri",
+   "emoji": "✍️",
+   "questions": [
+    {
+     "id": "q2_1",
+     "type": "choice",
+     "prompt": "\"Bu benim annem.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "This is my father.",
+      "This is my mother.",
+      "This is my sister."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_2",
+     "type": "choice",
+     "prompt": "\"Nasıl hissediyorsun?\" sorusunun İngilizce karşılığı hangisidir?",
+     "options": [
+      "How do you feel?",
+      "How old are you?",
+      "Who is this?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_3",
+     "type": "choice",
+     "prompt": "\"Ben çok mutluyum.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am sad.",
+      "I am happy.",
+      "I am tired."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_4",
+     "type": "choice",
+     "prompt": "\"Aç mısın?\" sorusunun İngilizce karşılığı hangisidir?",
+     "options": [
+      "Are you thirsty?",
+      "Are you hungry?",
+      "Are you tired?"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_5",
+     "type": "choice",
+     "prompt": "\"Bu kim?\" sorusunun İngilizce karşılığı hangisidir?",
+     "options": [
+      "Who is this?",
+      "Where is this?",
+      "What is this?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_6",
+     "type": "choice",
+     "prompt": "\"Benim babam uzun boyludur.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "My father is short.",
+      "My father is tall.",
+      "My father is young."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_7",
+     "type": "choice",
+     "prompt": "\"Ben susadım.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am thirsty.",
+      "I am hungry.",
+      "I am scared."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_8",
+     "type": "choice",
+     "prompt": "\"Bu senin erkek kardeşin mi?\" sorusunun İngilizce karşılığı hangisidir?",
+     "options": [
+      "Is this your brother?",
+      "Is this your sister?",
+      "Is this your father?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_9",
+     "type": "choice",
+     "prompt": "\"Benim dedem yaşlıdır.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "My grandfather is young.",
+      "My grandfather is old.",
+      "My grandfather is tall."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_10",
+     "type": "choice",
+     "prompt": "\"Ben yorgunum ama mutluyum.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am tired but happy.",
+      "I am sad and angry.",
+      "I am energetic and hungry."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_11",
+     "type": "choice",
+     "prompt": "\"O benim teyzem / halamdır.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "She is my aunt.",
+      "She is my mother.",
+      "She is my cousin."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_12",
+     "type": "choice",
+     "prompt": "\"Üzgün görünüyorsun.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "You look happy.",
+      "You look sad.",
+      "You look angry."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_13",
+     "type": "choice",
+     "prompt": "\"Bu benim büyük ailem.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "This is my big family.",
+      "This is my small house.",
+      "This is my school."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_14",
+     "type": "choice",
+     "prompt": "\"Korktun mu?\" sorusunun İngilizce karşılığı hangisidir?",
+     "options": [
+      "Are you scared?",
+      "Are you surprised?",
+      "Are you energetic?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_15",
+     "type": "choice",
+     "prompt": "\"Evet, öyleyim. / Hayır, değilim.\" yanıtlarının İngilizce karşılığı hangisidir?",
+     "options": [
+      "Yes, I am. / No, I am not.",
+      "Yes, it is. / No, it isn't.",
+      "Yes, please. / No, thanks."
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "title": "Dinle ve Seç",
+   "emoji": "🎧",
+   "questions": [
+    {
+     "id": "q3_1",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Bu benim babam.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "This is my father.",
+      "This is my brother.",
+      "This is my uncle."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_2",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben çok mutluyum.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am very sad.",
+      "I am very happy.",
+      "I am very tired."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_3",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Aç mısın?",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Are you thirsty?",
+      "Are you hungry?",
+      "Are you angry?"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_4",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Bu benim kız kardeşim.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "This is my sister.",
+      "This is my mother.",
+      "This is my aunt."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_5",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben yorgunum.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am energetic.",
+      "I am tired.",
+      "I am surprised."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_6",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "O benim amcam.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "He is my uncle.",
+      "He is my cousin.",
+      "He is my grandfather."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_7",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Susadım.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am hungry.",
+      "I am thirsty.",
+      "I am cold."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_8",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Nasıl hissediyorsun?",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "How do you feel?",
+      "How are you?",
+      "Who is this?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_9",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "O benim kuzenim.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "She is my cousin.",
+      "She is my sister.",
+      "She is my mother."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_10",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben şaşırdım.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am angry.",
+      "I am surprised.",
+      "I am scared."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_11",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Benim dedem gençtir.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "My grandfather is old.",
+      "My grandfather is young.",
+      "My grandfather is short."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_12",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Üzgün müsün?",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Are you happy?",
+      "Are you sad?",
+      "Are you energetic?"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_13",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Üşüdüm.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am hot.",
+      "I am cold.",
+      "I am tired."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_14",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Bu kim?",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Who is this?",
+      "What is this?",
+      "Where is this?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_15",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben enerjik hissediyorum.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I feel energetic.",
+      "I feel tired.",
+      "I feel sad."
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "title": "Kelime Sırala",
+   "emoji": "🧩",
+   "questions": [
+    {
+     "id": "q4_1",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "This is my mother.",
+     "audio": {
+      "text": "This is my mother.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "benim",
+      "Bu",
+      "annem.",
+      "babam."
+     ],
+     "answer": [
+      "Bu",
+      "benim",
+      "annem."
+     ]
+    },
+    {
+     "id": "q4_2",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "How do you feel?",
+     "audio": {
+      "text": "How do you feel?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "hissediyorsun?",
+      "Nasıl",
+      "Neredesin?"
+     ],
+     "answer": [
+      "Nasıl",
+      "hissediyorsun?"
+     ]
+    },
+    {
+     "id": "q4_3",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "I feel happy today.",
+     "audio": {
+      "text": "I feel happy today.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Bugün",
+      "mutlu",
+      "hissediyorum.",
+      "üzgün"
+     ],
+     "answer": [
+      "Bugün",
+      "mutlu",
+      "hissediyorum."
+     ]
+    },
+    {
+     "id": "q4_4",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "Are you hungry?",
+     "audio": {
+      "text": "Are you hungry?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Aç",
+      "mısın?",
+      "Susadın",
+      "mı?"
+     ],
+     "answer": [
+      "Aç",
+      "mısın?"
+     ]
+    },
+    {
+     "id": "q4_5",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "Who is this?",
+     "audio": {
+      "text": "Who is this?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "kim?",
+      "Bu",
+      "Nerede?"
+     ],
+     "answer": [
+      "Bu",
+      "kim?"
+     ]
+    },
+    {
+     "id": "q4_6",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "My brother is tall.",
+     "audio": {
+      "text": "My brother is tall.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "kardeşim",
+      "Erkek",
+      "uzun",
+      "boyludur."
+     ],
+     "answer": [
+      "Erkek",
+      "kardeşim",
+      "uzun",
+      "boyludur."
+     ]
+    },
+    {
+     "id": "q4_7",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "She is my aunt.",
+     "audio": {
+      "text": "She is my aunt.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "benim",
+      "O",
+      "teyzemdir.",
+      "amcamdır."
+     ],
+     "answer": [
+      "O",
+      "benim",
+      "teyzemdir."
+     ]
+    },
+    {
+     "id": "q4_8",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "I am thirsty now.",
+     "audio": {
+      "text": "I am thirsty now.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Şimdi",
+      "susadım.",
+      "acıktım."
+     ],
+     "answer": [
+      "Şimdi",
+      "susadım."
+     ]
+    },
+    {
+     "id": "q4_9",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "He is very tired.",
+     "audio": {
+      "text": "He is very tired.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "çok",
+      "O",
+      "yorgundur.",
+      "mutludur."
+     ],
+     "answer": [
+      "O",
+      "çok",
+      "yorgundur."
+     ]
+    },
+    {
+     "id": "q4_10",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "Is this your cousin?",
+     "audio": {
+      "text": "Is this your cousin?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "senin",
+      "Bu",
+      "kuzenin",
+      "mi?"
+     ],
+     "answer": [
+      "Bu",
+      "senin",
+      "kuzenin",
+      "mi?"
+     ]
+    },
+    {
+     "id": "q4_11",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "My family is great.",
+     "audio": {
+      "text": "My family is great.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "ailem",
+      "Benim",
+      "harikadır.",
+      "küçüktür."
+     ],
+     "answer": [
+      "Benim",
+      "ailem",
+      "harikadır."
+     ]
+    },
+    {
+     "id": "q4_12",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "We are happy together.",
+     "audio": {
+      "text": "We are happy together.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "birlikte",
+      "Biz",
+      "mutluyuz.",
+      "üzgünüz."
+     ],
+     "answer": [
+      "Biz",
+      "birlikte",
+      "mutluyuz."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "title": "Eşleştir",
+   "emoji": "🔗",
+   "questions": [
+    {
+     "id": "q5_1",
+     "type": "match",
+     "prompt": "Aile bireylerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Father",
+       "right": "Baba"
+      },
+      {
+       "left": "Mother",
+       "right": "Anne"
+      },
+      {
+       "left": "Brother",
+       "right": "Erkek kardeş"
+      },
+      {
+       "left": "Sister",
+       "right": "Kız kardeş"
+      }
+     ]
+    },
+    {
+     "id": "q5_2",
+     "type": "match",
+     "prompt": "Aile büyüklerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Grandfather",
+       "right": "Dede / Büyükbaba"
+      },
+      {
+       "left": "Grandmother",
+       "right": "Nene / Büyükanne"
+      },
+      {
+       "left": "Uncle",
+       "right": "Amca / Dayı"
+      },
+      {
+       "left": "Aunt",
+       "right": "Teyze / Hala"
+      }
+     ]
+    },
+    {
+     "id": "q5_3",
+     "type": "match",
+     "prompt": "Duyguları eşleştir!",
+     "pairs": [
+      {
+       "left": "Happy",
+       "right": "Mutlu"
+      },
+      {
+       "left": "Sad",
+       "right": "Üzgün"
+      },
+      {
+       "left": "Angry",
+       "right": "Kızgın"
+      },
+      {
+       "left": "Tired",
+       "right": "Yorgun"
+      }
+     ]
+    },
+    {
+     "id": "q5_4",
+     "type": "match",
+     "prompt": "Fiziksel ihtiyaç hislerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Hungry",
+       "right": "Aç"
+      },
+      {
+       "left": "Thirsty",
+       "right": "Susamış"
+      },
+      {
+       "left": "Hot",
+       "right": "Sıcak"
+      },
+      {
+       "left": "Cold",
+       "right": "Üşümüş"
+      }
+     ]
+    },
+    {
+     "id": "q5_5",
+     "type": "match",
+     "prompt": "Duygu durumlarını eşleştir!",
+     "pairs": [
+      {
+       "left": "Energetic",
+       "right": "Enerjik"
+      },
+      {
+       "left": "Surprised",
+       "right": "Şaşırmış"
+      },
+      {
+       "left": "Scared",
+       "right": "Korkmuş"
+      },
+      {
+       "left": "Fine",
+       "right": "İyi"
+      }
+     ]
+    },
+    {
+     "id": "q5_6",
+     "type": "match",
+     "prompt": "Soruyla cevabı eşleştir!",
+     "pairs": [
+      {
+       "left": "Who is this?",
+       "right": "This is my brother."
+      },
+      {
+       "left": "How do you feel?",
+       "right": "I feel happy."
+      },
+      {
+       "left": "Are you hungry?",
+       "right": "Yes, I am."
+      },
+      {
+       "left": "Is she tall?",
+       "right": "No, she isn't."
+      }
+     ]
+    },
+    {
+     "id": "q5_7",
+     "type": "match",
+     "prompt": "Zıt anlamlıları eşleştir!",
+     "pairs": [
+      {
+       "left": "Tall",
+       "right": "Short"
+      },
+      {
+       "left": "Young",
+       "right": "Old"
+      },
+      {
+       "left": "Happy",
+       "right": "Sad"
+      },
+      {
+       "left": "Big",
+       "right": "Small"
+      }
+     ]
+    },
+    {
+     "id": "q5_8",
+     "type": "match",
+     "prompt": "Aile terimlerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Cousin",
+       "right": "Kuzen"
+      },
+      {
+       "left": "Baby",
+       "right": "Bebek"
+      },
+      {
+       "left": "Parents",
+       "right": "Anne-Baba"
+      },
+      {
+       "left": "Family",
+       "right": "Aile"
+      }
+     ]
+    },
+    {
+     "id": "q5_9",
+     "type": "match",
+     "prompt": "Sıfatları eşleştir!",
+     "pairs": [
+      {
+       "left": "Slim",
+       "right": "Zayıf / İnce"
+      },
+      {
+       "left": "Plump",
+       "right": "Tombul"
+      },
+      {
+       "left": "Beautiful",
+       "right": "Güzel"
+      },
+      {
+       "left": "Handsome",
+       "right": "Yakışıklı"
+      }
+     ]
+    },
+    {
+     "id": "q5_10",
+     "type": "match",
+     "prompt": "Akraba ve arkadaşlık terimlerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Relative",
+       "right": "Akraba"
+      },
+      {
+       "left": "Friend",
+       "right": "Arkadaş"
+      },
+      {
+       "left": "Neighbor",
+       "right": "Komşu"
+      },
+      {
+       "left": "Child",
+       "right": "Çocuk"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "title": "Cümle Kur",
+   "emoji": "🏗️",
+   "questions": [
+    {
+     "id": "q6_1",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "This",
+      "is",
+      "my",
+      "father",
+      "."
+     ],
+     "answer": [
+      "This",
+      "is",
+      "my",
+      "father",
+      "."
+     ]
+    },
+    {
+     "id": "q6_2",
+     "type": "arrange",
+     "hint": "Doğru İngilizce soru cümlesini oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "How",
+      "do",
+      "you",
+      "feel",
+      "?"
+     ],
+     "answer": [
+      "How",
+      "do",
+      "you",
+      "feel",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_3",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "I",
+      "feel",
+      "very",
+      "happy",
+      "today"
+     ],
+     "answer": [
+      "I",
+      "feel",
+      "very",
+      "happy",
+      "today"
+     ]
+    },
+    {
+     "id": "q6_4",
+     "type": "arrange",
+     "hint": "Doğru İngilizce soru cümlesini oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Are",
+      "you",
+      "hungry",
+      "now",
+      "?"
+     ],
+     "answer": [
+      "Are",
+      "you",
+      "hungry",
+      "now",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_5",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "She",
+      "is",
+      "my",
+      "sister",
+      "."
+     ],
+     "answer": [
+      "She",
+      "is",
+      "my",
+      "sister",
+      "."
+     ]
+    },
+    {
+     "id": "q6_6",
+     "type": "arrange",
+     "hint": "Doğru İngilizce soru cümlesini oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Who",
+      "is",
+      "this",
+      "person",
+      "?"
+     ],
+     "answer": [
+      "Who",
+      "is",
+      "this",
+      "person",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_7",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "My",
+      "grandfather",
+      "is",
+      "very",
+      "old"
+     ],
+     "answer": [
+      "My",
+      "grandfather",
+      "is",
+      "very",
+      "old"
+     ]
+    },
+    {
+     "id": "q6_8",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "I",
+      "am",
+      "not",
+      "sad",
+      "today"
+     ],
+     "answer": [
+      "I",
+      "am",
+      "not",
+      "sad",
+      "today"
+     ]
+    },
+    {
+     "id": "q6_9",
+     "type": "arrange",
+     "hint": "Doğru İngilizce soru cümlesini oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Is",
+      "this",
+      "your",
+      "brother",
+      "?"
+     ],
+     "answer": [
+      "Is",
+      "this",
+      "your",
+      "brother",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_10",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "My",
+      "brother",
+      "is",
+      "very",
+      "tall"
+     ],
+     "answer": [
+      "My",
+      "brother",
+      "is",
+      "very",
+      "tall"
+     ]
+    },
+    {
+     "id": "q6_11",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "He",
+      "is",
+      "my",
+      "uncle",
+      "."
+     ],
+     "answer": [
+      "He",
+      "is",
+      "my",
+      "uncle",
+      "."
+     ]
+    },
+    {
+     "id": "q6_12",
+     "type": "arrange",
+     "hint": "Doğru İngilizce soru cümlesini oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Is",
+      "she",
+      "your",
+      "aunt",
+      "?"
+     ],
+     "answer": [
+      "Is",
+      "she",
+      "your",
+      "aunt",
+      "?"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "title": "Eşleştir 2",
+   "emoji": "👨‍👩‍👧‍👦",
+   "questions": [
+    {
+     "id": "q7_1",
+     "type": "match",
+     "prompt": "Aile üyelerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Parents",
+       "right": "Anne-Baba"
+      },
+      {
+       "left": "Cousin",
+       "right": "Kuzen"
+      },
+      {
+       "left": "Baby",
+       "right": "Bebek"
+      },
+      {
+       "left": "Relatives",
+       "right": "Akrabalar"
+      },
+      {
+       "left": "Family",
+       "right": "Aile"
+      }
+     ]
+    },
+    {
+     "id": "q7_2",
+     "type": "match",
+     "prompt": "Kişisel özellikleri eşleştir!",
+     "pairs": [
+      {
+       "left": "Tall",
+       "right": "Uzun"
+      },
+      {
+       "left": "Short",
+       "right": "Kısa"
+      },
+      {
+       "left": "Slim",
+       "right": "Zayıf / İnce"
+      },
+      {
+       "left": "Young",
+       "right": "Genç"
+      },
+      {
+       "left": "Old",
+       "right": "Yaşlı"
+      }
+     ]
+    },
+    {
+     "id": "q7_3",
+     "type": "match",
+     "prompt": "Hissiyatları eşleştir!",
+     "pairs": [
+      {
+       "left": "Good",
+       "right": "İyi"
+      },
+      {
+       "left": "Bad",
+       "right": "Kötü"
+      },
+      {
+       "left": "Okay",
+       "right": "Fena değil"
+      },
+      {
+       "left": "Great",
+       "right": "Harika"
+      },
+      {
+       "left": "Bored",
+       "right": "Sıkılmış"
+      }
+     ]
+    },
+    {
+     "id": "q7_4",
+     "type": "match",
+     "prompt": "Soruyla cevabı eşleştir!",
+     "pairs": [
+      {
+       "left": "Who is he?",
+       "right": "He is my uncle."
+      },
+      {
+       "left": "Is she tired?",
+       "right": "Yes, she is."
+      },
+      {
+       "left": "How are you?",
+       "right": "I am fine."
+      },
+      {
+       "left": "Are you okay?",
+       "right": "Yes, I am okay."
+      },
+      {
+       "left": "Who is she?",
+       "right": "She is my aunt."
+      }
+     ]
+    },
+    {
+     "id": "q7_5",
+     "type": "match",
+     "prompt": "Duygu ve hisleri eşleştir!",
+     "pairs": [
+      {
+       "left": "Angry",
+       "right": "Kızgın"
+      },
+      {
+       "left": "Tired",
+       "right": "Yorgun"
+      },
+      {
+       "left": "Cold",
+       "right": "Üşümüş"
+      },
+      {
+       "left": "Surprised",
+       "right": "Şaşırmış"
+      },
+      {
+       "left": "Energetic",
+       "right": "Enerjik"
+      }
+     ]
+    },
+    {
+     "id": "q7_6",
+     "type": "match",
+     "prompt": "Aile bireylerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Uncle",
+       "right": "Amca / Dayı"
+      },
+      {
+       "left": "Aunt",
+       "right": "Teyze / Hala"
+      },
+      {
+       "left": "Brother",
+       "right": "Erkek kardeş"
+      },
+      {
+       "left": "Sister",
+       "right": "Kız kardeş"
+      },
+      {
+       "left": "Baby",
+       "right": "Bebek"
+      }
+     ]
+    },
+    {
+     "id": "q7_7",
+     "type": "match",
+     "prompt": "Zıt anlamlıları eşleştir!",
+     "pairs": [
+      {
+       "left": "Tall",
+       "right": "Short"
+      },
+      {
+       "left": "Young",
+       "right": "Old"
+      },
+      {
+       "left": "Happy",
+       "right": "Sad"
+      },
+      {
+       "left": "Hot",
+       "right": "Cold"
+      },
+      {
+       "left": "Big",
+       "right": "Small"
+      }
+     ]
+    },
+    {
+     "id": "q7_8",
+     "type": "match",
+     "prompt": "Soruyla cevabı eşleştir!",
+     "pairs": [
+      {
+       "left": "Who is he?",
+       "right": "He is my father."
+      },
+      {
+       "left": "Are you hungry?",
+       "right": "Yes, I am."
+      },
+      {
+       "left": "Is she short?",
+       "right": "No, she isn't."
+      },
+      {
+       "left": "How do you feel?",
+       "right": "I feel great."
+      },
+      {
+       "left": "Are you sad?",
+       "right": "No, I am not."
+      }
+     ]
+    },
+    {
+     "id": "q7_9",
+     "type": "match",
+     "prompt": "Aile ve arkadaş terimlerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Family",
+       "right": "Aile"
+      },
+      {
+       "left": "Parents",
+       "right": "Anne-Baba"
+      },
+      {
+       "left": "Cousin",
+       "right": "Kuzen"
+      },
+      {
+       "left": "Friend",
+       "right": "Arkadaş"
+      },
+      {
+       "left": "Relative",
+       "right": "Akraba"
+      }
+     ]
+    },
+    {
+     "id": "q7_10",
+     "type": "match",
+     "prompt": "Karışık tekrar: eşleri bul!",
+     "pairs": [
+      {
+       "left": "Mother",
+       "right": "Anne"
+      },
+      {
+       "left": "Happy",
+       "right": "Mutlu"
+      },
+      {
+       "left": "Hungry",
+       "right": "Aç"
+      },
+      {
+       "left": "Tall",
+       "right": "Uzun"
+      },
+      {
+       "left": "Grandfather",
+       "right": "Dede / Büyükbaba"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "title": "Konuş",
+   "emoji": "🎤",
+   "questions": [
+    {
+     "id": "q8_1",
+     "type": "speak",
+     "prompt": "Ekrandaki cümleyi sesli oku.",
+     "display": "This is my mother. She is very kind.",
+     "accepted": [
+      "This is my mother. She is very kind."
+     ]
+    },
+    {
+     "id": "q8_2",
+     "type": "speak",
+     "prompt": "Dinle ve tekrar et.",
+     "audio": {
+      "text": "How do you feel today?",
+      "lang": "en-US"
+     },
+     "accepted": [
+      "How do you feel today?"
+     ]
+    },
+    {
+     "id": "q8_3",
+     "type": "speak",
+     "prompt": "İngilizce olarak söyle:",
+     "display": "Ben bugün çok mutluyum!",
+     "accepted": [
+      "I am very happy today!"
+     ]
+    },
+    {
+     "id": "q8_4",
+     "type": "speak",
+     "prompt": "Görseldeki aile üyesini İngilizce söyle.",
+     "image": "images/grandfather.jpg",
+     "emoji": "👴",
+     "accepted": [
+      "Grandfather",
+      "This is my grandfather."
+     ]
+    },
+    {
+     "id": "q8_5",
+     "type": "choice",
+     "prompt": "Soruyu dinle, doğru yanıtı seç ve sesli söyle.",
+     "audio": {
+      "text": "Are you hungry?",
+      "lang": "en-US"
+     },
+     "options": [
+      "Yes, I am hungry.",
+      "My name is Eda.",
+      "I'm 8 years old."
+     ],
+     "answer": 0,
+     "speakAfter": true
+    },
+    {
+     "id": "q8_6",
+     "type": "speak",
+     "prompt": "Ekrandaki cümleyi sesli oku.",
+     "display": "My brother is tall and energetic.",
+     "accepted": [
+      "My brother is tall and energetic."
+     ]
+    },
+    {
+     "id": "q8_7",
+     "type": "speak",
+     "prompt": "Dinle ve tekrar et.",
+     "audio": {
+      "text": "Who is this? This is my sister.",
+      "lang": "en-US"
+     },
+     "accepted": [
+      "Who is this? This is my sister."
+     ]
+    },
+    {
+     "id": "q8_8",
+     "type": "speak",
+     "prompt": "İngilizce olarak söyle:",
+     "display": "Susadım, su istiyorum.",
+     "accepted": [
+      "I am thirsty, I want water."
+     ]
+    },
+    {
+     "id": "q8_9",
+     "type": "speak",
+     "prompt": "Görseldeki duyguyu İngilizce söyle.",
+     "image": "images/happy.jpg",
+     "emoji": "😊",
+     "accepted": [
+      "Happy",
+      "I am happy."
+     ]
+    },
+    {
+     "id": "q8_10",
+     "type": "choice",
+     "prompt": "Soruyu dinle, doğru yanıtı seç ve sesli söyle.",
+     "audio": {
+      "text": "How do you feel?",
+      "lang": "en-US"
+     },
+     "options": [
+      "I feel happy.",
+      "This is my brother.",
+      "I'm 8 years old."
+     ],
+     "answer": 0,
+     "speakAfter": true
+    },
+    {
+     "id": "q8_11",
+     "type": "speak",
+     "prompt": "Ekrandaki cümleyi sesli oku.",
+     "display": "I feel happy today.",
+     "accepted": [
+      "I feel happy today."
+     ]
+    },
+    {
+     "id": "q8_12",
+     "type": "speak",
+     "prompt": "İngilizce olarak söyle:",
+     "display": "Bu benim kız kardeşim.",
+     "accepted": [
+      "This is my sister."
+     ]
+    },
+    {
+     "id": "q8_13",
+     "type": "speak",
+     "prompt": "Dinle ve tekrar et.",
+     "audio": {
+      "text": "She is my aunt.",
+      "lang": "en-US"
+     },
+     "accepted": [
+      "She is my aunt."
+     ]
+    },
+    {
+     "id": "q8_14",
+     "type": "speak",
+     "prompt": "Görseldeki aile üyesini İngilizce söyle.",
+     "image": "images/baby.jpg",
+     "emoji": "👶",
+     "accepted": [
+      "Baby",
+      "This is a baby."
+     ]
+    }
+   ]
+  }
+ ]
+}

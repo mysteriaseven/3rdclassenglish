@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>English Adventure – 3. Sınıf</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+<style>
+:root{--g:#58cc02;--gd:#46a302;--b:#1cb0f6;--bd:#1899d6;--r:#ff4b4b;--y:#ffc800;--t:#3c3c3c;--l:#e5e5e5}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;font-family:Nunito,system-ui,sans-serif;color:var(--t);background:#f0f9ff}
+body{max-width:520px;margin:auto;background:#fff;position:relative;overflow-x:hidden}
+[hidden]{display:none!important}
+#top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;padding:12px 18px;padding-top:calc(12px + env(safe-area-inset-top,0px));background:#fff;border-bottom:2px solid var(--l);font-weight:900;font-size:18px}
+#map{padding:10px 0 60px;text-align:center}
+.warn{margin:10px 14px;padding:10px;border-radius:12px;background:#fff3cd;font-weight:800;font-size:14px;text-align:left}
+.ub{margin:16px 14px;padding:14px 18px;border-radius:18px;color:#fff;text-align:left;box-shadow:0 5px 0 rgba(0,0,0,.2)}
+.ub b{display:block;font-size:13px;opacity:.85}.ub span{font-size:20px;font-weight:900}
+.nw{margin:18px 0;display:flex;flex-direction:column;align-items:center}
+.nw small{margin-top:6px;font-weight:800;color:#777;font-size:13px}
+.node{width:78px;height:70px;border-radius:50%;border:0;font-size:32px;cursor:pointer;font-family:inherit;color:#fff;background:var(--g);box-shadow:0 8px 0 var(--gd);position:relative;transition:transform .1s}
+.node:active{transform:translateY(6px);box-shadow:0 2px 0 var(--gd)}
+.node.done{background:var(--y);box-shadow:0 8px 0 #d9a600;font-weight:900}
+.node.rev{background:var(--r);box-shadow:0 8px 0 #c93a3a;animation:pulse 1.4s infinite}
+.node.lock{background:#ccc;box-shadow:0 8px 0 #aaa;filter:grayscale(1);cursor:not-allowed}
+.node.cur{animation:pulse 1.4s infinite}
+.node.cur::after{content:"BAŞLA";position:absolute;top:-30px;left:50%;transform:translateX(-50%);background:#fff;color:var(--g);border:2px solid var(--l);border-radius:12px;padding:2px 10px;font-size:13px;font-weight:900;animation:bob 1s infinite alternate}
+@keyframes pulse{50%{transform:scale(1.08)}}@keyframes bob{to{top:-36px}}
+#quiz,#done,#admin{position:fixed;inset:0;max-width:520px;margin:auto;background:#fff;display:flex;flex-direction:column;z-index:10;animation:slide .3s}
+@keyframes slide{from{transform:translateY(40px);opacity:0}}
+.bar{display:flex;align-items:center;gap:12px;padding:16px;padding-top:calc(16px + env(safe-area-inset-top,0px))}
+.bar button{border:0;background:none;font-size:26px;color:#aaa;cursor:pointer}
+.prog{flex:1;height:16px;background:var(--l);border-radius:9px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--g);border-radius:9px;transition:width .4s}
+#q{flex:1;overflow:auto;padding:8px 20px 20px;animation:slide .3s}
+h2{font-size:22px;margin:8px 0 16px}
+.rt{display:inline-block;background:#ffdfe0;color:#d33;border-radius:10px;padding:2px 10px;font-size:13px;font-weight:900;margin-bottom:6px}
+.spk{width:84px;height:84px;border-radius:24px;border:0;background:var(--b);box-shadow:0 5px 0 var(--bd);font-size:38px;cursor:pointer;margin:6px 0 16px}
+.spk:active,.mic:active{transform:translateY(4px);box-shadow:none}
+.pic{width:100%;max-height:220px;object-fit:cover;border-radius:20px;margin-bottom:14px}
+.em{font-size:96px;text-align:center;margin:8px 0 14px}
+.opt,.tk,.mt{display:block;width:100%;padding:14px;margin:0 0 12px;border:2px solid var(--l);border-bottom-width:5px;border-radius:16px;background:#fff;font:800 18px Nunito,sans-serif;color:var(--t);cursor:pointer;text-align:left}
+.opt.sel,.mt.sel{border-color:var(--b);background:#ddf4ff;color:var(--bd)}
+.opt.ok,.mt.ok{border-color:var(--g);background:#d7ffb8;color:var(--gd)}
+.opt.no{border-color:var(--r);background:#ffdfe0;color:#d33}
+.zone{min-height:66px;border-bottom:2px solid var(--l);padding:6px 0;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tk{width:auto;display:inline-block;margin:0;padding:10px 16px;text-align:center;animation:pop .2s}
+@keyframes pop{from{transform:scale(.7)}}
+.bank{display:flex;flex-wrap:wrap;gap:8px}
+.tk.used{visibility:hidden}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}.cols>div>.mt{margin-bottom:12px}
+.mt{margin:0;text-align:center;font-size:16px;padding:16px 8px}
+.mt.gone{visibility:hidden;transition:.3s}
+.shake{animation:sh .4s}@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.big{width:100%;padding:15px;border:0;border-radius:16px;background:var(--g);box-shadow:0 5px 0 var(--gd);color:#fff;font:900 17px Nunito,sans-serif;letter-spacing:.5px;cursor:pointer}
+.big:disabled{background:var(--l);box-shadow:0 5px 0 #c8c8c8;color:#aaa}
+.big:active:not(:disabled){transform:translateY(4px);box-shadow:none}
+#ft{padding:16px;padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));border-top:2px solid var(--l);transition:background .3s}
+#ft.good{background:#d7ffb8}#ft.bad{background:#ffdfe0}#ft.bad .big{background:var(--r);box-shadow:0 5px 0 #ea2b2b}
+#msg{font-weight:900;font-size:18px;margin-bottom:12px}#ft.good #msg{color:var(--gd)}#ft.bad #msg{color:#d33}
+.mic{width:110px;height:110px;border-radius:50%;border:0;background:var(--b);box-shadow:0 6px 0 var(--bd);font-size:48px;display:block;margin:20px auto 8px;cursor:pointer}
+.mic.rec{background:var(--r);animation:pulse .8s infinite}
+.center{text-align:center}.said{color:#777;font-weight:700;margin-top:10px;min-height:24px}
+.skip{margin-top:26px;border:0;background:none;color:#999;font:800 15px Nunito,sans-serif;text-decoration:underline;cursor:pointer}
+#done{align-items:center;justify-content:center;text-align:center;padding:24px}
+#done h1{font-size:34px;margin:10px 0}#lot{width:220px;height:220px}
+.stat{display:inline-block;margin:6px;padding:12px 20px;border:2px solid var(--y);border-radius:16px;font-weight:900;font-size:20px;color:#d99c00}
+.cf{position:fixed;top:-20px;width:10px;height:14px;z-index:30;animation:fall linear forwards;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+#adm{border:2px solid var(--l);border-bottom-width:4px;border-radius:12px;background:#fff;font:800 13px Nunito,sans-serif;color:#777;padding:4px 10px;margin-right:8px;cursor:pointer}
+#ab{padding:8px 20px;overflow:auto;flex:1}#ab label{display:block;font-weight:900;margin:16px 0 6px}
+#ab select{width:100%;padding:12px;border:2px solid var(--l);border-radius:12px;font:700 16px Nunito,sans-serif;background:#fff}
+#ab .chk{display:flex;gap:8px;align-items:center;font-weight:800}#ab .chk input{width:20px;height:20px}
+</style>
+</head>
+<body>
+<div id="top"><span>🌍 English Adventure</span><span><button id="adm">⚙️ Admin</button>⭐ <span id="xp">0</span> XP</span></div>
+<main id="map"><p style="margin-top:60px;font-weight:800">Yükleniyor...</p></main>
+
+<section id="quiz" hidden>
+  <div class="bar"><button id="x" aria-label="Kapat">✕</button><div class="prog"><i id="pi"></i></div></div>
+  <div id="q"></div>
+  <footer id="ft"><div id="msg"></div><button class="big" id="btn">KONTROL ET</button></footer>
+</section>
+
+<section id="admin" hidden>
+  <div class="bar"><button id="ax" aria-label="Kapat">✕</button><b style="font-size:20px">⚙️ Admin: ders / soru aç</b></div>
+  <div id="ab">
+    <label>Ünite</label><select id="au"></select>
+    <label>Ders</label><select id="al"></select>
+    <label>Soru</label><select id="aq"></select>
+    <label class="chk" style="margin-top:20px"><input type="checkbox" id="ao"> Sadece bu soruyu aç</label>
+    <p style="color:#777;font-weight:700;font-size:14px">Admin modunda ilerleme, XP ve yanlış listesi kaydedilmez. Kilitli dersler de açılır.</p>
+  </div>
+  <div style="padding:16px"><button class="big" id="ago">AÇ</button></div>
+</section>
+
+<section id="done" hidden>
+  <div id="lot"></div><h1 id="dt"></h1>
+  <div><span class="stat" id="ds"></span><span class="stat" id="dx"></span></div>
+  <p id="dn" style="font-weight:800;color:#777"></p>
+  <p style="width:100%;max-width:400px;margin-top:20px"><button class="big" id="dbtn">HARİTAYA DÖN</button></p>
+</section>
+
+<script>
+const $=s=>document.querySelector(s);
+const shuf=a=>[...a].sort(()=>Math.random()-.5);
+const LESSON=5;               // bir dersteki hedef soru sayısı
+const MAXUNIT=100;            // unit1.json ... unit100.json aranır
+const ADMIN_PIN='';           // boş değilse Admin açılırken bu şifre sorulur
+let UN=[],QM={},Q={},warns=[];
+let P=JSON.parse(localStorage.getItem('lr2')||'{"done":{},"wrong":{},"xp":0}');
+const save=()=>{localStorage.setItem('lr2',JSON.stringify(P));$('#xp').textContent=P.xp};
+
+/* ---------- Ses efektleri: sounds/*.mp3 varsa onlar, yoksa yerleşik sesler ---------- */
+function sfx(n){const a=new Audio('sounds/'+n+'.mp3');a.play().catch(()=>beep(n))}
+function beep(n){try{const c=new(window.AudioContext||webkitAudioContext)(),t=c.currentTime;
+ if(n=='applause'){const b=c.createBuffer(1,c.sampleRate*2,c.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.max(0,1-i/d.length)*(Math.random()>.7?1:.15);const s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start();return}
+ (n=='correct'?[660,880]:[200,150]).forEach((h,i)=>{const o=c.createOscillator(),g=c.createGain();o.type=n=='correct'?'sine':'sawtooth';o.frequency.value=h;g.gain.setValueAtTime(.2,t+i*.15);g.gain.exponentialRampToValueAtTime(.001,t+i*.15+.3);o.connect(g);g.connect(c.destination);o.start(t+i*.15);o.stop(t+i*.15+.3)})}catch(e){}}
+
+/* ---------- Text-to-Speech ---------- */
+function say(t,l){if(!window.speechSynthesis)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang=l||'en-US';u.rate=.85;
+ const v=speechSynthesis.getVoices().filter(v=>v.lang.replace('_','-').startsWith(u.lang.slice(0,2)));u.voice=v.find(x=>/google/i.test(x.name))||v[0]||null;speechSynthesis.speak(u)}
+
+function confetti(){for(let i=0;i<60;i++){const e=document.createElement('div');e.className='cf';e.style.cssText=`left:${Math.random()*100}vw;background:hsl(${Math.random()*360},90%,60%);animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*.5}s`;document.body.appendChild(e);setTimeout(()=>e.remove(),4500)}}
+function lot(){const el=$('#lot');el.innerHTML='<div style="font-size:120px">🏆</div>';
+ fetch('animations/celebrate.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>{el.innerHTML='';lottie.loadAnimation({container:el,animationData:d,loop:false})}).catch(()=>{})}
+
+/* ---------- Ünite dosyalarını bul: unit1.json ... unit100.json ---------- */
+async function loadUnits(){
+ const res=await Promise.all(Array.from({length:MAXUNIT},(_,i)=>i+1).map(async n=>{
+  try{const r=await fetch(`unit${n}.json`);if(!r.ok)return null;
+   try{return {n,j:await r.json()}}catch(e){warns.push(`unit${n}.json okunamadı (JSON söz dizimi hatası)`);return null}}
+  catch(e){return null}}));
+ res.filter(Boolean).sort((a,b)=>(a.j.unit||a.n)-(b.j.unit||b.n)).forEach(({n,j})=>buildUnit(j.unit||n,j));
+}
+function buildUnit(n,j){
+ const u={n,title:j.title||('Ünite '+n),color:j.color||'#58cc02',emoji:j.emoji||'📘',lessons:[],ids:[]};
+ (j.sections||[]).forEach((s,si)=>{
+  const qs=(s.questions||[]).filter(q=>['choice','arrange','match','speak'].includes(q.type));
+  qs.forEach((q,i)=>{q._id=`u${n}:${q.id||s.id+'-'+i}`;QM[q._id]=q;u.ids.push(q._id)});
+  const k=Math.max(1,Math.round(qs.length/LESSON)),base=Math.floor(qs.length/k),extra=qs.length%k;
+  let p=0;for(let i=0;i<k&&qs.length;i++){const sz=base+(i<extra?1:0);
+   u.lessons.push({key:`u${n}-${s.id||si}-${i}`,title:(s.title||'Bölüm')+(k>1?` ${i+1}/${k}`:''),emoji:s.emoji||'⭐',qs:qs.slice(p,p+sz)});p+=sz}});
+ UN.push(u)}
+const wrongOf=u=>u.ids.filter(id=>P.wrong[id]);
+
+/* ---------- Harita ---------- */
+function renderMap(){
+ let prev=true,h=warns.map(w=>`<div class="warn">⚠️ ${w}</div>`).join('');
+ if(!UN.length)h+='<p style="margin:60px 20px;font-weight:800">Ünite dosyası bulunamadı. unit1.json dosyasını index.html ile aynı klasöre koy.</p>';
+ UN.forEach(u=>{h+=`<div class="ub" style="background:${u.color}"><b>ÜNİTE ${u.n}</b><span>${u.emoji} ${u.title}</span></div>`;let i=0;
+  const node=(cls,dis,att,em,lab)=>`<div class="nw" style="transform:translateX(${Math.round(Math.sin(i++*1.3)*70)}px)"><button class="node ${cls}" ${dis?'disabled':''} ${att}>${em}</button><small>${lab}</small></div>`;
+  u.lessons.forEach((l,li)=>{const d=P.done[l.key],st=d?'done':prev?'cur':'lock';
+   h+=node(st,st=='lock',`data-n="${u.n}" data-l="${li}"`,d?'✓':st=='lock'?'🔒':l.emoji,l.title);prev=!!d});
+  const all=u.lessons.length&&u.lessons.every(l=>P.done[l.key]),w=wrongOf(u).length;
+  h+=all?(w?node('rev',0,`data-n="${u.n}" data-l="r"`,'🔁',`Tekrar (${w})`):node('done',1,'','🏆','Ünite tamam!')):node('lock',1,'','🔒','Tekrar')});
+ $('#map').innerHTML=h;
+ $('#map').querySelectorAll('.node[data-n]').forEach(b=>b.onclick=()=>{const u=UN.find(x=>x.n==b.dataset.n);b.dataset.l=='r'?startReview(u):startLesson(u,u.lessons[+b.dataset.l])});
+ const c=$('.node.cur')||$('.node.rev');c&&c.scrollIntoView({block:'center'});save()}
+
+/* ---------- Quiz motoru ---------- */
+function startLesson(u,l){Q={key:l.key,unit:u,qs:l.qs.map(q=>({...q})),i:0,ok:0,n:l.qs.length,cur:null};open()}
+function startReview(u){Q={review:1,unit:u,qs:wrongOf(u).map(id=>({...QM[id]})),i:0,ok:0,n:0,cur:null};open()}
+function open(){$('#quiz').hidden=false;next()}
+function next(){if(Q.i>=Q.qs.length)return finish();$('#pi').style.width=Q.i/Q.qs.length*100+'%';Q.cur=Q.qs[Q.i];show(Q.cur)}
+const skipq=()=>{speechSynthesis&&speechSynthesis.cancel();Q.i++;next()};
+function setBtn(t,fn,dis,hide){const b=$('#btn');b.textContent=t;b.disabled=!!dis;b.onclick=fn;b.hidden=!!hide}
+function rec(ok){if(Q.admin)return;const q=Q.cur;
+ if(ok){delete P.wrong[q._id];if(!q._r&&!Q.review)Q.ok++}
+ else{P.wrong[q._id]=1;if(Q.review||!q._r)Q.qs.push({...q,_r:1})}
+ save()}
+function fb(ok,msg){rec(ok);sfx(ok?'correct':'wrong');$('#ft').className=ok?'good':'bad';$('#msg').innerHTML=(ok?'🎉 Harika!':'😕 Olmadı')+(msg?'<br><small>'+msg+'</small>':'');setBtn('DEVAM',()=>{Q.i++;next()})}
+const spk=(a,auto)=>{const b=$('.spk');b.onclick=()=>say(a.text,a.lang);if(auto)setTimeout(()=>say(a.text,a.lang),400)};
+const pic=q=>q.image?`<img class="pic" src="${q.image}" alt="" onerror="this.outerHTML='<div class=em>${q.emoji||'🖼️'}</div>'">`:'';
+const tag=q=>(q._r||Q.review)?'<div class="rt">🔁 Tekrar</div>':'';
+
+function show(q){$('#ft').className='';$('#msg').innerHTML='';const e=$('#q');e.style.animation='none';void e.offsetWidth;e.style.animation='';
+ ({choice,arrange,match,speak})[q.type](q)}
+
+function choice(q){let sel=-1;
+ $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2>${q.audio?'<button class="spk">🔊</button>':''}${pic(q)}`+q.options.map((o,i)=>`<button class="opt" data-i="${i}">${o}</button>`).join('');
+ if(q.audio)spk(q.audio,1);
+ const os=[...$('#q').querySelectorAll('.opt')];
+ os.forEach(o=>o.onclick=()=>{os.forEach(x=>x.classList.remove('sel'));o.classList.add('sel');sel=+o.dataset.i;setBtn('KONTROL ET',chk)});
+ setBtn('KONTROL ET',chk,1);
+ function chk(){const ok=sel==q.answer;os.forEach(o=>o.disabled=true);os[sel].classList.add(ok?'ok':'no');os[q.answer].classList.add('ok');
+  if(ok&&q.speakAfter){sfx('correct');return show({type:'speak',prompt:'Doğru! Şimdi sesli söyle 👇',display:q.options[q.answer],accepted:[q.options[q.answer]]})}
+  fb(ok,ok?'':'Doğru cevap: '+q.options[q.answer])}}
+
+function arrange(q){let placed=[];const T=shuf(q.tokens.map((t,i)=>({t,i})));
+ $('#q').innerHTML=`${tag(q)}<h2>${q.hint||''}</h2>${q.audio?'<button class="spk">🔊</button>':''}<h2 style="color:var(--bd)">${q.prompt||''}</h2><div class="zone"></div><div class="bank"></div>`;
+ if(q.audio)spk(q.audio);
+ const draw=()=>{$('.zone').innerHTML=placed.map(o=>`<button class="tk">${o.t}</button>`).join('');
+  $('.bank').innerHTML=T.map(o=>`<button class="tk ${placed.includes(o)?'used':''}">${o.t}</button>`).join('');
+  $('.zone').querySelectorAll('.tk').forEach((b,k)=>b.onclick=()=>{placed.splice(k,1);draw()});
+  $('.bank').querySelectorAll('.tk').forEach((b,k)=>b.onclick=()=>{if(!placed.includes(T[k])){placed.push(T[k]);draw()}});
+  setBtn('KONTROL ET',chk,!placed.length)};
+ function chk(){const ok=placed.map(o=>o.t).join(' ')==q.answer.join(' ');fb(ok,ok?'':'Doğrusu: '+q.answer.join(' '));document.querySelectorAll('.tk').forEach(b=>b.disabled=true)}
+ draw()}
+
+function match(q){let sel=null,left=q.pairs.length,bad=0;
+ const L=shuf(q.pairs.map((p,i)=>[p.left,i])),R=shuf(q.pairs.map((p,i)=>[p.right,i]));
+ $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2><div class="cols"><div>${L.map(l=>`<button class="mt" data-s="L" data-i="${l[1]}">${l[0]}</button>`).join('')}</div><div>${R.map(r=>`<button class="mt" data-s="R" data-i="${r[1]}">${r[0]}</button>`).join('')}</div></div>`;
+ setBtn('',null,1,1);
+ $('#q').querySelectorAll('.mt').forEach(b=>b.onclick=()=>{
+  if(!sel||sel.dataset.s==b.dataset.s){$('#q .sel')&&$('#q .sel').classList.remove('sel');b.classList.add('sel');sel=b;if(b.dataset.s=='L')say(b.textContent,'en-US');return}
+  if(sel.dataset.i==b.dataset.i){[sel,b].forEach(x=>{x.classList.remove('sel');x.classList.add('ok');setTimeout(()=>x.classList.add('gone'),500)});sfx('correct');sel=null;
+   if(!--left)setTimeout(()=>{rec(!bad);if(!bad)sfx('applause');Q.i++;next()},900)}
+  else{bad++;sfx('wrong');[sel,b].forEach(x=>{x.classList.remove('sel');x.classList.add('shake');setTimeout(()=>x.classList.remove('shake'),400)});sel=null}})}
+
+function speak(q){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+ $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2><div class="center">${q.audio?'<button class="spk">🔊</button>':''}${pic(q)}${q.display?`<h2 style="color:var(--bd)">${q.display}</h2>`:''}${SR?'<button class="mic" id="mic">🎤</button><div class="said" id="said">Mikrofona dokun ve konuş</div>':'<p>⚠️ Bu tarayıcı mikrofonu desteklemiyor. Chrome kullan.</p>'}<button class="skip">Şimdi konuşamıyorum • Geç</button></div>`;
+ $('.skip').onclick=skipq;
+ if(q.audio)spk(q.audio,1);
+ const norm=s=>s.toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
+ const score=(h,e)=>{const H=norm(h),E=norm(e);return E.length?E.filter(w=>H.includes(w)).length/E.length:0};
+ setBtn('',null,1,1);
+ if(!SR)return setBtn('GEÇ',skipq);
+ $('#mic').onclick=()=>{const r=new SR();r.lang='en-US';r.maxAlternatives=3;r.interimResults=false;
+  $('#mic').classList.add('rec');$('#said').textContent='Dinliyorum...';
+  r.onresult=e=>{const alts=[...e.results[0]].map(a=>a.transcript);$('#said').textContent='Duyduğum: “'+alts[0]+'”';
+   const ok=alts.some(a=>q.accepted.some(c=>score(a,c)>=.75));$('#mic').disabled=true;fb(ok,ok?'':'Doğrusu: '+q.accepted[0])};
+  r.onerror=e=>{$('#mic').classList.remove('rec');$('#said').textContent=/not-allowed|service/.test(e.error)?'Mikrofon izni ver ya da Geç’e bas':'Duyamadım, tekrar dene 🎤'};
+  r.onend=()=>$('#mic').classList.remove('rec');
+  r.start()}}
+
+function finish(){$('#quiz').hidden=true;let xp=0;
+ if(Q.admin){$('#dt').textContent='Admin: bitti 🛠️';$('#ds').textContent=`✅ ${Q.ok}/${Q.n}`;$('#dx').textContent='⭐ kayıt yok';$('#dn').textContent='Admin modu: ilerleme kaydedilmedi';$('#done').hidden=false;return}
+ if(Q.review){const w=wrongOf(Q.unit).length;$('#dt').textContent=w?'Tekrar bitti 👏':'Tüm yanlışlar düzeldi! 🎉';$('#ds').textContent=`🔁 Kalan: ${w}`;$('#dx').textContent='⭐ +0 XP';$('#dn').textContent=''}
+ else{xp=Q.ok*10;P.done[Q.key]=1;P.xp+=xp;const w=Q.n-Q.ok;
+  $('#dt').textContent=Q.ok==Q.n?'Mükemmel! 🎉':'Ders tamam! 👏';$('#ds').textContent=`✅ ${Q.ok}/${Q.n}`;$('#dx').textContent=`⭐ +${xp} XP`;
+  $('#dn').textContent=w?`${w} soru ünite sonunda tekrar edilecek`:''}
+ save();$('#done').hidden=false;sfx('applause');confetti();lot()}
+$('#dbtn').onclick=()=>{$('#done').hidden=true;renderMap()};
+$('#x').onclick=()=>{if(confirm('Dersten çıkmak istiyor musun?')){speechSynthesis&&speechSynthesis.cancel();$('#quiz').hidden=true;renderMap()}};
+
+/* ---------- Admin ---------- */
+const qLabel=(q,i)=>`${q.id||i+1} · ${q.type} · `+String(q.prompt||q.display||(q.audio&&q.audio.text)||(q.tokens||[]).join(' ')||(q.pairs&&q.pairs[0].left)||'').slice(0,38);
+function fillL(){const u=UN[$('#au').value];$('#al').innerHTML=u.lessons.map((l,i)=>`<option value="${i}">${i+1}. ${l.title}</option>`).join('');fillQ()}
+function fillQ(){const l=UN[$('#au').value].lessons[$('#al').value];$('#aq').innerHTML=l.qs.map((q,i)=>`<option value="${i}">${qLabel(q,i)}</option>`).join('')}
+$('#adm').onclick=()=>{if(!UN.length)return alert('Ünite yüklenmedi');if(ADMIN_PIN&&prompt('Admin şifresi')!==ADMIN_PIN)return;
+ $('#au').innerHTML=UN.map((u,i)=>`<option value="${i}">Ünite ${u.n} – ${u.title}</option>`).join('');fillL();$('#admin').hidden=false};
+$('#au').onchange=fillL;$('#al').onchange=fillQ;$('#ax').onclick=()=>$('#admin').hidden=true;
+$('#ago').onclick=()=>{const u=UN[$('#au').value],l=u.lessons[$('#al').value],i0=+$('#aq').value,only=$('#ao').checked;
+ const qs=(only?[l.qs[i0]]:l.qs).map(q=>({...q}));Q={admin:1,unit:u,qs,i:only?0:i0,ok:0,n:qs.length,cur:null};$('#admin').hidden=true;open()};
+
+loadUnits().then(renderMap).catch(e=>{$('#map').innerHTML='<p style="margin:60px 20px">Yükleme hatası. Siteyi Netlify veya yerel sunucuda aç.</p>'});
+window.speechSynthesis&&speechSynthesis.getVoices();
+</script>
+</body>
+</html>

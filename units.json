@@ -1,0 +1,870 @@
+{
+  "units": [
+    {
+      "id": "u1",
+      "title": "Unit 1: Greetings & School Life",
+      "color": "#58cc02",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "1. Picture Matching (Görsel Eşleştirme)",
+          "emoji": "🖼️",
+          "questions": [
+            {
+              "id": "q1_1",
+              "type": "choice",
+              "prompt": "Görsele en uygun okul mekanını seçiniz.",
+              "image": "images/library.jpg",
+              "emoji": "📚",
+              "note": "(Not: Kitaplarla dolu okul kütüphanesi görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Playground", "Library", "Canteen", "Classroom"],
+              "answer": 1
+            },
+            {
+              "id": "q1_2",
+              "type": "choice",
+              "prompt": "Görseldeki selamlaşma ifadesini seçiniz.",
+              "image": "images/morning.jpg",
+              "emoji": "🌅",
+              "note": "(Not: Sabah güneş doğarken selamlaşan öğrenciler görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Good night", "Good afternoon", "Good morning", "Goodbye"],
+              "answer": 2
+            },
+            {
+              "id": "q1_3",
+              "type": "choice",
+              "prompt": "Görseldeki doğum günü nesnesini seçiniz.",
+              "image": "images/birthday_cake.jpg",
+              "emoji": "🎂",
+              "note": "(Not: Üzerinde mumlar olan doğum günü pastası görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Balloons", "A gift", "Candles", "A cake"],
+              "answer": 3
+            },
+            {
+              "id": "q1_4",
+              "type": "choice",
+              "prompt": "Görsele en uygun mekanı seçiniz.",
+              "image": "images/playground.jpg",
+              "emoji": "🛝",
+              "note": "(Not: Salıncak ve kaydırakların olduğu okul bahçesi görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Sports field", "Playground", "Music room", "Office"],
+              "answer": 1
+            },
+            {
+              "id": "q1_5",
+              "type": "choice",
+              "prompt": "Görseldeki okul çalışanını seçiniz.",
+              "image": "images/teacher.jpg",
+              "emoji": "👩‍🏫",
+              "note": "(Not: Tahta önünde ders anlatan öğretmen görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Librarian", "Headmaster", "Teacher", "Pupil"],
+              "answer": 2
+            },
+            {
+              "id": "q1_6",
+              "type": "choice",
+              "prompt": "Görseldeki nesneyi seçiniz.",
+              "image": "images/ruler.jpg",
+              "emoji": "📏",
+              "note": "(Not: Dereceli cetvel görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Duster", "Ruler", "Coursebook", "Pencil"],
+              "answer": 1
+            },
+            {
+              "id": "q1_7",
+              "type": "choice",
+              "prompt": "Görseldeki okul mekanını seçiniz.",
+              "image": "images/canteen.jpg",
+              "emoji": "🥪",
+              "note": "(Not: Öğrencilerin yiyecek aldığı okul kantini görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Canteen", "Classroom", "Meeting room", "Gym"],
+              "answer": 0
+            },
+            {
+              "id": "q1_8",
+              "type": "choice",
+              "prompt": "Görseldeki kutlama malzemesini seçiniz.",
+              "image": "images/balloons.jpg",
+              "emoji": "🎈",
+              "note": "(Not: Renkli balonlar görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Candles", "Balloons", "Bookshelf", "Flashcard"],
+              "answer": 1
+            },
+            {
+              "id": "q1_9",
+              "type": "choice",
+              "prompt": "Görseldeki sınıf eşyasını seçiniz.",
+              "image": "images/blackboard.jpg",
+              "emoji": "🪧",
+              "note": "(Not: Sınıf tahtası görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Blackboard", "Bookcase", "Desk", "Locker"],
+              "answer": 0
+            },
+            {
+              "id": "q1_10",
+              "type": "choice",
+              "prompt": "Görseldeki öğrenci eşyasını seçiniz.",
+              "image": "images/desk.jpg",
+              "emoji": "🪑",
+              "note": "(Not: Öğrenci sırası görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Teacher's chair", "Student's desk", "Bookshelf", "Bin"],
+              "answer": 1
+            },
+            {
+              "id": "q1_11",
+              "type": "choice",
+              "prompt": "Görseldeki okul alanını seçiniz.",
+              "image": "images/sports_field.jpg",
+              "emoji": "⚽",
+              "note": "(Not: Okul spor sahası görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Music room", "Sports field", "Lunch hall", "Library"],
+              "answer": 1
+            },
+            {
+              "id": "q1_12",
+              "type": "choice",
+              "prompt": "Görseldeki hediyeyi seçiniz.",
+              "image": "images/gift.jpg",
+              "emoji": "🎁",
+              "note": "(Not: Paket yapılmış hediye kutusu görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["A gift", "A cake", "A balloon", "A card"],
+              "answer": 0
+            },
+            {
+              "id": "q1_13",
+              "type": "choice",
+              "prompt": "Görseldeki öğrenciyi seçiniz.",
+              "image": "images/pupil.jpg",
+              "emoji": "🎒",
+              "note": "(Not: Okul üniformalı öğrenci görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Headmaster", "Pupil", "Librarian", "Nurse"],
+              "answer": 1
+            },
+            {
+              "id": "q1_14",
+              "type": "choice",
+              "prompt": "Görseldeki tahta silgisini seçiniz.",
+              "image": "images/duster.jpg",
+              "emoji": "🧼",
+              "note": "(Not: Tahta silgisi görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Ruler", "Duster", "Crayon", "Paintbrush"],
+              "answer": 1
+            },
+            {
+              "id": "q1_15",
+              "type": "choice",
+              "prompt": "Görseldeki kitaplığı seçiniz.",
+              "image": "images/bookcase.jpg",
+              "emoji": "🗄️",
+              "note": "(Not: Kitaplık/kitap rafı görseli. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)",
+              "options": ["Bookcase", "Desk", "Blackboard", "Map"],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "title": "2. Translate to English (MCQ - written)",
+          "emoji": "✍️",
+          "questions": [
+            {
+              "id": "q2_1",
+              "type": "choice",
+              "prompt": "\"Tanıştığımıza memnun oldum!\" cümlesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["How are you?", "Nice to meet you!", "What is your name?"],
+              "answer": 1
+            },
+            {
+              "id": "q2_2",
+              "type": "choice",
+              "prompt": "\"Kaç yaşındasın?\" sorusunun İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["How old are you?", "What month is it?", "Where is the library?"],
+              "answer": 0
+            },
+            {
+              "id": "q2_3",
+              "type": "choice",
+              "prompt": "\"Doğum günün ne zaman?\" sorusunun İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["How are you today?", "When is your birthday?", "Whose birthday is it?"],
+              "answer": 1
+            },
+            {
+              "id": "q2_4",
+              "type": "choice",
+              "prompt": "\"İyi hafta sonları!\" ifadesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["Have a nice day!", "Have a nice weekend!", "Good night!"],
+              "answer": 1
+            },
+            {
+              "id": "q2_5",
+              "type": "choice",
+              "prompt": "\"Seni görmek güzel.\" cümlesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["It's good to see you.", "See you later!", "Take care!"],
+              "answer": 0
+            },
+            {
+              "id": "q2_6",
+              "type": "choice",
+              "prompt": "\"Öğretmen nerede?\" sorusunun İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["Where is the teacher?", "Who is the teacher?", "Is it a teacher?"],
+              "answer": 0
+            },
+            {
+              "id": "q2_7",
+              "type": "choice",
+              "prompt": "\"Kendine iyi bak!\" ifadesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["Good morning!", "Take care!", "You're welcome."],
+              "answer": 1
+            },
+            {
+              "id": "q2_8",
+              "type": "choice",
+              "prompt": "\"Ben sekiz yaşındayım.\" cümlesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["I'm eight years old.", "I'm nine years old.", "My name is Eda."],
+              "answer": 0
+            },
+            {
+              "id": "q2_9",
+              "type": "choice",
+              "prompt": "\"Rica ederim.\" ifadesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["Thank you.", "You're welcome.", "Sorry."],
+              "answer": 1
+            },
+            {
+              "id": "q2_10",
+              "type": "choice",
+              "prompt": "\"Şimdi hangi aydayız?\" sorusunun İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["What month is it now?", "When is your birthday?", "Whose birthday is it?"],
+              "answer": 0
+            },
+            {
+              "id": "q2_11",
+              "type": "choice",
+              "prompt": "\"Dikkatli olun çocuklar!\" cümlesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["Be quiet kids!", "Be careful kids!", "Run in the corridor!"],
+              "answer": 1
+            },
+            {
+              "id": "q2_12",
+              "type": "choice",
+              "prompt": "\"İyiyim, teşekkür ederim.\" cümlesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["I'm fine, thank you.", "Nice to meet you.", "See you later."],
+              "answer": 0
+            },
+            {
+              "id": "q2_13",
+              "type": "choice",
+              "prompt": "\"Koridorda koşmamalısınız.\" cümlesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["You mustn't run in the corridor.", "You must run in the corridor.", "Let's run in the classroom."],
+              "answer": 0
+            },
+            {
+              "id": "q2_14",
+              "type": "choice",
+              "prompt": "\"Bu kimin doğum günü?\" sorusunun İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["Whose birthday is it?", "When is your birthday?", "How old are you?"],
+              "answer": 0
+            },
+            {
+              "id": "q2_15",
+              "type": "choice",
+              "prompt": "\"Benim doğum günüm Temmuz ayında.\" cümlesinin İngilizce karşılığı hangisidir?",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)",
+              "options": ["My birthday is in July.", "My birthday is in June.", "My birthday is in January."],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "title": "3. Translate to English (MCQ - silent)",
+          "emoji": "🎧",
+          "questions": [
+            {
+              "id": "q3_1",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_i_am_eight.mp3",
+              "note": "(Not: \"Ben sekiz yaşındayım.\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["I’m eight years old.", "I’m nine years old.", "My name is Zeynep."],
+              "answer": 0
+            },
+            {
+              "id": "q3_2",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe ifadenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_take_care.mp3",
+              "note": "(Not: \"Kendine iyi bak!\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["Have a nice day!", "Take care!", "Everything is all right!"],
+              "answer": 1
+            },
+            {
+              "id": "q3_3",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe ifadenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_good_weekend.mp3",
+              "note": "(Not: \"İyi hafta sonları!\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["Good morning!", "Have a nice weekend!", "See you later!"],
+              "answer": 1
+            },
+            {
+              "id": "q3_4",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_good_afternoon.mp3",
+              "note": "(Not: \"Tünaydın / İyi öğlenler!\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["Good morning!", "Good afternoon!", "Good night!"],
+              "answer": 1
+            },
+            {
+              "id": "q3_5",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe sorunun İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_whats_your_name.mp3",
+              "note": "(Not: \"Adın ne?\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["What is your name?", "How old are you?", "How are you?"],
+              "answer": 0
+            },
+            {
+              "id": "q3_6",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_see_you_later.mp3",
+              "note": "(Not: \"Sonra görüşürüz!\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["See you later!", "Nice to meet you!", "Good morning!"],
+              "answer": 0
+            },
+            {
+              "id": "q3_7",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_welcome.mp3",
+              "note": "(Not: \"Rica ederim!\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["Thank you!", "You're welcome!", "Sorry!"],
+              "answer": 1
+            },
+            {
+              "id": "q3_8",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_in_june.mp3",
+              "note": "(Not: \"Haziran ayında.\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["It's in June.", "It's in July.", "It's in January."],
+              "answer": 0
+            },
+            {
+              "id": "q3_9",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_good_night.mp3",
+              "note": "(Not: \"İyi geceler!\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["Good evening!", "Good night!", "Good morning!"],
+              "answer": 1
+            },
+            {
+              "id": "q3_10",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe sorunun İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_where_is_eda.mp3",
+              "note": "(Not: \"Eda nerede?\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["Where is Eda?", "Who is Eda?", "How is Eda?"],
+              "answer": 0
+            },
+            {
+              "id": "q3_11",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_happy_birthday.mp3",
+              "note": "(Not: \"İyi ki doğdun!\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["Happy birthday!", "Have a nice day!", "Great job!"],
+              "answer": 0
+            },
+            {
+              "id": "q3_12",
+              "type": "choice",
+              "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+              "audio": "audio/tr_all_right.mp3",
+              "note": "(Not: \"Her şey yolunda!\" Türkçe ses kaydı. Ses: Var, Metin: Yok (yalnızca seçenekler), Boşluk: Yok, 3 Seçenek)",
+              "options": ["Everything is all right!", "That's right!", "Great job!"],
+              "answer": 0
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "title": "4. Arrange the Words (English -> Turkish)",
+          "emoji": "🧩",
+          "questions": [
+            {
+              "id": "q4_1",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "What is your name?",
+              "blocks": ["Senin", "adın", "ne?", "nerede"],
+              "correct_order": ["Senin", "adın", "ne?"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_2",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "I'm fine, thank you.",
+              "blocks": ["Ben", "iyiyim,", "teşekkür ederim.", "kötüyüm"],
+              "correct_order": ["Ben", "iyiyim,", "teşekkür ederim."],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_3",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "How old are you?",
+              "blocks": ["Kaç", "yaşındasın?", "Adın", "ne?"],
+              "correct_order": ["Kaç", "yaşındasın?"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_4",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "Nice to meet you!",
+              "blocks": ["Tanıştığımıza", "memnun", "oldum!", "Hoşça kal"],
+              "correct_order": ["Tanıştığımıza", "memnun", "oldum!"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_5",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "Have a nice weekend!",
+              "blocks": ["İyi", "hafta", "sonları!", "günler!"],
+              "correct_order": ["İyi", "hafta", "sonları!"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_6",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "Where is the library?",
+              "blocks": ["Kütüphane", "nerede?", "Okul", "ne zaman?"],
+              "correct_order": ["Kütüphane", "nerede?"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_7",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "When is your birthday?",
+              "blocks": ["Doğum günün", "ne", "zaman?", "kaç yaşında?"],
+              "correct_order": ["Doğum günün", "ne", "zaman?"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_8",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "Take care!",
+              "blocks": ["Kendine", "iyi", "bak!", "Hoşça kal"],
+              "correct_order": ["Kendine", "iyi", "bak!"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_9",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "See you later!",
+              "blocks": ["Sonra", "görüşürüz!", "Günaydın", "Memnun oldum"],
+              "correct_order": ["Sonra", "görüşürüz!"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_10",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "Good morning teacher!",
+              "blocks": ["Günaydın", "öğretmenim!", "Tünaydın", "Öğrenci"],
+              "correct_order": ["Günaydın", "öğretmenim!"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_11",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "Be careful kids!",
+              "blocks": ["Dikkatli", "olun", "çocuklar!", "Koşmayın"],
+              "correct_order": ["Dikkatli", "olun", "çocuklar!"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            },
+            {
+              "id": "q4_12",
+              "type": "arrange",
+              "prompt": "Verilen İngilizce cümlenin Türkçe karşılığını kelime bloklarını doğru sıraya koyarak oluşturun.",
+              "sentence": "You're welcome!",
+              "blocks": ["Rica", "ederim!", "Teşekkürler", "Lütfen"],
+              "correct_order": ["Rica", "ederim!"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Kelime bloğu)"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "title": "5. Match Pairs (4 Pairs)",
+          "emoji": "🔗",
+          "questions": [
+            {
+              "id": "q5_1",
+              "type": "match",
+              "prompt": "Okul görevlilerini Türkçe karşılıklarıyla eşleştiriniz.",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)",
+              "pairs": [
+                { "left": "Teacher", "right": "Öğretmen" },
+                { "left": "Pupil", "right": "Öğrenci" },
+                { "left": "Headmaster", "right": "Okul Müdürü" },
+                { "left": "Librarian", "right": "Kütüphaneci" }
+              ]
+            },
+            {
+              "id": "q5_2",
+              "type": "match",
+              "prompt": "İngilizce soruları uygun yanıtlarıyla eşleştiriniz.",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)",
+              "pairs": [
+                { "left": "How are you?", "right": "I'm fine, thank you." },
+                { "left": "What's your name?", "right": "My name is Sude." },
+                { "left": "How old are you?", "right": "I'm 8 years old." },
+                { "left": "When's your birthday?", "right": "It's in July." }
+              ]
+            },
+            {
+              "id": "q5_3",
+              "type": "match",
+              "prompt": "Selamlaşma ifadelerini Türkçe karşılıklarıyla eşleştiriniz.",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)",
+              "pairs": [
+                { "left": "Good morning", "right": "Günaydın" },
+                { "left": "Good afternoon", "right": "Tünaydın / İyi öğlenler" },
+                { "left": "Good evening", "right": "İyi akşamlar" },
+                { "left": "Good night", "right": "İyi geceler" }
+              ]
+            },
+            {
+              "id": "q5_4",
+              "type": "match",
+              "prompt": "Okul mekanlarını Türkçe karşılıklarıyla eşleştiriniz.",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)",
+              "pairs": [
+                { "left": "Classroom", "right": "Sınıf" },
+                { "left": "Library", "right": "Kütüphane" },
+                { "left": "Playground", "right": "Oyun alanı / Bahçe" },
+                { "left": "Canteen", "right": "Kantin" }
+              ]
+            },
+            {
+              "id": "q5_5",
+              "type": "match",
+              "prompt": "Doğum günü kelimelerini Türkçe karşılıklarıyla eşleştiriniz.",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)",
+              "pairs": [
+                { "left": "Cake", "right": "Pasta" },
+                { "left": "Candles", "right": "Mumlard" },
+                { "left": "Balloons", "right": "Balonlar" },
+                { "left": "Gift", "right": "Hediye" }
+              ]
+            },
+            {
+              "id": "q5_6",
+              "type": "match",
+              "prompt": "Sınıf nesnelerini Türkçe karşılıklarıyla eşleştiriniz.",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)",
+              "pairs": [
+                { "left": "Coursebook", "right": "Ders kitabı" },
+                { "left": "Duster", "right": "Tahta silgisi" },
+                { "left": "Ruler", "right": "Cetvel" },
+                { "left": "Desk", "right": "Sıra" }
+              ]
+            },
+            {
+              "id": "q5_7",
+              "type": "match",
+              "prompt": "Nezaket ifadelerini Türkçe karşılıklarıyla eşleştiriniz.",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)",
+              "pairs": [
+                { "left": "Thank you", "right": "Teşekkür ederim" },
+                { "left": "You're welcome", "right": "Rica ederim" },
+                { "left": "Sorry", "right": "Özür dilerim" },
+                { "left": "Take care", "right": "Kendine iyi bak" }
+              ]
+            },
+            {
+              "id": "q5_8",
+              "type": "match",
+              "prompt": "Mevsim başı ayları Türkçe karşılıklarıyla eşleştiriniz.",
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)",
+              "pairs": [
+                { "left": "January", "right": "Ocak" },
+                { "left": "April", "right": "Nisan" },
+                { "left": "July", "right": "Temmuz" },
+                { "left": "October", "right": "Ekim" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "title": "6. Arrange the Words (English -> English)",
+          "emoji": "🔤",
+          "questions": [
+            {
+              "id": "q6_1",
+              "type": "arrange",
+              "prompt": "Kelime bloklarını sürükleyerek anlamlı ve doğru bir İngilizce cümle kurun.",
+              "blocks": ["Where", "is", "the", "teacher", "?"],
+              "correct_order": ["Where", "is", "the", "teacher", "?"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Kelime bloğu)"
+            },
+            {
+              "id": "q6_2",
+              "type": "arrange",
+              "prompt": "Kelime bloklarını sürükleyerek anlamlı ve doğru bir İngilizce cümle kurun.",
+              "blocks": ["My", "birthday", "is", "in", "July"],
+              "correct_order": ["My", "birthday", "is", "in", "July"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Kelime bloğu)"
+            },
+            {
+              "id": "q6_3",
+              "type": "arrange",
+              "prompt": "Kelime bloklarını sürükleyerek anlamlı ve doğru bir İngilizce cümle kurun.",
+              "blocks": ["Nice", "to", "meet", "you", "!"],
+              "correct_order": ["Nice", "to", "meet", "you", "!"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Kelime bloğu)"
+            },
+            {
+              "id": "q6_4",
+              "type": "arrange",
+              "prompt": "Kelime bloklarını sürükleyerek anlamlı ve doğru bir İngilizce soru cümlesi kurun.",
+              "blocks": ["What", "is", "your", "name", "?"],
+              "correct_order": ["What", "is", "your", "name", "?"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Kelime bloğu)"
+            },
+            {
+              "id": "q6_5",
+              "type": "arrange",
+              "prompt": "Kelime bloklarını sürükleyerek anlamlı ve doğru bir İngilizce soru cümlesi kurun.",
+              "blocks": ["How", "old", "are", "you", "?"],
+              "correct_order": ["How", "old", "are", "you", "?"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Kelime bloğu)"
+            },
+            {
+              "id": "q6_6",
+              "type": "arrange",
+              "prompt": "Kelime bloklarını sürükleyerek anlamlı ve doğru bir İngilizce cümle kurun.",
+              "blocks": ["I", "am", "eight", "years", "old"],
+              "correct_order": ["I", "am", "eight", "years", "old"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Kelime bloğu)"
+            },
+            {
+              "id": "q6_7",
+              "type": "arrange",
+              "prompt": "Kelime bloklarını sürükleyerek anlamlı ve doğru bir İngilizce cümle kurun.",
+              "blocks": ["Have", "a", "nice", "weekend", "!"],
+              "correct_order": ["Have", "a", "nice", "weekend", "!"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Kelime bloğu)"
+            },
+            {
+              "id": "q6_8",
+              "type": "arrange",
+              "prompt": "Kelime bloklarını sürükleyerek anlamlı ve doğru bir İngilizce soru cümlesi kurun.",
+              "blocks": ["Whose", "birthday", "is", "it", "?"],
+              "correct_order": ["Whose", "birthday", "is", "it", "?"],
+              "note": "(Not: Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Kelime bloğu)"
+            },
+            {
+              "id": "q6_9",
+              "type": "arrange",
+              "prompt": "Kelime bloklarını sürükleyerek anlamlı ve doğru bir İngilizce soru cümlesi kurun.",
+              "blocks": ["When", "is", "your", "birthday", "?"],
+              "correct_100 soruluk kapsamlı **Unit 1: Greetings & School Life** alıştırma seti, `JsonFormat.txt` yapısına tam uyumlu şekilde hazırlanmıştır.
+
+Bu sette 3. Sınıf İngilizce Ders Kitabı ve Çalışma Kitabı'ndaki tüm kelimeler (selamlaşmalar, okul mekanları, görevliler, sınıf eşyaları, aylar, doğum günü ifadeleri ve okul kuralları) 8 farklı soru türüne dağıtılmıştır.
+
+```json
+{
+  "units": [
+    {
+      "id": "u1",
+      "title": "Unit 1: Greetings & School Life",
+      "color": "#58cc02",
+      "sections": [
+        {
+          "id": "s1",
+          "title": "1. Picture Matching",
+          "emoji": "🖼️",
+          "questions": [
+            {"id": "q1_1", "type": "choice", "prompt": "Görsele en uygun mekanı seçiniz.", "image": "images/library.jpg", "emoji": "📚", "note": "(Görsel: Okul kütüphanesi. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Playground", "Library", "Canteen", "Classroom"], "answer": 1},
+            {"id": "q1_2", "type": "choice", "prompt": "Görseldeki selamlaşma ifadesini seçiniz.", "image": "images/morning.jpg", "emoji": "🌅", "note": "(Görsel: Sabah selamlaşması. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Good night", "Good afternoon", "Good morning", "Goodbye"], "answer": 2},
+            {"id": "q1_3", "type": "choice", "prompt": "Görseldeki doğum günü nesnesini seçiniz.", "image": "images/cake.jpg", "emoji": "🎂", "note": "(Görsel: Doğum günü pastası. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Balloons", "A gift", "Candles", "A cake"], "answer": 3},
+            {"id": "q1_4", "type": "choice", "prompt": "Görseldeki okul alanını seçiniz.", "image": "images/playground.jpg", "emoji": "🛝", "note": "(Görsel: Okul bahçesi/oyun parkı. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Sports field", "Playground", "Music room", "Office"], "answer": 1},
+            {"id": "q1_5", "type": "choice", "prompt": "Görseldeki kişiyi seçiniz.", "image": "images/teacher.jpg", "emoji": "👩‍🏫", "note": "(Görsel: Öğretmen. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Librarian", "Headmaster", "Teacher", "Pupil"], "answer": 2},
+            {"id": "q1_6", "type": "choice", "prompt": "Görseldeki ders gerecini seçiniz.", "image": "images/ruler.jpg", "emoji": "📏", "note": "(Görsel: Cetvel. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Duster", "Ruler", "Coursebook", "Pencil"], "answer": 1},
+            {"id": "q1_7", "type": "choice", "prompt": "Görseldeki yeri seçiniz.", "image": "images/canteen.jpg", "emoji": "🥪", "note": "(Görsel: Okul kantini. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Canteen", "Classroom", "Meeting room", "Gym"], "answer": 0},
+            {"id": "q1_8", "type": "choice", "prompt": "Görseldeki süsleme malzemesini seçiniz.", "image": "images/balloons.jpg", "emoji": "🎈", "note": "(Görsel: Balonlar. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Candles", "Balloons", "Bookshelf", "Flashcard"], "answer": 1},
+            {"id": "q1_9", "type": "choice", "prompt": "Görseldeki sınıf eşyasını seçiniz.", "image": "images/blackboard.jpg", "emoji": "🪧", "note": "(Görsel: Yazı tahtası. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Blackboard", "Bookcase", "Desk", "Locker"], "answer": 0},
+            {"id": "q1_10", "type": "choice", "prompt": "Görseldeki eşyayı seçiniz.", "image": "images/desk.jpg", "emoji": "🪑", "note": "(Görsel: Öğrenci sırası. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Teacher's chair", "Student's desk", "Bookshelf", "Bin"], "answer": 1},
+            {"id": "q1_11", "type": "choice", "prompt": "Görseldeki açık alanı seçiniz.", "image": "images/sports_field.jpg", "emoji": "⚽", "note": "(Görsel: Spor sahası. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["Music room", "Sports field", "Lunch hall", "Library"], "answer": 1},
+            {"id": "q1_12", "type": "choice", "prompt": "Görseldeki nesneyi seçiniz.", "image": "images/gift.jpg", "emoji": "🎁", "note": "(Görsel: Hediye paketi. Ses: Yok, Metin: Var, Boşluk: Yok, 4 Seçenek)", "options": ["A gift", "A cake", "A balloon", "A card"], "answer": 0}
+          ]
+        },
+        {
+          "id": "s2",
+          "title": "2. Translate to English (MCQ - written)",
+          "emoji": "✍️",
+          "questions": [
+            {"id": "q2_1", "type": "choice", "prompt": "\"Tanıştığımıza memnun oldum!\" ifadesinin İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["How are you?", "Nice to meet you!", "What is your name?"], "answer": 1},
+            {"id": "q2_2", "type": "choice", "prompt": "\"Kaç yaşındasın?\" sorusunun İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["How old are you?", "What month is it?", "Where is the library?"], "answer": 0},
+            {"id": "q2_3", "type": "choice", "prompt": "\"Doğum günün ne zaman?\" sorusunun İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["How are you today?", "When is your birthday?", "Whose birthday is it?"], "answer": 1},
+            {"id": "q2_4", "type": "choice", "prompt": "\"İyi hafta sonları!\" ifadesinin İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["Have a nice day!", "Have a nice weekend!", "Good night!"], "answer": 1},
+            {"id": "q2_5", "type": "choice", "prompt": "\"Seni görmek güzel.\" ifadesinin İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["It's good to see you.", "See you later!", "Take care!"], "answer": 0},
+            {"id": "q2_6", "type": "choice", "prompt": "\"Öğretmen nerede?\" sorusunun İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["Where is the teacher?", "Who is the teacher?", "Is it a teacher?"], "answer": 0},
+            {"id": "q2_7", "type": "choice", "prompt": "\"Kendine iyi bak!\" ifadesinin İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["Good morning!", "Take care!", "You're welcome."], "answer": 1},
+            {"id": "q2_8", "type": "choice", "prompt": "\"Ben sekiz yaşındayım.\" ifadesinin İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["I'm eight years old.", "I'm nine years old.", "My name is Eda."], "answer": 0},
+            {"id": "q2_9", "type": "choice", "prompt": "\"Rica ederim.\" ifadesinin İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["Thank you.", "You're welcome.", "Sorry."], "answer": 1},
+            {"id": "q2_10", "type": "choice", "prompt": "\"Şimdi hangi aydayız?\" sorusunun İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["What month is it now?", "When is your birthday?", "Whose birthday is it?"], "answer": 0},
+            {"id": "q2_11", "type": "choice", "prompt": "\"Dikkatli olun çocuklar!\" uyarısının İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["Be quiet kids!", "Be careful kids!", "Run in the corridor!"], "answer": 1},
+            {"id": "q2_12", "type": "choice", "prompt": "\"İyiyim, teşekkür ederim.\" yanıtının İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["I'm fine, thank you.", "Nice to meet you.", "See you later."], "answer": 0},
+            {"id": "q2_13", "type": "choice", "prompt": "\"Koridorda koşmamalısınız.\" uyarısının İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["You mustn't run in the corridor.", "You must run in the corridor.", "Let's run in the classroom."], "answer": 0},
+            {"id": "q2_14", "type": "choice", "prompt": "\"Bu kimin doğum günü?\" sorusunun İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["Whose birthday is it?", "When is your birthday?", "How old are you?"], "answer": 0},
+            {"id": "q2_15", "type": "choice", "prompt": "\"Benim doğum günüm Temmuz ayında.\" cümlesinin İngilizcesi nedir?", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 3 Seçenek)", "options": ["My birthday is in July.", "My birthday is in June.", "My birthday is in January."], "answer": 0}
+          ]
+        },
+        {
+          "id": "s3",
+          "title": "3. Translate to English (MCQ - silent)",
+          "emoji": "🎧",
+          "questions": [
+            {"id": "q3_1", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_8_yasi.mp3", "note": "(Ses: \"Ben sekiz yaşındayım\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["I’m eight years old.", "I’m nine years old.", "My name is Zeynep."], "answer": 0},
+            {"id": "q3_2", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_kendine_bak.mp3", "note": "(Ses: \"Kendine iyi bak!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Have a nice day!", "Take care!", "Everything is all right!"], "answer": 1},
+            {"id": "q3_3", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_haftasonu.mp3", "note": "(Ses: \"İyi hafta sonları!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Good morning!", "Have a nice weekend!", "See you later!"], "answer": 1},
+            {"id": "q3_4", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_tunaydin.mp3", "note": "(Ses: \"Tünaydın!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Good morning!", "Good afternoon!", "Good night!"], "answer": 1},
+            {"id": "q3_5", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_adin_ne.mp3", "note": "(Ses: \"Adın ne?\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["What is your name?", "How old are you?", "How are you?"], "answer": 0},
+            {"id": "q3_6", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_gorusuruz.mp3", "note": "(Ses: \"Sonra görüşürüz!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["See you later!", "Nice to meet you!", "Good morning!"], "answer": 0},
+            {"id": "q3_7", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_rica_ederim.mp3", "note": "(Ses: \"Rica ederim!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Thank you!", "You're welcome!", "Sorry!"], "answer": 1},
+            {"id": "q3_8", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_haziranda.mp3", "note": "(Ses: \"Haziran ayında\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["It's in June.", "It's in July.", "It's in January."], "answer": 0},
+            {"id": "q3_9", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_iyi_geceler.mp3", "note": "(Ses: \"İyi geceler!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Good evening!", "Good night!", "Good morning!"], "answer": 1},
+            {"id": "q3_10", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_eda_nerede.mp3", "note": "(Ses: \"Eda nerede?\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Where is Eda?", "Who is Eda?", "How is Eda?"], "answer": 0},
+            {"id": "q3_11", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_dogum_gunun_kutlu.mp3", "note": "(Ses: \"İyi ki doğdun!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Happy birthday!", "Have a nice day!", "Great job!"], "answer": 0},
+            {"id": "q3_12", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_hersey_yolunda.mp3", "note": "(Ses: \"Her şey yolunda!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Everything is all right!", "That's right!", "Great job!"], "answer": 0},
+            {"id": "q3_13", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_iyi_aksamlar.mp3", "note": "(Ses: \"İyi akşamlar!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Good afternoon!", "Good evening!", "Good night!"], "answer": 1},
+            {"id": "q3_14", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_iyi_gunler.mp3", "note": "(Ses: \"İyi günler!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Have a nice day!", "Have a nice weekend!", "Good night!"], "answer": 0},
+            {"id": "q3_15", "type": "choice", "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.", "audio": "audio/tr_sessiz_olun.mp3", "note": "(Ses: \"Sessiz olun!\", Metin: Seçenekler var, Boşluk: Yok, 3 Seçenek)", "options": ["Be quiet!", "Be careful!", "Run fast!"], "answer": 0}
+          ]
+        },
+        {
+          "id": "s4",
+          "title": "4. Arrange the Words (EN -> TR)",
+          "emoji": "🧩",
+          "questions": [
+            {"id": "q4_1", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"What is your name?\"", "sentence": "What is your name?", "blocks": ["Senin", "adın", "ne?", "nerede"], "correct_order": ["Senin", "adın", "ne?"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_2", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"I'm fine, thank you.\"", "sentence": "I'm fine, thank you.", "blocks": ["Ben", "iyiyim,", "teşekkür ederim.", "kötüyüm"], "correct_order": ["Ben", "iyiyim,", "teşekkür ederim."], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_3", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"How old are you?\"", "sentence": "How old are you?", "blocks": ["Kaç", "yaşındasın?", "Adın", "ne?"], "correct_order": ["Kaç", "yaşındasın?"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_4", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"Nice to meet you!\"", "sentence": "Nice to meet you!", "blocks": ["Tanıştığımıza", "memnun", "oldum!", "Hoşça kal"], "correct_order": ["Tanıştığımıza", "memnun", "oldum!"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_5", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"Have a nice weekend!\"", "sentence": "Have a nice weekend!", "blocks": ["İyi", "hafta", "sonları!", "günler!"], "correct_order": ["İyi", "hafta", "sonları!"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_6", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"Where is the library?\"", "sentence": "Where is the library?", "blocks": ["Kütüphane", "nerede?", "Okul", "ne zaman?"], "correct_order": ["Kütüphane", "nerede?"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_7", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"When is your birthday?\"", "sentence": "When is your birthday?", "blocks": ["Doğum günün", "ne", "zaman?", "kaç yaşında?"], "correct_order": ["Doğum günün", "ne", "zaman?"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_8", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"Take care!\"", "sentence": "Take care!", "blocks": ["Kendine", "iyi", "bak!", "Hoşça kal"], "correct_order": ["Kendine", "iyi", "bak!"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_9", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"See you later!\"", "sentence": "See you later!", "blocks": ["Sonra", "görüşürüz!", "Günaydın", "Memnun oldum"], "correct_order": ["Sonra", "görüşürüz!"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_10", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"Good morning teacher!\"", "sentence": "Good morning teacher!", "blocks": ["Günaydın", "öğretmenim!", "Tünaydın", "Öğrenci"], "correct_order": ["Günaydın", "öğretmenim!"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_11", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"Be careful kids!\"", "sentence": "Be careful kids!", "blocks": ["Dikkatli", "olun", "çocuklar!", "Koşmayın"], "correct_order": ["Dikkatli", "olun", "çocuklar!"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"},
+            {"id": "q4_12", "type": "arrange", "prompt": "Türkçe karşılığını sıraya dizin: \"You're welcome!\"", "sentence": "You're welcome!", "blocks": ["Rica", "ederim!", "Teşekkürler", "Lütfen"], "correct_order": ["Rica", "ederim!"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 4 Blok)"}
+          ]
+        },
+        {
+          "id": "s5",
+          "title": "5. Match Pairs (4 Pairs)",
+          "emoji": "🔗",
+          "questions": [
+            {"id": "q5_1", "type": "match", "prompt": "Okul çalışanlarını eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "Teacher", "right": "Öğretmen"}, {"left": "Pupil", "right": "Öğrenci"}, {"left": "Headmaster", "right": "Müdür"}, {"left": "Librarian", "right": "Kütüphaneci"}]},
+            {"id": "q5_2", "type": "match", "prompt": "Soru ve cevapları eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "How are you?", "right": "I'm fine, thank you."}, {"left": "What's your name?", "right": "My name is Sude."}, {"left": "How old are you?", "right": "I'm 8 years old."}, {"left": "When's your birthday?", "right": "It's in July."}]},
+            {"id": "q5_3", "type": "match", "prompt": "Selamlaşmaları eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "Good morning", "right": "Günaydın"}, {"left": "Good afternoon", "right": "Tünaydın"}, {"left": "Good evening", "right": "İyi akşamlar"}, {"left": "Good night", "right": "İyi geceler"}]},
+            {"id": "q5_4", "type": "match", "prompt": "Mekanları eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "Classroom", "right": "Sınıf"}, {"left": "Library", "right": "Kütüphane"}, {"left": "Playground", "right": "Oyun bahçesi"}, {"left": "Canteen", "right": "Kantin"}]},
+            {"id": "q5_5", "type": "match", "prompt": "Parti gereçlerini eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "Cake", "right": "Pasta"}, {"left": "Candles", "right": "Mumlar"}, {"left": "Balloons", "right": "Balonlar"}, {"left": "Gift", "right": "Hediye"}]},
+            {"id": "q5_6", "type": "match", "prompt": "Ders gereçlerini eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "Coursebook", "right": "Ders kitabı"}, {"left": "Duster", "right": "Tahta silgisi"}, {"left": "Ruler", "right": "Cetvel"}, {"left": "Desk", "right": "Sıra"}]},
+            {"id": "q5_7", "type": "match", "prompt": "Nezaket sözlerini eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "Thank you", "right": "Teşekkür ederim"}, {"left": "You're welcome", "right": "Rica ederim"}, {"left": "Sorry", "right": "Özür dilerim"}, {"left": "Take care", "right": "Kendine iyi bak"}]},
+            {"id": "q5_8", "type": "match", "prompt": "Mevsim başı ayları eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "January", "right": "Ocak"}, {"left": "April", "right": "Nisan"}, {"left": "July", "right": "Temmuz"}, {"left": "October", "right": "Ekim"}]},
+            {"id": "q5_9", "type": "match", "prompt": "Sınıf eşyalarını eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "Blackboard", "right": "Kara tahta"}, {"left": "Whiteboard", "right": "Beyaz tahta"}, {"left": "Bookcase", "right": "Kitaplık"}, {"left": "Locker", "right": "Kilitli dolap"}]},
+            {"id": "q5_10", "type": "match", "prompt": "Kişisel eşyaları eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 4 Çift)", "pairs": [{"left": "Workbook", "right": "Çalışma kitabı"}, {"left": "School bag", "right": "Okul çantası"}, {"left": "Pencil", "right": "Kurşun kalem"}, {"left": "Crayon", "right": "Pastel boya"}]}
+          ]
+        },
+        {
+          "id": "s6",
+          "title": "6. Arrange the Words (EN -> EN)",
+          "emoji": "🔤",
+          "questions": [
+            {"id": "q6_1", "type": "arrange", "prompt": "Anlamlı İngilizce cümle kurun.", "blocks": ["Where", "is", "the", "teacher", "?"], "correct_order": ["Where", "is", "the", "teacher", "?"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_2", "type": "arrange", "prompt": "Anlamlı İngilizce cümle kurun.", "blocks": ["My", "birthday", "is", "in", "July"], "correct_order": ["My", "birthday", "is", "in", "July"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_3", "type": "arrange", "prompt": "Anlamlı İngilizce cümle kurun.", "blocks": ["Nice", "to", "meet", "you", "!"], "correct_order": ["Nice", "to", "meet", "you", "!"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_4", "type": "arrange", "prompt": "Anlamlı İngilizce soru cümlesi kurun.", "blocks": ["What", "is", "your", "name", "?"], "correct_order": ["What", "is", "your", "name", "?"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_5", "type": "arrange", "prompt": "Anlamlı İngilizce soru cümlesi kurun.", "blocks": ["How", "old", "are", "you", "?"], "correct_order": ["How", "old", "are", "you", "?"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_6", "type": "arrange", "prompt": "Anlamlı İngilizce cümle kurun.", "blocks": ["I", "am", "eight", "years", "old"], "correct_order": ["I", "am", "eight", "years", "old"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_7", "type": "arrange", "prompt": "Anlamlı İngilizce cümle kurun.", "blocks": ["Have", "a", "nice", "weekend", "!"], "correct_order": ["Have", "a", "nice", "weekend", "!"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_8", "type": "arrange", "prompt": "Anlamlı İngilizce soru cümlesi kurun.", "blocks": ["Whose", "birthday", "is", "it", "?"], "correct_order": ["Whose", "birthday", "is", "it", "?"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_9", "type": "arrange", "prompt": "Anlamlı İngilizce soru cümlesi kurun.", "blocks": ["When", "is", "your", "birthday", "?"], "correct_order": ["When", "is", "your", "birthday", "?"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_10", "type": "arrange", "prompt": "Anlamlı İngilizce cümle kurun.", "blocks": ["You", "mustn't", "run", "in", "corridor"], "correct_order": ["You", "mustn't", "run", "in", "corridor"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_11", "type": "arrange", "prompt": "Anlamlı İngilizce cümle kurun.", "blocks": ["It", "is", "good", "to", "see"], "correct_order": ["It", "is", "good", "to", "see"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"},
+            {"id": "q6_12", "type": "arrange", "prompt": "Anlamlı İngilizce cümle kurun.", "blocks": ["She", "is", "in", "the", "library"], "correct_order": ["She", "is", "in", "the", "library"], "note": "(Ses: Yok, Metin: Var, Boşluk: Tam boşluk, 5 Blok)"}
+          ]
+        },
+        {
+          "id": "s7",
+          "title": "7. Match Pairs (5 Pairs)",
+          "emoji": "🌟",
+          "questions": [
+            {"id": "q7_1", "type": "match", "prompt": "Ayları Türkçe karşılıklarıyla eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "January", "right": "Ocak"}, {"left": "March", "right": "Mart"}, {"left": "May", "right": "Mayıs"}, {"left": "June", "right": "Haziran"}, {"left": "September", "right": "Eylül"}]},
+            {"id": "q7_2", "type": "match", "prompt": "Ders araçlarını Türkçe karşılıklarıyla eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "Coursebook", "right": "Ders kitabı"}, {"left": "Exercise book", "right": "Defter"}, {"left": "Ruler", "right": "Cetvel"}, {"left": "Flashcard", "right": "Bilgi kartı"}, {"left": "Desk", "right": "Öğrenci sırası"}]},
+            {"id": "q7_3", "type": "match", "prompt": "Ayların devamını eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "February", "right": "Şubat"}, {"left": "August", "right": "Ağustos"}, {"left": "October", "right": "Ekim"}, {"left": "November", "right": "Kasım"}, {"left": "December", "right": "Aralık"}]},
+            {"id": "q7_4", "type": "match", "prompt": "Okul alanlarını eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "Lunch hall", "right": "Yemekhane"}, {"left": "Music room", "right": "Müzik odası"}, {"left": "Meeting room", "right": "Toplantı odası"}, {"left": "Office", "right": "Ofis / İdare"}, {"left": "Sports field", "right": "Spor sahası"}]},
+            {"id": "q7_5", "type": "match", "prompt": "Sınıf eylemlerini eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "Listen", "right": "Dinlemek"}, {"left": "Read", "right": "Okumak"}, {"left": "Write", "right": "Yazmak"}, {"left": "Match", "right": "Eşleştirmek"}, {"left": "Spell", "right": "Harf harf söylemek"}]},
+            {"id": "q7_6", "type": "match", "prompt": "Sınıf araç gereçlerini eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "Paintbrush", "right": "Boya fırçası"}, {"left": "Map", "right": "Harita"}, {"left": "Microphone", "right": "Mikrofon"}, {"left": "Keyboard", "right": "Klavye"}, {"left": "Mouse", "right": "Fare"}]},
+            {"id": "q7_7", "type": "match", "prompt": "Ders isimlerini Türkçe karşılıklarıyla eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "Maths", "right": "Matematik"}, {"left": "Science", "right": "Fen Bilgisi"}, {"left": "Life Study", "right": "Hayat Bilgisi"}, {"left": "Turkish", "right": "Türkçe"}, {"left": "Music", "right": "Müzik"}]},
+            {"id": "q7_8", "type": "match", "prompt": "Sınıf eylemlerini eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "Open", "right": "Açmak"}, {"left": "Close", "right": "Kapatmak"}, {"left": "Point", "right": "İşaret etmek"}, {"left": "Show", "right": "Göstermek"}, {"left": "Repeat", "right": "Tekrar etmek"}]},
+            {"id": "q7_9", "type": "match", "prompt": "Çalışma odası eşyalarını eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "Teacher's chair", "right": "Öğretmen sandalyesi"}, {"left": "Teacher's desk", "right": "Öğretmen masası"}, {"left": "Bookshelf", "right": "Kitap rafı"}, {"left": "Bin", "right": "Çöp kutusu"}, {"left": "Locker", "right": "Dolap"}]},
+            {"id": "q7_10", "type": "match", "prompt": "Diğer okul kavramlarını eşleştiriniz.", "note": "(Ses: Yok, Metin: Var, Boşluk: Yok, 5 Çift)", "pairs": [{"left": "School nurse", "right": "Okul hemşiresi"}, {"left": "Friend", "right": "Arkadaş"}, {"left": "Lesson", "right": "Ders"}, {"left": "Page", "right": "Sayfa"}, {"left": "Prize", "right": "Ödül"}]}
+          ]
+        },
+        {
+          "id": "s8",
+          "title": "8. Choose & Speak (Microphone)",
+          "emoji": "🎙️",
+          "questions": [
+            {"id": "q8_1", "type": "speak_classic", "prompt": "Ekranda görünen İngilizce cümleyi mikrofona sesli okuyunuz.", "text_to_read": "Good morning, Mr. Bulut! Have a nice weekend!", "note": "(Classic Speak. Ses: Yok, Metin: Var, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_2", "type": "speak_listen_repeat", "prompt": "Dinlediğiniz İngilizce cümleyi mikrofona tekrar ediniz.", "audio": "audio/nice_to_meet.mp3", "expected_speech": "Nice to meet you, Daphne!", "note": "(Listen & Speak. Ses: Var, Metin: Yok, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_3", "type": "speak_translate", "prompt": "Türkçe verilen cümleyi İngilizceye çevirerek mikrofona söyleyiniz.", "turkish_prompt": "Hoşça kal, sonra görüşürüz!", "expected_speech": "Goodbye, see you later!", "note": "(Translate & Speak. Ses: Yok, Metin: Var, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_4", "type": "speak_picture_describe", "prompt": "Görseldeki okul mekanını İngilizce olarak mikrofona söyleyiniz.", "image": "images/playground.jpg", "expected_speech": "Playground", "note": "(Picture Describe. Ses: Yok, Metin: Yok, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_5", "type": "speak_choose_response", "prompt": "Dinlediğiniz soruya en uygun yanıtı seçip mikrofona sesli okuyunuz.", "audio": "audio/how_are_you.mp3", "options": ["I'm 8 years old.", "I'm fine, thank you.", "My name is Eren."], "answer": 1, "expected_speech": "I'm fine, thank you.", "note": "(Choose Correct Response. Ses: Var, Metin: Var, Boşluk: Kısmi, 3 Seçenek + Mikrofon)"},
+            {"id": "q8_6", "type": "speak_classic", "prompt": "Ekranda görünen cümleyi mikrofona sesli okuyunuz.", "text_to_read": "My birthday is in July. What about you?", "note": "(Classic Speak. Ses: Yok, Metin: Var, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_7", "type": "speak_listen_repeat", "prompt": "Dinlediğiniz İngilizce cümleyi mikrofona tekrar ediniz.", "audio": "audio/where_is_eda.mp3", "expected_speech": "Where is Eda?", "note": "(Listen & Speak. Ses: Var, Metin: Yok, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_8", "type": "speak_translate", "prompt": "Türkçe cümleyi İngilizceye çevirip mikrofona söyleyiniz.", "turkish_prompt": "Kendine iyi bak!", "expected_speech": "Take care!", "note": "(Translate & Speak. Ses: Yok, Metin: Var, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_9", "type": "speak_picture_describe", "prompt": "Görseldeki ders gerecini İngilizce olarak mikrofona söyleyiniz.", "image": "images/ruler.jpg", "expected_speech": "Ruler", "note": "(Picture Describe. Ses: Yok, Metin: Yok, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_10", "type": "speak_choose_response", "prompt": "Dinlediğiniz soruya en uygun yanıtı seçip sesli okuyunuz.", "audio": "audio/how_old_are_you.mp3", "options": ["I'm eight years old.", "My name is Ali.", "It's in June."], "answer": 0, "expected_speech": "I'm eight years old.", "note": "(Choose Response & Speak. Ses: Var, Metin: Var, Boşluk: Kısmi, 3 Seçenek + Mikrofon)"},
+            {"id": "q8_11", "type": "speak_classic", "prompt": "Ekranda görünen İngilizce uyarını mikrofona okuyunuz.", "text_to_read": "Be careful kids! You mustn't run in the corridor.", "note": "(Classic Speak. Ses: Yok, Metin: Var, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_12", "type": "speak_listen_repeat", "prompt": "Dinlediğiniz cümleyi mikrofona tekrar ediniz.", "audio": "audio/happy_birthday.mp3", "expected_speech": "Happy birthday to you!", "note": "(Listen & Speak. Ses: Var, Metin: Yok, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_13", "type": "speak_translate", "prompt": "Türkçe ifadeyi İngilizceye çevirip sesli söyleyiniz.", "turkish_prompt": "Rica ederim!", "expected_speech": "You're welcome!", "note": "(Translate & Speak. Ses: Yok, Metin: Var, Boşluk: Yok, Mikrofon)"},
+            {"id": "q8_14", "type": "speak_picture_describe", "prompt": "Görseldeki mekanı İngilizce olarak mikrofona söyleyiniz.", "image": "images/library.jpg", "expected_speech": "Library", "note": "(Picture Describe. Ses: Yok, Metin: Yok, Boşluk: Yok, Mikrofon)"}
+          ]
+        }
+      ]
+    }
+  ]
+}
