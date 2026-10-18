@@ -38,7 +38,7 @@ h2{font-size:22px;margin:8px 0 16px}
 .rt{display:inline-block;background:#ffdfe0;color:#d33;border-radius:10px;padding:2px 10px;font-size:13px;font-weight:900;margin-bottom:6px}
 .spk{width:84px;height:84px;border-radius:24px;border:0;background:var(--b);box-shadow:0 5px 0 var(--bd);font-size:38px;cursor:pointer;margin:6px 0 16px}
 .spk:active,.mic:active{transform:translateY(4px);box-shadow:none}
-.pic{width:100%;max-height:220px;object-fit:cover;border-radius:20px;margin-bottom:14px}
+.pic{display:block;width:100%;height:auto;max-height:min(38vh,300px);object-fit:contain;background:#f3f4f6;border-radius:20px;margin:0 auto 14px}
 .em{font-size:96px;text-align:center;margin:8px 0 14px}
 .opt,.tk,.mt{display:block;width:100%;padding:14px;margin:0 0 12px;border:2px solid var(--l);border-bottom-width:5px;border-radius:16px;background:#fff;font:800 18px Nunito,sans-serif;color:var(--t);cursor:pointer;text-align:left}
 .opt.sel,.mt.sel{border-color:var(--b);background:#ddf4ff;color:var(--bd)}
@@ -180,12 +180,12 @@ function show(q){$('#ft').className='';$('#msg').innerHTML='';const e=$('#q');e.
  ({choice,arrange,match,speak})[q.type](q)}
 
 function choice(q){let sel=-1;
- $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2>${q.audio?'<button class="spk">🔊</button>':''}${pic(q)}`+q.options.map((o,i)=>`<button class="opt" data-i="${i}">${o}</button>`).join('');
+ $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2>${q.audio?'<button class="spk">🔊</button>':''}${pic(q)}`+shuf(q.options.map((o,i)=>i)).map(i=>`<button class="opt" data-i="${i}">${q.options[i]}</button>`).join('');
  if(q.audio)spk(q.audio,1);
  const os=[...$('#q').querySelectorAll('.opt')];
  os.forEach(o=>o.onclick=()=>{os.forEach(x=>x.classList.remove('sel'));o.classList.add('sel');sel=+o.dataset.i;setBtn('KONTROL ET',chk)});
  setBtn('KONTROL ET',chk,1);
- function chk(){const ok=sel==q.answer;os.forEach(o=>o.disabled=true);os[sel].classList.add(ok?'ok':'no');os[q.answer].classList.add('ok');
+ function chk(){const ok=sel==q.answer;os.forEach(o=>o.disabled=true);os.find(o=>+o.dataset.i==sel).classList.add(ok?'ok':'no');os.find(o=>+o.dataset.i==q.answer).classList.add('ok');
   if(ok&&q.speakAfter){sfx('correct');return show({type:'speak',prompt:'Doğru! Şimdi sesli söyle 👇',display:q.options[q.answer],accepted:[q.options[q.answer]]})}
   fb(ok,ok?'':'Doğru cevap: '+q.options[q.answer])}}
 
@@ -214,7 +214,7 @@ function speak(q){const SR=window.SpeechRecognition||window.webkitSpeechRecognit
  $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2><div class="center">${q.audio?'<button class="spk">🔊</button>':''}${pic(q)}${q.display?`<h2 style="color:var(--bd)">${q.display}</h2>`:''}${SR?'<button class="mic" id="mic">🎤</button><div class="said" id="said">Mikrofona dokun ve konuş</div>':'<p>⚠️ Bu tarayıcı mikrofonu desteklemiyor. Chrome kullan.</p>'}<button class="skip">Şimdi konuşamıyorum • Geç</button></div>`;
  $('.skip').onclick=skipq;
  if(q.audio)spk(q.audio,1);
- const norm=s=>s.toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
+ const norm=s=>s.toLowerCase().replace(/[’‘]/g,"'").replace(/\bcan ?not\b/g,"can't").replace(/[^a-z0-9' ]/g,' ').split(/\s+/).filter(Boolean);
  const score=(h,e)=>{const H=norm(h),E=norm(e);return E.length?E.filter(w=>H.includes(w)).length/E.length:0};
  setBtn('',null,1,1);
  if(!SR)return setBtn('GEÇ',skipq);

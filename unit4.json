@@ -1,0 +1,1754 @@
+{
+ "unit": 4,
+ "title": "Feelings & Needs",
+ "color": "#ff9600",
+ "emoji": "😊",
+ "sections": [
+  {
+   "id": "s1",
+   "title": "Resim Eşleştirme",
+   "emoji": "🖼️",
+   "questions": [
+    {
+     "id": "q1_1",
+     "type": "choice",
+     "prompt": "Görseldeki hissi / ihtiyacı seçiniz.",
+     "image": "images/hungry.jpg",
+     "emoji": "🥪",
+     "options": [
+      "Hungry",
+      "Thirsty",
+      "Tired",
+      "Happy"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_2",
+     "type": "choice",
+     "prompt": "Görseldeki hissi / ihtiyacı seçiniz.",
+     "image": "images/thirsty.jpg",
+     "emoji": "🧃",
+     "options": [
+      "Hungry",
+      "Thirsty",
+      "Cold",
+      "Angry"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_3",
+     "type": "choice",
+     "prompt": "Görseldeki duygu durumunu seçiniz.",
+     "image": "images/tired.jpg",
+     "emoji": "🥱",
+     "options": [
+      "Energetic",
+      "Tired",
+      "Sad",
+      "Surprised"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_4",
+     "type": "choice",
+     "prompt": "Görseldeki duygu durumunu seçiniz.",
+     "image": "images/happy.jpg",
+     "emoji": "😊",
+     "options": [
+      "Sad",
+      "Happy",
+      "Scared",
+      "Angry"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_5",
+     "type": "choice",
+     "prompt": "Görseldeki duygu durumunu seçiniz.",
+     "image": "images/sad.jpg",
+     "emoji": "😢",
+     "options": [
+      "Happy",
+      "Sad",
+      "Energetic",
+      "Hungry"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_6",
+     "type": "choice",
+     "prompt": "Görseldeki duygu durumunu seçiniz.",
+     "image": "images/angry.jpg",
+     "emoji": "😡",
+     "options": [
+      "Scared",
+      "Surprised",
+      "Angry",
+      "Calm"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_7",
+     "type": "choice",
+     "prompt": "Görseldeki hissi seçiniz.",
+     "image": "images/cold.jpg",
+     "emoji": "🥶",
+     "options": [
+      "Hot",
+      "Cold",
+      "Thirsty",
+      "Hungry"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_8",
+     "type": "choice",
+     "prompt": "Görseldeki hissi seçiniz.",
+     "image": "images/hot.jpg",
+     "emoji": "🥵",
+     "options": [
+      "Cold",
+      "Hot",
+      "Tired",
+      "Sick"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_9",
+     "type": "choice",
+     "prompt": "Görseldeki durumu seçiniz.",
+     "image": "images/sleepy.jpg",
+     "emoji": "😴",
+     "options": [
+      "Sleepy",
+      "Happy",
+      "Energetic",
+      "Thirsty"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_10",
+     "type": "choice",
+     "prompt": "Görseldeki sağlık durumunu seçiniz.",
+     "image": "images/sick.jpg",
+     "emoji": "🤒",
+     "options": [
+      "Healthy",
+      "Sick",
+      "Hungry",
+      "Scared"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_11",
+     "type": "choice",
+     "prompt": "Görseldeki eylemi / öneriyi seçiniz.",
+     "image": "images/eat_sandwich.jpg",
+     "emoji": "🥪",
+     "options": [
+      "Drink water",
+      "Eat a sandwich",
+      "Sleep",
+      "Play games"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_12",
+     "type": "choice",
+     "prompt": "Görseldeki eylemi / öneriyi seçiniz.",
+     "image": "images/drink_water.jpg",
+     "emoji": "💧",
+     "options": [
+      "Eat food",
+      "Drink water",
+      "Go to bed",
+      "Run fast"
+     ],
+     "answer": 1
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "title": "Çeviri",
+   "emoji": "✍️",
+   "questions": [
+    {
+     "id": "q2_1",
+     "type": "choice",
+     "prompt": "\"Ben açım.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am hungry.",
+      "I am thirsty.",
+      "I am tired."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_2",
+     "type": "choice",
+     "prompt": "\"Ben susadım.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am hungry.",
+      "I am thirsty.",
+      "I am cold."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_3",
+     "type": "choice",
+     "prompt": "\"Hadi yemek yiyelim!\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "Let's eat!",
+      "Let's drink!",
+      "Let's sleep!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_4",
+     "type": "choice",
+     "prompt": "\"Hadi su içelim!\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "Let's drink water!",
+      "Let's eat food!",
+      "Let's play!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_5",
+     "type": "choice",
+     "prompt": "\"Ben yorgunum.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am energetic.",
+      "I am tired.",
+      "I am happy."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_6",
+     "type": "choice",
+     "prompt": "\"Hadi uyuyalım!\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "Let's sleep!",
+      "Let's run!",
+      "Let's dance!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_7",
+     "type": "choice",
+     "prompt": "\"Üşüdüm.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am hot.",
+      "I am cold.",
+      "I am sick."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_8",
+     "type": "choice",
+     "prompt": "\"Sıcakladım.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am cold.",
+      "I am hot.",
+      "I am tired."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_9",
+     "type": "choice",
+     "prompt": "\"O üzgün.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "She is happy.",
+      "She is sad.",
+      "She is angry."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_10",
+     "type": "choice",
+     "prompt": "\"O mutlu.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "He is sad.",
+      "He is happy.",
+      "He is scared."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_11",
+     "type": "choice",
+     "prompt": "\"Ben hastayım.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am fine.",
+      "I am sick.",
+      "I am energetic."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_12",
+     "type": "choice",
+     "prompt": "\"Hadi oyun oynayalım!\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "Let's play games!",
+      "Let's study!",
+      "Let's sleep!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_13",
+     "type": "choice",
+     "prompt": "\"Korktun mu?\" sorusunun İngilizce karşılığı hangisidir?",
+     "options": [
+      "Are you scared?",
+      "Are you hungry?",
+      "Are you tired?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_14",
+     "type": "choice",
+     "prompt": "\"Uykum var.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am sleepy.",
+      "I am hungry.",
+      "I am thirsty."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_15",
+     "type": "choice",
+     "prompt": "\"Ben iyiyim, teşekkürler.\" cümlesinin İngilizce karşılığı hangisidir?",
+     "options": [
+      "I am fine, thank you.",
+      "I am sick, thank you.",
+      "I am sad, thank you."
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "title": "Dinle ve Seç",
+   "emoji": "🎧",
+   "questions": [
+    {
+     "id": "q3_1",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben açım.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am hungry.",
+      "I am thirsty.",
+      "I am tired."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_2",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben susadım.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am hungry.",
+      "I am thirsty.",
+      "I am cold."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_3",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Hadi su içelim.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Let's drink water.",
+      "Let's eat food.",
+      "Let's sleep."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_4",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben yorgunum.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am energetic.",
+      "I am tired.",
+      "I am sad."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_5",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Üşüdüm.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am hot.",
+      "I am cold.",
+      "I am sick."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_6",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Sıcakladım.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am cold.",
+      "I am hot.",
+      "I am hungry."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_7",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben hastayım.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am healthy.",
+      "I am sick.",
+      "I am happy."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_8",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Uykum var.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am sleepy.",
+      "I am hungry.",
+      "I am thirsty."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_9",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Hadi yemek yiyelim.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Let's eat.",
+      "Let's sleep.",
+      "Let's play."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_10",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Hadi uyuyalım.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Let's sleep.",
+      "Let's drink.",
+      "Let's run."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_11",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben çok mutluyum.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am very sad.",
+      "I am very happy.",
+      "I am very angry."
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_12",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "O kızgın.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "She is angry.",
+      "She is happy.",
+      "She is sleepy."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_13",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Korktun mu?",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Are you scared?",
+      "Are you tired?",
+      "Are you hungry?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_14",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Ben iyiyim.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I am fine.",
+      "I am sick.",
+      "I am bad."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_15",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe cümlenin İngilizce karşılığını seçiniz.",
+     "audio": {
+      "text": "Hadi dışarı çıkalım.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Let's go out.",
+      "Let's eat.",
+      "Let's sleep."
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "title": "Kelime Sırala",
+   "emoji": "🧩",
+   "questions": [
+    {
+     "id": "q4_1",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "I am hungry.",
+     "audio": {
+      "text": "I am hungry.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Ben",
+      "açım.",
+      "susadım."
+     ],
+     "answer": [
+      "Ben",
+      "açım."
+     ]
+    },
+    {
+     "id": "q4_2",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "I am thirsty.",
+     "audio": {
+      "text": "I am thirsty.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Ben",
+      "susadım.",
+      "tokum."
+     ],
+     "answer": [
+      "Ben",
+      "susadım."
+     ]
+    },
+    {
+     "id": "q4_3",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "Let's eat!",
+     "audio": {
+      "text": "Let's eat!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Hadi",
+      "yemek",
+      "yiyelim!",
+      "içelim!"
+     ],
+     "answer": [
+      "Hadi",
+      "yemek",
+      "yiyelim!"
+     ]
+    },
+    {
+     "id": "q4_4",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "Let's drink water!",
+     "audio": {
+      "text": "Let's drink water!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Hadi",
+      "su",
+      "içelim!",
+      "uyuyalım!"
+     ],
+     "answer": [
+      "Hadi",
+      "su",
+      "içelim!"
+     ]
+    },
+    {
+     "id": "q4_5",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "I am tired.",
+     "audio": {
+      "text": "I am tired.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Ben",
+      "yorgunum.",
+      "mutluyum."
+     ],
+     "answer": [
+      "Ben",
+      "yorgunum."
+     ]
+    },
+    {
+     "id": "q4_6",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "Let's sleep!",
+     "audio": {
+      "text": "Let's sleep!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Hadi",
+      "uyuyalım!",
+      "koşalım!"
+     ],
+     "answer": [
+      "Hadi",
+      "uyuyalım!"
+     ]
+    },
+    {
+     "id": "q4_7",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "I am cold.",
+     "audio": {
+      "text": "I am cold.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Ben",
+      "üşüdüm.",
+      "sıcakladım."
+     ],
+     "answer": [
+      "Ben",
+      "üşüdüm."
+     ]
+    },
+    {
+     "id": "q4_8",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "I am hot.",
+     "audio": {
+      "text": "I am hot.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Ben",
+      "sıcakladım.",
+      "üşüdüm."
+     ],
+     "answer": [
+      "Ben",
+      "sıcakladım."
+     ]
+    },
+    {
+     "id": "q4_9",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "Are you hungry?",
+     "audio": {
+      "text": "Are you hungry?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Aç",
+      "mısın?",
+      "Susadın"
+     ],
+     "answer": [
+      "Aç",
+      "mısın?"
+     ]
+    },
+    {
+     "id": "q4_10",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "I feel sleepy.",
+     "audio": {
+      "text": "I feel sleepy.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Uykulu",
+      "hissediyorum.",
+      "mutlu"
+     ],
+     "answer": [
+      "Uykulu",
+      "hissediyorum."
+     ]
+    },
+    {
+     "id": "q4_11",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "I am sick today.",
+     "audio": {
+      "text": "I am sick today.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Bugün",
+      "hastayım.",
+      "iyiyim."
+     ],
+     "answer": [
+      "Bugün",
+      "hastayım."
+     ]
+    },
+    {
+     "id": "q4_12",
+     "type": "arrange",
+     "hint": "Cümlenin Türkçesini doğru sırala:",
+     "prompt": "Let's play a game!",
+     "audio": {
+      "text": "Let's play a game!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Hadi",
+      "oyun",
+      "oynayalım!",
+      "ders"
+     ],
+     "answer": [
+      "Hadi",
+      "oyun",
+      "oynayalım!"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "title": "Eşleştir",
+   "emoji": "🔗",
+   "questions": [
+    {
+     "id": "q5_1",
+     "type": "match",
+     "prompt": "Duyguları eşleştir!",
+     "pairs": [
+      {
+       "left": "Happy",
+       "right": "Mutlu"
+      },
+      {
+       "left": "Sad",
+       "right": "Üzgün"
+      },
+      {
+       "left": "Angry",
+       "right": "Kızgın"
+      },
+      {
+       "left": "Scared",
+       "right": "Korkmuş"
+      }
+     ]
+    },
+    {
+     "id": "q5_2",
+     "type": "match",
+     "prompt": "Fiziksel hisleri eşleştir!",
+     "pairs": [
+      {
+       "left": "Hungry",
+       "right": "Aç"
+      },
+      {
+       "left": "Thirsty",
+       "right": "Susamış"
+      },
+      {
+       "left": "Cold",
+       "right": "Üşümüş"
+      },
+      {
+       "left": "Hot",
+       "right": "Sıcak"
+      }
+     ]
+    },
+    {
+     "id": "q5_3",
+     "type": "match",
+     "prompt": "Durumları eşleştir!",
+     "pairs": [
+      {
+       "left": "Tired",
+       "right": "Yorgun"
+      },
+      {
+       "left": "Sleepy",
+       "right": "Uykulu"
+      },
+      {
+       "left": "Sick",
+       "right": "Hasta"
+      },
+      {
+       "left": "Energetic",
+       "right": "Enerjik"
+      }
+     ]
+    },
+    {
+     "id": "q5_4",
+     "type": "match",
+     "prompt": "Öneri cümlelerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Let's eat",
+       "right": "Hadi yemek yiyelim"
+      },
+      {
+       "left": "Let's drink",
+       "right": "Hadi içelim"
+      },
+      {
+       "left": "Let's sleep",
+       "right": "Hadi uyuyalım"
+      },
+      {
+       "left": "Let's play",
+       "right": "Hadi oynayalım"
+      }
+     ]
+    },
+    {
+     "id": "q5_5",
+     "type": "match",
+     "prompt": "Zıt durumları eşleştir!",
+     "pairs": [
+      {
+       "left": "Hot",
+       "right": "Cold"
+      },
+      {
+       "left": "Happy",
+       "right": "Sad"
+      },
+      {
+       "left": "Hungry",
+       "right": "Full"
+      },
+      {
+       "left": "Sick",
+       "right": "Healthy"
+      }
+     ]
+    },
+    {
+     "id": "q5_6",
+     "type": "match",
+     "prompt": "Soruyla cevabı eşleştir!",
+     "pairs": [
+      {
+       "left": "Are you hungry?",
+       "right": "Yes, I am."
+      },
+      {
+       "left": "Is he sleepy?",
+       "right": "No, he isn't."
+      },
+      {
+       "left": "Is she sick?",
+       "right": "Yes, she is."
+      },
+      {
+       "left": "How do you feel?",
+       "right": "I feel tired."
+      }
+     ]
+    },
+    {
+     "id": "q5_7",
+     "type": "match",
+     "prompt": "Eylemleri eşleştir!",
+     "pairs": [
+      {
+       "left": "Eat food",
+       "right": "Yemek yemek"
+      },
+      {
+       "left": "Drink water",
+       "right": "Su içmek"
+      },
+      {
+       "left": "Go to sleep",
+       "right": "Uyumaya gitmek"
+      },
+      {
+       "left": "Rest now",
+       "right": "Şimdi dinlenmek"
+      }
+     ]
+    },
+    {
+     "id": "q5_8",
+     "type": "match",
+     "prompt": "Duygu nitelemelerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Surprised",
+       "right": "Şaşırmış"
+      },
+      {
+       "left": "Bored",
+       "right": "Sıkılmış"
+      },
+      {
+       "left": "Fine",
+       "right": "İyi"
+      },
+      {
+       "left": "Bad",
+       "right": "Kötü"
+      }
+     ]
+    },
+    {
+     "id": "q5_9",
+     "type": "match",
+     "prompt": "Günlük ifadeleri eşleştir!",
+     "pairs": [
+      {
+       "left": "I am fine",
+       "right": "İyiyim"
+      },
+      {
+       "left": "I am hungry",
+       "right": "Acıktım"
+      },
+      {
+       "left": "I am cold",
+       "right": "Üşüdüm"
+      },
+      {
+       "left": "I am tired",
+       "right": "Yoruldum"
+      }
+     ]
+    },
+    {
+     "id": "q5_10",
+     "type": "match",
+     "prompt": "İstek ve eylemleri eşleştir!",
+     "pairs": [
+      {
+       "left": "Eat a sandwich",
+       "right": "Sandviç yemek"
+      },
+      {
+       "left": "Drink fruit juice",
+       "right": "Meyve suyu içmek"
+      },
+      {
+       "left": "Sleep early",
+       "right": "Erken uyumak"
+      },
+      {
+       "left": "Play outside",
+       "right": "Dışarıda oynamak"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "title": "Cümle Kur",
+   "emoji": "🏗️",
+   "questions": [
+    {
+     "id": "q6_1",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "I",
+      "am",
+      "very",
+      "hungry",
+      "."
+     ],
+     "answer": [
+      "I",
+      "am",
+      "very",
+      "hungry",
+      "."
+     ]
+    },
+    {
+     "id": "q6_2",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Let's",
+      "drink",
+      "some",
+      "water",
+      "!"
+     ],
+     "answer": [
+      "Let's",
+      "drink",
+      "some",
+      "water",
+      "!"
+     ]
+    },
+    {
+     "id": "q6_3",
+     "type": "arrange",
+     "hint": "Doğru İngilizce soru cümlesini oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Are",
+      "you",
+      "feeling",
+      "tired",
+      "?"
+     ],
+     "answer": [
+      "Are",
+      "you",
+      "feeling",
+      "tired",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_4",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "She",
+      "is",
+      "not",
+      "sad",
+      "."
+     ],
+     "answer": [
+      "She",
+      "is",
+      "not",
+      "sad",
+      "."
+     ]
+    },
+    {
+     "id": "q6_5",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "I",
+      "feel",
+      "happy",
+      "today",
+      "."
+     ],
+     "answer": [
+      "I",
+      "feel",
+      "happy",
+      "today",
+      "."
+     ]
+    },
+    {
+     "id": "q6_6",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Let's",
+      "eat",
+      "a",
+      "sandwich",
+      "!"
+     ],
+     "answer": [
+      "Let's",
+      "eat",
+      "a",
+      "sandwich",
+      "!"
+     ]
+    },
+    {
+     "id": "q6_7",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "He",
+      "is",
+      "very",
+      "sleepy",
+      "."
+     ],
+     "answer": [
+      "He",
+      "is",
+      "very",
+      "sleepy",
+      "."
+     ]
+    },
+    {
+     "id": "q6_8",
+     "type": "arrange",
+     "hint": "Doğru İngilizce soru cümlesini oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Are",
+      "you",
+      "hungry",
+      "now",
+      "?"
+     ],
+     "answer": [
+      "Are",
+      "you",
+      "hungry",
+      "now",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_9",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "I",
+      "am",
+      "cold",
+      "today",
+      "."
+     ],
+     "answer": [
+      "I",
+      "am",
+      "cold",
+      "today",
+      "."
+     ]
+    },
+    {
+     "id": "q6_10",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Let's",
+      "play",
+      "a",
+      "game",
+      "!"
+     ],
+     "answer": [
+      "Let's",
+      "play",
+      "a",
+      "game",
+      "!"
+     ]
+    },
+    {
+     "id": "q6_11",
+     "type": "arrange",
+     "hint": "Doğru İngilizce cümleyi oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "We",
+      "are",
+      "happy",
+      "together",
+      "."
+     ],
+     "answer": [
+      "We",
+      "are",
+      "happy",
+      "together",
+      "."
+     ]
+    },
+    {
+     "id": "q6_12",
+     "type": "arrange",
+     "hint": "Doğru İngilizce soru cümlesini oluşturun.",
+     "prompt": "",
+     "tokens": [
+      "Is",
+      "he",
+      "sick",
+      "today",
+      "?"
+     ],
+     "answer": [
+      "Is",
+      "he",
+      "sick",
+      "today",
+      "?"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "title": "Eşleştir 2",
+   "emoji": "👨‍👩‍👧‍👦",
+   "questions": [
+    {
+     "id": "q7_1",
+     "type": "match",
+     "prompt": "Duygu ve hisleri eşleştir!",
+     "pairs": [
+      {
+       "left": "Happy",
+       "right": "Mutlu"
+      },
+      {
+       "left": "Sad",
+       "right": "Üzgün"
+      },
+      {
+       "left": "Hungry",
+       "right": "Aç"
+      },
+      {
+       "left": "Thirsty",
+       "right": "Susamış"
+      },
+      {
+       "left": "Tired",
+       "right": "Yorgun"
+      }
+     ]
+    },
+    {
+     "id": "q7_2",
+     "type": "match",
+     "prompt": "Fiziksel durumları eşleştir!",
+     "pairs": [
+      {
+       "left": "Cold",
+       "right": "Üşümüş"
+      },
+      {
+       "left": "Hot",
+       "right": "Sıcak"
+      },
+      {
+       "left": "Sleepy",
+       "right": "Uykulu"
+      },
+      {
+       "left": "Sick",
+       "right": "Hasta"
+      },
+      {
+       "left": "Healthy",
+       "right": "Sağlıklı"
+      }
+     ]
+    },
+    {
+     "id": "q7_3",
+     "type": "match",
+     "prompt": "Önerileri eşleştir!",
+     "pairs": [
+      {
+       "left": "Let's eat",
+       "right": "Hadi yiyelim"
+      },
+      {
+       "left": "Let's drink",
+       "right": "Hadi içelim"
+      },
+      {
+       "left": "Let's sleep",
+       "right": "Hadi uyuyalım"
+      },
+      {
+       "left": "Let's play",
+       "right": "Hadi oynayalım"
+      },
+      {
+       "left": "Let's rest",
+       "right": "Hadi dinlenelim"
+      }
+     ]
+    },
+    {
+     "id": "q7_4",
+     "type": "match",
+     "prompt": "Soruyla cevabı eşleştir!",
+     "pairs": [
+      {
+       "left": "Are you hungry?",
+       "right": "Yes, I am."
+      },
+      {
+       "left": "Is she tired?",
+       "right": "Yes, she is."
+      },
+      {
+       "left": "Is he sick?",
+       "right": "No, he isn't."
+      },
+      {
+       "left": "Are they happy?",
+       "right": "Yes, they are."
+      },
+      {
+       "left": "How do you feel?",
+       "right": "I feel happy."
+      }
+     ]
+    },
+    {
+     "id": "q7_5",
+     "type": "match",
+     "prompt": "Duygu durumlarını eşleştir!",
+     "pairs": [
+      {
+       "left": "Angry",
+       "right": "Kızgın"
+      },
+      {
+       "left": "Surprised",
+       "right": "Şaşırmış"
+      },
+      {
+       "left": "Scared",
+       "right": "Korkmuş"
+      },
+      {
+       "left": "Energetic",
+       "right": "Enerjik"
+      },
+      {
+       "left": "Bored",
+       "right": "Sıkılmış"
+      }
+     ]
+    },
+    {
+     "id": "q7_6",
+     "type": "match",
+     "prompt": "Yiyecek ve içecek eylemlerini eşleştir!",
+     "pairs": [
+      {
+       "left": "Drink water",
+       "right": "Su içmek"
+      },
+      {
+       "left": "Eat bread",
+       "right": "Ekmek yemek"
+      },
+      {
+       "left": "Drink milk",
+       "right": "Süt içmek"
+      },
+      {
+       "left": "Eat an apple",
+       "right": "Elma yemek"
+      },
+      {
+       "left": "Drink tea",
+       "right": "Çay içmek"
+      }
+     ]
+    },
+    {
+     "id": "q7_7",
+     "type": "match",
+     "prompt": "Zıtlıkları eşleştir!",
+     "pairs": [
+      {
+       "left": "Hot",
+       "right": "Cold"
+      },
+      {
+       "left": "Happy",
+       "right": "Sad"
+      },
+      {
+       "left": "Good",
+       "right": "Bad"
+      },
+      {
+       "left": "Fast",
+       "right": "Slow"
+      },
+      {
+       "left": "Big",
+       "right": "Small"
+      }
+     ]
+    },
+    {
+     "id": "q7_8",
+     "type": "match",
+     "prompt": "Günlük durum kalıplarını eşleştir!",
+     "pairs": [
+      {
+       "left": "I'm hungry",
+       "right": "Acıktım"
+      },
+      {
+       "left": "I'm thirsty",
+       "right": "Susadım"
+      },
+      {
+       "left": "I'm tired",
+       "right": "Yoruldum"
+      },
+      {
+       "left": "I'm cold",
+       "right": "Üşüdüm"
+      },
+      {
+       "left": "I'm hot",
+       "right": "Bunaldım / Sıcakladım"
+      }
+     ]
+    },
+    {
+     "id": "q7_9",
+     "type": "match",
+     "prompt": "Soru kalıplarını eşleştir!",
+     "pairs": [
+      {
+       "left": "How are you?",
+       "right": "Nasılsın?"
+      },
+      {
+       "left": "How do you feel?",
+       "right": "Nasıl hissediyorsun?"
+      },
+      {
+       "left": "Are you okay?",
+       "right": "İyi misin?"
+      },
+      {
+       "left": "Are you hungry?",
+       "right": "Aç mısın?"
+      },
+      {
+       "left": "Are you cold?",
+       "right": "Üşüdün mü?"
+      }
+     ]
+    },
+    {
+     "id": "q7_10",
+     "type": "match",
+     "prompt": "Ünite tekrarı: eşleri bul!",
+     "pairs": [
+      {
+       "left": "Hungry",
+       "right": "Aç"
+      },
+      {
+       "left": "Thirsty",
+       "right": "Susamış"
+      },
+      {
+       "left": "Sleepy",
+       "right": "Uykulu"
+      },
+      {
+       "left": "Happy",
+       "right": "Mutlu"
+      },
+      {
+       "left": "Sad",
+       "right": "Üzgün"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "title": "Konuş",
+   "emoji": "🎤",
+   "questions": [
+    {
+     "id": "q8_1",
+     "type": "speak",
+     "prompt": "Ekrandaki cümleyi sesli oku.",
+     "display": "I am hungry. Let's eat a sandwich.",
+     "accepted": [
+      "I am hungry. Let's eat a sandwich."
+     ]
+    },
+    {
+     "id": "q8_2",
+     "type": "speak",
+     "prompt": "Dinle ve tekrar et.",
+     "audio": {
+      "text": "I am thirsty. Let's drink water.",
+      "lang": "en-US"
+     },
+     "accepted": [
+      "I am thirsty. Let's drink water."
+     ]
+    },
+    {
+     "id": "q8_3",
+     "type": "speak",
+     "prompt": "İngilizce olarak söyle:",
+     "display": "Ben çok yorgunum.",
+     "accepted": [
+      "I am very tired.",
+      "I'm very tired."
+     ]
+    },
+    {
+     "id": "q8_4",
+     "type": "speak",
+     "prompt": "Görseldeki durumu İngilizce söyle.",
+     "image": "images/hungry.jpg",
+     "emoji": "🥪",
+     "accepted": [
+      "Hungry",
+      "I am hungry."
+     ]
+    },
+    {
+     "id": "q8_5",
+     "type": "choice",
+     "prompt": "Soruyu dinle, doğru yanıtı seç ve sesli söyle.",
+     "audio": {
+      "text": "Are you hungry?",
+      "lang": "en-US"
+     },
+     "options": [
+      "Yes, I am hungry.",
+      "My name is Ali.",
+      "I am 8 years old."
+     ],
+     "answer": 0,
+     "speakAfter": true
+    },
+    {
+     "id": "q8_6",
+     "type": "speak",
+     "prompt": "Ekrandaki cümleyi sesli oku.",
+     "display": "I feel happy and energetic today.",
+     "accepted": [
+      "I feel happy and energetic today."
+     ]
+    },
+    {
+     "id": "q8_7",
+     "type": "speak",
+     "prompt": "Dinle ve tekrar et.",
+     "audio": {
+      "text": "How do you feel today?",
+      "lang": "en-US"
+     },
+     "accepted": [
+      "How do you feel today?"
+     ]
+    },
+    {
+     "id": "q8_8",
+     "type": "speak",
+     "prompt": "İngilizce olarak söyle:",
+     "display": "Üşüdüm, hadi içeri girelim.",
+     "accepted": [
+      "I am cold, let's go inside.",
+      "I'm cold, let's go in."
+     ]
+    },
+    {
+     "id": "q8_9",
+     "type": "speak",
+     "prompt": "Görseldeki durumu İngilizce söyle.",
+     "image": "images/tired.jpg",
+     "emoji": "🥱",
+     "accepted": [
+      "Tired",
+      "I am tired."
+     ]
+    },
+    {
+     "id": "q8_10",
+     "type": "choice",
+     "prompt": "Soruyu dinle, doğru yanıtı seç ve sesli söyle.",
+     "audio": {
+      "text": "How do you feel?",
+      "lang": "en-US"
+     },
+     "options": [
+      "I feel happy.",
+      "I am a student.",
+      "It is a pencil."
+     ],
+     "answer": 0,
+     "speakAfter": true
+    },
+    {
+     "id": "q8_11",
+     "type": "speak",
+     "prompt": "Ekrandaki cümleyi sesli oku.",
+     "display": "Let's drink water and eat food.",
+     "accepted": [
+      "Let's drink water and eat food."
+     ]
+    },
+    {
+     "id": "q8_12",
+     "type": "speak",
+     "prompt": "İngilizce olarak söyle:",
+     "display": "Uykum var, hadi uyuyalım.",
+     "accepted": [
+      "I am sleepy, let's sleep.",
+      "I'm sleepy, let's sleep."
+     ]
+    },
+    {
+     "id": "q8_13",
+     "type": "speak",
+     "prompt": "Dinle ve tekrar et.",
+     "audio": {
+      "text": "She is sad today.",
+      "lang": "en-US"
+     },
+     "accepted": [
+      "She is sad today."
+     ]
+    },
+    {
+     "id": "q8_14",
+     "type": "speak",
+     "prompt": "Görseldeki durumu İngilizce söyle.",
+     "image": "images/cold.jpg",
+     "emoji": "🥶",
+     "accepted": [
+      "Cold",
+      "I am cold."
+     ]
+    }
+   ]
+  }
+ ]
+}
