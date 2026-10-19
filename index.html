@@ -9,11 +9,13 @@
 <style>
 :root{--g:#58cc02;--gd:#46a302;--b:#1cb0f6;--bd:#1899d6;--r:#ff4b4b;--y:#ffc800;--t:#3c3c3c;--l:#e5e5e5}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;height:100%;font-family:Nunito,system-ui,sans-serif;color:var(--t);background:#f0f9ff}
-body{max-width:520px;margin:auto;background:#fff;position:relative;overflow-x:hidden}
+html{background:#f0f9ff;min-height:100%}
+body{margin:0;min-height:100vh;min-height:100dvh;font-family:Nunito,system-ui,sans-serif;color:var(--t)}
+body::before{content:"";position:fixed;top:0;bottom:0;left:50%;width:min(520px,100%);transform:translateX(-50%);background:#fff;border-left:1px solid rgba(255,75,75,.6);border-right:1px solid rgba(255,75,75,.6);z-index:-1;pointer-events:none}
+body{max-width:520px;min-height:100vh;min-height:100dvh;margin:auto;background:transparent;position:relative;overflow-x:hidden}
 [hidden]{display:none!important}
 #top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;padding:12px 18px;padding-top:calc(12px + env(safe-area-inset-top,0px));background:#fff;border-bottom:2px solid var(--l);font-weight:900;font-size:18px}
-#map{padding:10px 0 60px;text-align:center}
+#map{padding:10px 0 80px;text-align:center;min-height:100vh;min-height:100dvh}
 .warn{margin:10px 14px;padding:10px;border-radius:12px;background:#fff3cd;font-weight:800;font-size:14px;text-align:left}
 .ub{margin:16px 14px;padding:14px 18px;border-radius:18px;color:#fff;text-align:left;box-shadow:0 5px 0 rgba(0,0,0,.2)}
 .ub b{display:block;font-size:13px;opacity:.85}.ub span{font-size:20px;font-weight:900}
@@ -49,7 +51,7 @@ h2{font-size:22px;margin:8px 0 16px}
 @keyframes pop{from{transform:scale(.7)}}
 .bank{display:flex;flex-wrap:wrap;gap:8px}
 .tk.used{visibility:hidden}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}.cols>div>.mt{margin-bottom:12px}
+.cols{display:grid;grid-template-columns:1fr 8px 1fr;gap:10px}.sep{width:8px;min-height:100%;border-radius:8px;box-shadow:0 0 0 2px #fff;background:linear-gradient(180deg,#ff4b4b,#ff9600,#ffc800,#58cc02,#1cb0f6,#a855f7)}.cols>div>.mt{margin-bottom:12px}
 .mt{margin:0;text-align:center;font-size:16px;padding:16px 8px}
 .mt.gone{visibility:hidden;transition:.3s}
 .shake{animation:sh .4s}@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
@@ -74,6 +76,7 @@ h2{font-size:22px;margin:8px 0 16px}
 #ab .chk{display:flex;gap:8px;align-items:center;font-weight:800}#ab .chk input{width:20px;height:20px}
 #top{gap:8px}#top>span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#top>span:last-child{white-space:nowrap;flex-shrink:0}
 #snd{padding:3px 9px;font-size:16px}.bar #snd2{font-size:22px}
+#quiz,#done,#admin{border-left:1px solid rgba(255,75,75,.55);border-right:1px solid rgba(255,75,75,.55)}
 </style>
 </head>
 <body>
@@ -123,8 +126,25 @@ function beep(n){try{const c=new(window.AudioContext||webkitAudioContext)(),t=c.
  (n=='correct'?[660,880]:[200,150]).forEach((h,i)=>{const o=c.createOscillator(),g=c.createGain();o.type=n=='correct'?'sine':'sawtooth';o.frequency.value=h;g.gain.setValueAtTime(.2,t+i*.15);g.gain.exponentialRampToValueAtTime(.001,t+i*.15+.3);o.connect(g);g.connect(c.destination);o.start(t+i*.15);o.stop(t+i*.15+.3)})}catch(e){}}
 
 /* ---------- Text-to-Speech ---------- */
-function say(t,l){if(!window.speechSynthesis)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang=l||'en-US';u.rate=.85;
- const v=speechSynthesis.getVoices().filter(v=>v.lang.replace('_','-').startsWith(u.lang.slice(0,2)));u.voice=v.find(x=>/google/i.test(x.name))||v[0]||null;speechSynthesis.speak(u)}
+/* ---------- Sesli okuma: tarayıcının kendi konuşma sentezi (Android'de Google sesleri) ---------- */
+let VOICES=[];const loadVoices=()=>{VOICES=window.speechSynthesis?speechSynthesis.getVoices():[]};
+if(window.speechSynthesis){loadVoices();speechSynthesis.addEventListener&&speechSynthesis.addEventListener('voiceschanged',loadVoices)}
+const vl=v=>v.lang.toLowerCase().replace('_','-');
+function pickVoice(lang){const L=lang.toLowerCase(),vs=VOICES.filter(v=>vl(v).startsWith(L.slice(0,2)));   // yalnızca aynı dilin sesleri
+ return vs.find(v=>vl(v)===L&&/google/i.test(v.name))||vs.find(v=>vl(v)===L)||vs.find(v=>/google/i.test(v.name))||vs[0]||null}
+function stopSpeech(){window.speechSynthesis&&speechSynthesis.cancel()}
+let sayTok=0;
+function say(text,lang){text=(text||'').trim();if(!text||!window.speechSynthesis)return;stopSpeech();const my=++sayTok;
+ const l=/^tr/i.test(lang||'')?'tr-TR':(/^en-us/i.test(lang||'')?'en-US':'en-GB');
+ setTimeout(()=>{if(my!==sayTok)return;
+  const u=new SpeechSynthesisUtterance(text);u.lang=l;u.rate=.85;
+  if(!VOICES.length)loadVoices();const v=pickVoice(l);if(v){u.voice=v;u.lang=v.lang}
+  try{speechSynthesis.resume()}catch(e){}speechSynthesis.speak(u)},60)}
+/* Dil tahmini: Türkçe belirtisi (harf / sık kelime) varsa Türkçe, yoksa İngilizce */
+const TRW=new Set('ben sen biz siz onlar bu şu bir ve ile için mi mı mu mü değil var yok evet hayır ne nerede kim nasıl çok az ama de da ki gibi ev kedi köpek elma su süt ekmek okul kitap kalem anne baba kardeş merhaba günaydın teşekkürler lütfen kırmızı mavi sarı yeşil siyah beyaz araba top masa sandalye adım benim senin onun bizim evet hayır iyi kötü büyük küçük merhaba görüşürüz kız erkek çocuk arkadaş öğretmen sınıf'.split(' '));
+const ENW=new Set("i you he she it we they is am are the a an my your his her this that to in on at have has do does like can what where who how name hello thanks thank please yes no and or of with for from it's i'm don't big small red blue green yellow black white".split(' '));
+const trScore=t=>{t=(t||'').trim();let s=/[çğıöşüÇĞİÖŞÜ]/.test(t)?3:0;t.toLowerCase().split(/[^\p{L}']+/u).forEach(w=>{if(TRW.has(w))s++;else if(ENW.has(w))s--});return s}
+const isWordTxt=t=>/[\p{L}]/u.test(t||'')
 
 function confetti(){for(let i=0;i<60;i++){const e=document.createElement('div');e.className='cf';e.style.cssText=`left:${Math.random()*100}vw;background:hsl(${Math.random()*360},90%,60%);animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*.5}s`;document.body.appendChild(e);setTimeout(()=>e.remove(),4500)}}
 function lot(){const el=$('#lot');el.innerHTML='<div style="font-size:120px">🏆</div>';
@@ -138,14 +158,28 @@ async function loadUnits(){
   catch(e){return null}}));
  res.filter(Boolean).sort((a,b)=>(a.j.unit||a.n)-(b.j.unit||b.n)).forEach(({n,j})=>buildUnit(j.unit||n,j));
 }
+const EMJ=['⭐','🎯','🧩','🎧','🎤','📖'];
+/* Aynı tür sorular üst üste gelmesin: sabit (rastgele olmayan) bir sırayla bölümler arasında dönüşümlü seç */
+const kindOf=x=>x.type=='choice'?(x.image?'img':x.audio?'listen':'tr'):x.type;
+function mixQ(secs){const q=secs.map(a=>a.slice()),out=[],total=q.reduce((n,a)=>n+a.length,0);let last=null,last2=null;
+ while(out.length<total){const rem=total-out.length,cnt={};
+  q.forEach(a=>a.forEach(x=>{const k=kindOf(x);cnt[k]=(cnt[k]||0)+1}));
+  let best=-1,bs=-1e9;
+  q.forEach((a,i)=>{if(!a.length)return;const x=a[0],k=kindOf(x);let sc=cnt[k]*2-i*3;
+   if(last&&k===last.k)sc-=10000;              // aynı tür asla üst üste gelmesin
+   if(2*cnt[k]-1>=rem)sc+=5000;                // bu tür çok kaldıysa şimdi yerleştir
+   if(last&&x.type===last.type)sc-=300;        // aynı soru tipi (örn. iki çoktan seçmeli) de arka arkaya olmasın
+   if(last2&&k===last2.k)sc-=40;if(last2&&x.type===last2.type)sc-=10;
+   if(sc>bs){bs=sc;best=i}});
+  const x=q[best].shift();out.push(x);last2=last;last={type:x.type,k:kindOf(x)}}
+ return out}
 function buildUnit(n,j){
  const u={n,title:j.title||('Ünite '+n),color:j.color||'#58cc02',emoji:j.emoji||'📘',lessons:[],ids:[]};
- (j.sections||[]).forEach((s,si)=>{
-  const qs=(s.questions||[]).filter(q=>['choice','arrange','match','speak'].includes(q.type));
-  qs.forEach((q,i)=>{q._id=`u${n}:${q.id||s.id+'-'+i}`;QM[q._id]=q;u.ids.push(q._id)});
-  const k=Math.max(1,Math.round(qs.length/LESSON)),base=Math.floor(qs.length/k),extra=qs.length%k;
-  let p=0;for(let i=0;i<k&&qs.length;i++){const sz=base+(i<extra?1:0);
-   u.lessons.push({key:`u${n}-${s.id||si}-${i}`,title:(s.title||'Bölüm')+(k>1?` ${i+1}/${k}`:''),emoji:s.emoji||'⭐',qs:qs.slice(p,p+sz)});p+=sz}});
+ const secs=(j.sections||[]).map((s,si)=>{const qs=(s.questions||[]).filter(q=>['choice','arrange','match','speak'].includes(q.type));
+  qs.forEach((q,i)=>{q._id=`u${n}:${q.id||(s.id||si)+'-'+i}`;QM[q._id]=q;u.ids.push(q._id)});return qs});
+ const seq=mixQ(secs),k=Math.max(1,Math.round(seq.length/LESSON)),base=Math.floor(seq.length/k),extra=seq.length%k;
+ let p=0;for(let i=0;i<k&&seq.length;i++){const sz=base+(i<extra?1:0);
+  u.lessons.push({key:`u${n}-L${i}`,title:`Ders ${i+1}`,emoji:EMJ[i%EMJ.length],qs:seq.slice(p,p+sz)});p+=sz}
  UN.push(u)}
 const wrongOf=u=>u.ids.filter(id=>P.wrong[id]);
 
@@ -168,7 +202,7 @@ function startLesson(u,l){Q={key:l.key,unit:u,qs:l.qs.map(q=>({...q})),i:0,ok:0,
 function startReview(u){Q={review:1,unit:u,qs:wrongOf(u).map(id=>({...QM[id]})),i:0,ok:0,n:0,cur:null};open()}
 function open(){$('#quiz').hidden=false;next()}
 function next(){if(Q.i>=Q.qs.length)return finish();$('#pi').style.width=Q.i/Q.qs.length*100+'%';Q.cur=Q.qs[Q.i];show(Q.cur)}
-const skipq=()=>{speechSynthesis&&speechSynthesis.cancel();Q.i++;next()};
+const skipq=()=>{stopSpeech();Q.i++;next()};
 function setBtn(t,fn,dis,hide){const b=$('#btn');b.textContent=t;b.disabled=!!dis;b.onclick=fn;b.hidden=!!hide}
 function rec(ok){if(Q.admin)return;const q=Q.cur;
  if(ok){delete P.wrong[q._id];if(!q._r&&!Q.review)Q.ok++}
@@ -179,22 +213,28 @@ const spk=(a,auto)=>{const b=$('.spk');b.onclick=()=>say(a.text,a.lang);if(auto)
 const pic=q=>q.image?`<img class="pic" src="${q.image}" alt="" onerror="this.outerHTML='<div class=em>${q.emoji||'🖼️'}</div>'">`:'';
 const tag=q=>(q._r||Q.review)?'<div class="rt">🔁 Tekrar</div>':'';
 
-function show(q){$('#ft').className='';$('#msg').innerHTML='';const e=$('#q');e.style.animation='none';void e.offsetWidth;e.style.animation='';
+function show(q){stopSpeech();$('#ft').className='';$('#msg').innerHTML='';const e=$('#q');e.style.animation='none';void e.offsetWidth;e.style.animation='';
  ({choice,arrange,match,speak})[q.type](q)}
 
 function choice(q){let sel=-1;
  $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2>${q.audio?'<button class="spk">🔊</button>':''}${pic(q)}`+shuf(q.options.map((o,i)=>i)).map(i=>`<button class="opt" data-i="${i}">${q.options[i]}</button>`).join('');
  if(q.audio)spk(q.audio,1);
  const os=[...$('#q').querySelectorAll('.opt')];
- os.forEach(o=>o.onclick=()=>{os.forEach(x=>x.classList.remove('sel'));o.classList.add('sel');sel=+o.dataset.i;setBtn('KONTROL ET',chk)});
+ const optTR=(()=>{const sc=q.options.reduce((n,o)=>n+trScore(o),0);if(sc>0)return true;if(sc<0)return false;
+  const p=String(q.prompt||'');if(/ingilizce|in english/i.test(p))return false;return /türkçe|ne demek|anlamı/i.test(p)})();
+ os.forEach(o=>o.onclick=()=>{os.forEach(x=>x.classList.remove('sel'));o.classList.add('sel');sel=+o.dataset.i;
+  const t=q.options[sel];if(isWordTxt(t)&&!optTR)say(t,'en-GB');else stopSpeech();setBtn('KONTROL ET',chk)});
  setBtn('KONTROL ET',chk,1);
  function chk(){const ok=sel==q.answer;os.forEach(o=>o.disabled=true);os.find(o=>+o.dataset.i==sel).classList.add(ok?'ok':'no');os.find(o=>+o.dataset.i==q.answer).classList.add('ok');
   if(ok&&q.speakAfter){sfx('correct');return show({type:'speak',prompt:'Doğru! Şimdi sesli söyle 👇',display:q.options[q.answer],accepted:[q.options[q.answer]]})}
   fb(ok,ok?'':'Doğru cevap: '+q.options[q.answer])}}
 
 function arrange(q){let placed=[];
- const tl=q.tokenLang||(q.prompt?'tr-TR':'en-US');   // prompt doluysa kelimeler Türkçe, boşsa İngilizce
- const speakTok=t=>{const w=t.replace(/^[.,!?;:…]+|[.,!?;:…]+$/g,'').trim();if(w&&/[\p{L}\p{N}]/u.test(w))say(w,tl)};const T=shuf(q.tokens.map((t,i)=>({t,i})));
+ const ansTxt=(q.answer||q.tokens||[]).join(' '),sc0=trScore(ansTxt);
+ const hintTR=q.tokenLang?/^tr/i.test(q.tokenLang):(sc0>0||(sc0==0&&/türkçesini|türkçe olarak/i.test(q.hint||'')));   // dil cevaptan anlaşılır; ipucundaki "Türkçe" kelimesine bakılmaz
+ const tokLang=t=>(hintTR||/[çğıöşüÇĞİÖŞÜ]/.test(t))?'tr-TR':'en-GB';
+ const cleanTok=t=>t.replace(/^[.,!?;:…]+|[.,!?;:…]+$/g,'').trim(),isWord=w=>!!w&&/[\p{L}\p{N}]/u.test(w);
+ const speakTok=t=>{const w=cleanTok(t);if(isWord(w))say(w,tokLang(w))};const T=shuf(q.tokens.map((t,i)=>({t,i})));
  $('#q').innerHTML=`${tag(q)}<h2>${q.hint||''}</h2>${q.audio?'<button class="spk">🔊</button>':''}<h2 style="color:var(--bd)">${q.prompt||''}</h2><div class="zone"></div><div class="bank"></div>`;
  if(q.audio)spk(q.audio);
  const draw=()=>{$('.zone').innerHTML=placed.map(o=>`<button class="tk">${o.t}</button>`).join('');
@@ -206,13 +246,14 @@ function arrange(q){let placed=[];
  draw()}
 
 function match(q){let sel=null,left=q.pairs.length,bad=0;
+ const enSide=q.pairs.reduce((n,p)=>n+trScore(p.left),0)<=q.pairs.reduce((n,p)=>n+trScore(p.right),0)?'L':'R';
  const L=shuf(q.pairs.map((p,i)=>[p.left,i])),R=shuf(q.pairs.map((p,i)=>[p.right,i]));
- $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2><div class="cols"><div>${L.map(l=>`<button class="mt" data-s="L" data-i="${l[1]}">${l[0]}</button>`).join('')}</div><div>${R.map(r=>`<button class="mt" data-s="R" data-i="${r[1]}">${r[0]}</button>`).join('')}</div></div>`;
+ $('#q').innerHTML=`${tag(q)}<h2>${q.prompt}</h2><div class="cols"><div>${L.map(l=>`<button class="mt" data-s="L" data-i="${l[1]}">${l[0]}</button>`).join('')}</div><div class="sep"></div><div>${R.map(r=>`<button class="mt" data-s="R" data-i="${r[1]}">${r[0]}</button>`).join('')}</div></div>`;
  setBtn('',null,1,1);
  $('#q').querySelectorAll('.mt').forEach(b=>b.onclick=()=>{
-  if(!sel||sel.dataset.s==b.dataset.s){$('#q .sel')&&$('#q .sel').classList.remove('sel');b.classList.add('sel');sel=b;if(b.dataset.s=='L')say(b.textContent,'en-US');return}
-  if(sel.dataset.i==b.dataset.i){[sel,b].forEach(x=>{x.classList.remove('sel');x.classList.add('ok');setTimeout(()=>x.classList.add('gone'),500)});sfx('correct');sel=null;
-   if(!--left)setTimeout(()=>{rec(!bad);if(!bad)sfx('applause');Q.i++;next()},900)}
+  if(!sel||sel.dataset.s==b.dataset.s){$('#q .sel')&&$('#q .sel').classList.remove('sel');b.classList.add('sel');sel=b;if(b.dataset.s==enSide&&isWordTxt(b.textContent))say(b.textContent,'en-GB');else stopSpeech();return}
+  if(sel.dataset.i==b.dataset.i){[sel,b].forEach(x=>{x.classList.remove('sel');x.classList.add('ok');setTimeout(()=>x.classList.add('gone'),500)});sel=null;
+   if(!--left)setTimeout(()=>{rec(!bad);Q.i++;next()},900)}
   else{bad++;sfx('wrong');[sel,b].forEach(x=>{x.classList.remove('sel');x.classList.add('shake');setTimeout(()=>x.classList.remove('shake'),400)});sel=null}})}
 
 function speak(q){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
@@ -239,7 +280,7 @@ function finish(){$('#quiz').hidden=true;let xp=0;
   $('#dn').textContent=w?`${w} soru ünite sonunda tekrar edilecek`:''}
  save();$('#done').hidden=false;sfx('applause');confetti();lot()}
 $('#dbtn').onclick=()=>{$('#done').hidden=true;renderMap()};
-$('#x').onclick=()=>{if(confirm('Dersten çıkmak istiyor musun?')){speechSynthesis&&speechSynthesis.cancel();$('#quiz').hidden=true;renderMap()}};
+$('#x').onclick=()=>{if(confirm('Dersten çıkmak istiyor musun?')){stopSpeech();$('#quiz').hidden=true;renderMap()}};
 
 /* ---------- Ses efektleri aç/kapa ---------- */
 const updSnd=()=>document.querySelectorAll('#snd,#snd2').forEach(b=>{b.textContent=SND?'🔔':'🔕';b.title=SND?'Ses efektleri açık':'Ses efektleri kapalı'});
