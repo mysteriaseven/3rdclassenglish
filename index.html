@@ -29,7 +29,7 @@ body{max-width:520px;min-height:100vh;min-height:100dvh;margin:auto;background:t
 .node.cur{animation:pulse 1.4s infinite}
 .node.cur::after{content:"BAŞLA";position:absolute;top:-30px;left:50%;transform:translateX(-50%);background:#fff;color:var(--g);border:2px solid var(--l);border-radius:12px;padding:2px 10px;font-size:13px;font-weight:900;animation:bob 1s infinite alternate}
 @keyframes pulse{50%{transform:scale(1.08)}}@keyframes bob{to{top:-36px}}
-#quiz,#done,#admin{position:fixed;inset:0;max-width:520px;margin:auto;background:#fff;display:flex;flex-direction:column;z-index:10;animation:slide .3s}
+#quiz,#done,#admin,#prize{position:fixed;inset:0;max-width:520px;margin:auto;background:#fff;display:flex;flex-direction:column;z-index:10;animation:slide .3s}
 @keyframes slide{from{transform:translateY(40px);opacity:0}}
 .bar{display:flex;align-items:center;gap:12px;padding:16px;padding-top:calc(16px + env(safe-area-inset-top,0px))}
 .bar button{border:0;background:none;font-size:26px;color:#aaa;cursor:pointer}
@@ -70,17 +70,28 @@ h2{font-size:22px;margin:8px 0 16px}
 .stat{display:inline-block;margin:6px;padding:12px 20px;border:2px solid var(--y);border-radius:16px;font-weight:900;font-size:20px;color:#d99c00}
 .cf{position:fixed;top:-20px;width:10px;height:14px;z-index:30;animation:fall linear forwards;pointer-events:none}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
-#adm,#snd{border:2px solid var(--l);border-bottom-width:4px;border-radius:12px;background:#fff;font:800 13px Nunito,sans-serif;color:#777;padding:4px 10px;margin-right:8px;cursor:pointer}
+#adm,#snd,#prz{border:2px solid var(--l);border-bottom-width:4px;border-radius:12px;background:#fff;font:800 13px Nunito,sans-serif;color:#777;padding:4px 10px;margin-right:8px;cursor:pointer}
 #ab{padding:8px 20px;overflow:auto;flex:1}#ab label{display:block;font-weight:900;margin:16px 0 6px}
 #ab select{width:100%;padding:12px;border:2px solid var(--l);border-radius:12px;font:700 16px Nunito,sans-serif;background:#fff}
 #ab .chk{display:flex;gap:8px;align-items:center;font-weight:800}#ab .chk input{width:20px;height:20px}
 #top{gap:8px}#top>span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#top>span:last-child{white-space:nowrap;flex-shrink:0}
 #snd{padding:3px 9px;font-size:16px}.bar #snd2{font-size:22px}
-#quiz,#done,#admin{border-left:1px solid rgba(255,75,75,.55);border-right:1px solid rgba(255,75,75,.55)}
+#quiz,#done,#admin,#prize{border-left:1px solid rgba(255,75,75,.55);border-right:1px solid rgba(255,75,75,.55)}
+#prz{position:relative}#prz.dot::after{content:"";position:absolute;top:-5px;right:-3px;width:11px;height:11px;border-radius:50%;background:#ff4b4b;border:2px solid #fff}
+#pinfo{padding:0 18px 6px;font-weight:800;color:#555;font-size:15px}
+#pgrid{flex:1;overflow:auto;padding:10px 16px 30px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px;align-content:start}
+.pc{position:relative;aspect-ratio:2/3;border-radius:16px;overflow:hidden;border:3px solid #d9d9d9;background:linear-gradient(160deg,#6b7280,#374151);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:900;box-shadow:0 5px 0 rgba(0,0,0,.18)}
+.pc .n{position:absolute;top:6px;left:9px;font-size:12px;opacity:.85}.pc .big2{font-size:46px}.pc small{font-size:15px;opacity:.95}
+.pc.ready{background:linear-gradient(160deg,#fbbf24,#f97316);border-color:#ffc800;animation:pulse 1.4s infinite;cursor:pointer}
+.pc.own{background:#fff;border-color:#ffc800;cursor:zoom-in;padding:0}.pc.own img,.pc.own .ph{width:100%;height:100%;object-fit:cover;display:block}
+.ph{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;background:linear-gradient(160deg,#8b5cf6,#ec4899);color:#fff;font-weight:900;font-size:18px}
+#zoom{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.84);display:flex;align-items:center;justify-content:center;padding:16px;animation:slide .25s;cursor:pointer}
+#zoom img,#zoom .ph{max-height:86vh;max-width:92vw;aspect-ratio:2/3;border-radius:18px;box-shadow:0 0 0 4px #ffc800,0 12px 40px rgba(0,0,0,.6);object-fit:cover}#zoom .ph{width:min(70vw,340px)}
+@media(max-width:430px){#top{padding-left:10px;padding-right:10px}#top>span:first-child{font-size:0}#top>span:first-child::before{content:'🌍';font-size:20px}}
 </style>
 </head>
 <body>
-<div id="top"><span>🌍 English Adventure</span><span><button id="snd" aria-label="Ses efektleri">🔔</button><button id="adm">⚙️ Admin</button>⭐ <span id="xp">0</span> XP</span></div>
+<div id="top"><span>🌍 English Adventure</span><span><button id="snd" aria-label="Ses efektleri">🔔</button><button id="prz">🎁 Prize</button><button id="adm">⚙️ Admin</button>⭐ <span id="xp">0</span> XP</span></div>
 <main id="map"><p style="margin-top:60px;font-weight:800">Yükleniyor...</p></main>
 
 <section id="quiz" hidden>
@@ -101,6 +112,13 @@ h2{font-size:22px;margin:8px 0 16px}
   <div style="padding:16px"><button class="big" id="ago">AÇ</button></div>
 </section>
 
+<section id="prize" hidden>
+  <div class="bar"><button id="px" aria-label="Kapat">✕</button><b style="font-size:20px">🎁 Ödül Kartları</b><span id="pcnt" style="margin-left:auto;font-weight:900;color:#d99c00;font-size:18px"></span></div>
+  <div id="pinfo"></div>
+  <div id="pgrid"></div>
+</section>
+<div id="zoom" hidden></div>
+
 <section id="done" hidden>
   <div id="lot"></div><h1 id="dt"></h1>
   <div><span class="stat" id="ds"></span><span class="stat" id="dx"></span></div>
@@ -116,13 +134,17 @@ const MAXUNIT=100;            // unit1.json ... unit100.json aranır
 const ADMIN_PIN='';           // boş değilse Admin açılırken bu şifre sorulur
 let UN=[],QM={},Q={},warns=[];
 let P=JSON.parse(localStorage.getItem('lr2')||'{"done":{},"wrong":{},"xp":0}');
-const save=()=>{localStorage.setItem('lr2',JSON.stringify(P));$('#xp').textContent=P.xp};
+P.best=P.best||{};P.ub=P.ub||{};P.cards=P.cards||{};
+const UNIT_BONUS=100;         // bir üniteyi bitirince (ilk kez) verilen bonus XP
+const PRIZE_TARGET=7700;      // 20. kart için gereken XP (11 ünite x 100 soru x 10 XP x ~%70 + ünite bonusları)
+const PRIZE_COST=Array.from({length:20},(_,i)=>Math.round(PRIZE_TARGET*Math.pow((i+1)/20,1.5)/10)*10);   // 90 ... 7700
+const save=()=>{localStorage.setItem('lr2',JSON.stringify(P));$('#xp').textContent=P.xp;const b=$('#prz');b&&b.classList.toggle('dot',PRIZE_COST.some((c,i)=>P.xp>=c&&!P.cards[i+1]))};
 
 /* ---------- Ses efektleri: sounds/*.mp3 varsa onlar, yoksa yerleşik sesler ---------- */
 let SND=localStorage.getItem('lr_snd')!=='0';   // doğru/yanlış/alkış efektleri
 function sfx(n){if(!SND)return;const a=new Audio('sounds/'+n+'.mp3');a.play().catch(()=>beep(n))}
 function beep(n){try{const c=new(window.AudioContext||webkitAudioContext)(),t=c.currentTime;
- if(n=='applause'){const b=c.createBuffer(1,c.sampleRate*2,c.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.max(0,1-i/d.length)*(Math.random()>.7?1:.15);const s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start();return}
+ if(n=='applause'||n=='applauseunit'){const b=c.createBuffer(1,c.sampleRate*2,c.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.max(0,1-i/d.length)*(Math.random()>.7?1:.15);const s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start();return}
  (n=='correct'?[660,880]:[200,150]).forEach((h,i)=>{const o=c.createOscillator(),g=c.createGain();o.type=n=='correct'?'sine':'sawtooth';o.frequency.value=h;g.gain.setValueAtTime(.2,t+i*.15);g.gain.exponentialRampToValueAtTime(.001,t+i*.15+.3);o.connect(g);g.connect(c.destination);o.start(t+i*.15);o.stop(t+i*.15+.3)})}catch(e){}}
 
 /* ---------- Text-to-Speech ---------- */
@@ -135,13 +157,19 @@ function pickVoice(lang){const L=lang.toLowerCase(),vs=VOICES.filter(v=>vl(v).st
 function stopSpeech(){window.speechSynthesis&&speechSynthesis.cancel()}
 let sayTok=0;
 function say(text,lang){text=(text||'').trim();if(!text||!window.speechSynthesis)return;stopSpeech();const my=++sayTok;
- const l=/^tr/i.test(lang||'')?'tr-TR':(/^en-us/i.test(lang||'')?'en-US':'en-GB');
- setTimeout(()=>{if(my!==sayTok)return;
+ const l=/^tr/i.test(lang||'')?'tr-TR':(/^en-us/i.test(lang||'')?'en-US':'en-GB');let retried=false;
+ const go=again=>{if(my!==sayTok)return;
   const u=new SpeechSynthesisUtterance(text);u.lang=l;u.rate=.85;
   if(!VOICES.length)loadVoices();const v=pickVoice(l);if(v){u.voice=v;u.lang=v.lang}
-  try{speechSynthesis.resume()}catch(e){}speechSynthesis.speak(u)},60)}
+  let started=false;u.onstart=()=>{started=true};
+  const retry=()=>{if(again||retried||my!==sayTok)return;retried=true;try{speechSynthesis.cancel()}catch(e){}setTimeout(()=>go(true),150)};   // ilk deneme sessiz kalırsa bir kez daha dene
+  u.onerror=e=>{if(!started&&!/cancel|interrupt/i.test((e&&e.error)||''))retry()};
+  try{speechSynthesis.resume()}catch(e){}speechSynthesis.speak(u);
+  if(!again)setTimeout(()=>{if(!started&&!speechSynthesis.speaking)retry()},1000)};
+ setTimeout(()=>go(false),60)}
+addEventListener('pointerdown',()=>{try{const u=new SpeechSynthesisUtterance(' ');u.volume=0;speechSynthesis.speak(u)}catch(e){}},{once:true});   // mobilde konuşmayı ilk dokunuşta aç
 /* Dil tahmini: Türkçe belirtisi (harf / sık kelime) varsa Türkçe, yoksa İngilizce */
-const TRW=new Set('ben sen biz siz onlar bu şu bir ve ile için mi mı mu mü değil var yok evet hayır ne nerede kim nasıl çok az ama de da ki gibi ev kedi köpek elma su süt ekmek okul kitap kalem anne baba kardeş merhaba günaydın teşekkürler lütfen kırmızı mavi sarı yeşil siyah beyaz araba top masa sandalye adım benim senin onun bizim evet hayır iyi kötü büyük küçük merhaba görüşürüz kız erkek çocuk arkadaş öğretmen sınıf'.split(' '));
+const TRW=new Set('ben sen biz siz onlar bu şu bir ve ile için mi mı mu mü değil var yok evet hayır ne nerede kim nasıl çok az ama de da ki gibi ev kedi köpek elma su süt ekmek okul kitap kalem anne baba kardeş merhaba günaydın teşekkürler lütfen kırmızı mavi sarı yeşil siyah beyaz araba top masa sandalye adım benim senin onun bizim evet hayır iyi kötü büyük küçük merhaba görüşürüz kız erkek çocuk arkadaş öğretmen sınıf rica ederim teşekkür hoş geldin geldiniz güle görüşürüz tanıştığımıza memnun oldum kendine bak iyiyim nasılsın günler akşamlar geceler adın yaşındasın yaşındayım kaç sekiz dokuz yedi altı beş dört üç iki bugün şimdi dede nene amca teyze hala mutlu üzgün aç susamış yorgun'.split(' '));
 const ENW=new Set("i you he she it we they is am are the a an my your his her this that to in on at have has do does like can what where who how name hello thanks thank please yes no and or of with for from it's i'm don't big small red blue green yellow black white".split(' '));
 const trScore=t=>{t=(t||'').trim();let s=/[çğıöşüÇĞİÖŞÜ]/.test(t)?3:0;t.toLowerCase().split(/[^\p{L}']+/u).forEach(w=>{if(TRW.has(w))s++;else if(ENW.has(w))s--});return s}
 const isWordTxt=t=>/[\p{L}]/u.test(t||'')
@@ -231,12 +259,12 @@ function choice(q){let sel=-1;
 
 function arrange(q){let placed=[];
  const ansTxt=(q.answer||q.tokens||[]).join(' '),sc0=trScore(ansTxt);
- const hintTR=q.tokenLang?/^tr/i.test(q.tokenLang):(sc0>0||(sc0==0&&/türkçesini|türkçe olarak/i.test(q.hint||'')));   // dil cevaptan anlaşılır; ipucundaki "Türkçe" kelimesine bakılmaz
+ const hintTR=q.tokenLang?/^tr/i.test(q.tokenLang):(sc0>0||(sc0==0&&/türkçe karşılığını|türkçesini|türkçe olarak/i.test((q.hint||'')+' '+(q.prompt||''))));   // dil cevaptan anlaşılır; ipucundaki "Türkçe" kelimesine bakılmaz
  const tokLang=t=>(hintTR||/[çğıöşüÇĞİÖŞÜ]/.test(t))?'tr-TR':'en-GB';
  const cleanTok=t=>t.replace(/^[.,!?;:…]+|[.,!?;:…]+$/g,'').trim(),isWord=w=>!!w&&/[\p{L}\p{N}]/u.test(w);
  const speakTok=t=>{const w=cleanTok(t);if(isWord(w))say(w,tokLang(w))};const T=shuf(q.tokens.map((t,i)=>({t,i})));
  $('#q').innerHTML=`${tag(q)}<h2>${q.hint||''}</h2>${q.audio?'<button class="spk">🔊</button>':''}<h2 style="color:var(--bd)">${q.prompt||''}</h2><div class="zone"></div><div class="bank"></div>`;
- if(q.audio)spk(q.audio);
+ if(q.audio)spk(q.audio,1);
  const draw=()=>{$('.zone').innerHTML=placed.map(o=>`<button class="tk">${o.t}</button>`).join('');
   $('.bank').innerHTML=T.map(o=>`<button class="tk ${placed.includes(o)?'used':''}">${o.t}</button>`).join('');
   $('.zone').querySelectorAll('.tk').forEach((b,k)=>b.onclick=()=>{speakTok(placed[k].t);placed.splice(k,1);draw()});
@@ -272,13 +300,16 @@ function speak(q){const SR=window.SpeechRecognition||window.webkitSpeechRecognit
   r.onend=()=>$('#mic').classList.remove('rec');
   r.start()}}
 
-function finish(){$('#quiz').hidden=true;let xp=0;
+function finish(){$('#quiz').hidden=true;let xp=0,unitFin=false;
  if(Q.admin){$('#dt').textContent='Admin: bitti 🛠️';$('#ds').textContent=`✅ ${Q.ok}/${Q.n}`;$('#dx').textContent='⭐ kayıt yok';$('#dn').textContent='Admin modu: ilerleme kaydedilmedi';$('#done').hidden=false;return}
  if(Q.review){const w=wrongOf(Q.unit).length;$('#dt').textContent=w?'Tekrar bitti 👏':'Tüm yanlışlar düzeldi! 🎉';$('#ds').textContent=`🔁 Kalan: ${w}`;$('#dx').textContent='⭐ +0 XP';$('#dn').textContent=''}
- else{xp=Q.ok*10;P.done[Q.key]=1;P.xp+=xp;const w=Q.n-Q.ok;
-  $('#dt').textContent=Q.ok==Q.n?'Mükemmel! 🎉':'Ders tamam! 👏';$('#ds').textContent=`✅ ${Q.ok}/${Q.n}`;$('#dx').textContent=`⭐ +${xp} XP`;
-  $('#dn').textContent=w?`${w} soru ünite sonunda tekrar edilecek`:''}
- save();$('#done').hidden=false;sfx('applause');confetti();lot()}
+ else{xp=Q.ok*10;const pb=P.best[Q.key]||0,gain=Math.max(0,xp-pb);P.best[Q.key]=Math.max(pb,xp);   // aynı dersi tekrar çözerek XP kasılamaz
+  const was=Q.unit.lessons.every(l=>P.done[l.key]);P.done[Q.key]=1;P.xp+=gain;
+  let bonus=0;if(!was&&Q.unit.lessons.every(l=>P.done[l.key])&&!P.ub[Q.unit.n]){bonus=UNIT_BONUS;P.ub[Q.unit.n]=1;P.xp+=bonus;unitFin=true}
+  const w=Q.n-Q.ok;
+  $('#dt').textContent=unitFin?'Ünite tamamlandı! 🏆':Q.ok==Q.n?'Mükemmel! 🎉':'Ders tamam! 👏';$('#ds').textContent=`✅ ${Q.ok}/${Q.n}`;$('#dx').textContent=`⭐ +${gain+bonus} XP`;
+  $('#dn').textContent=(unitFin?`🏆 Ünite bonusu +${bonus} XP. `:'')+(w?`${w} soru ünite sonunda tekrar edilecek`:'')}
+ save();$('#done').hidden=false;sfx(unitFin?'applauseunit':'applause');confetti();lot()}
 $('#dbtn').onclick=()=>{$('#done').hidden=true;renderMap()};
 $('#x').onclick=()=>{if(confirm('Dersten çıkmak istiyor musun?')){stopSpeech();$('#quiz').hidden=true;renderMap()}};
 
@@ -296,6 +327,26 @@ $('#adm').onclick=()=>{if(!UN.length)return alert('Ünite yüklenmedi');if(ADMIN
 $('#au').onchange=fillL;$('#al').onchange=fillQ;$('#ax').onclick=()=>$('#admin').hidden=true;
 $('#ago').onclick=()=>{const u=UN[$('#au').value],l=u.lessons[$('#al').value],i0=+$('#aq').value,only=$('#ao').checked;
  const qs=(only?[l.qs[i0]]:l.qs).map(q=>({...q}));Q={admin:1,unit:u,qs,i:only?0:i0,ok:0,n:qs.length,cur:null};$('#admin').hidden=true;open()};
+
+/* ---------- Ödül kartları (XP eşiğine göre açılır; XP harcanmaz) ---------- */
+const cNN=i=>String(i).padStart(2,'0');
+window.cardErr=img=>{const n=img.dataset.n,t=+(img.dataset.t||0)+1,c=[`cards/card${n}.png`,`images/card${n}.png`,`card${n}.png`];   // klasör sırası
+ if(t<c.length){img.dataset.t=t;img.src=c[t]}else img.outerHTML=`<div class="ph"><span style="font-size:46px">🎴</span>Kart ${n}</div>`};
+const cardImg=i=>`<img data-n="${cNN(i)}" src="cards/card${cNN(i)}.png" alt="Kart ${cNN(i)}" onerror="cardErr(this)">`;
+function renderPrize(){
+ const own=Object.keys(P.cards).length,next=PRIZE_COST.findIndex((c,i)=>!P.cards[i+1]&&P.xp<c),ready=PRIZE_COST.filter((c,i)=>!P.cards[i+1]&&P.xp>=c).length;
+ $('#pcnt').textContent=`${own}/20`;
+ $('#pinfo').innerHTML=`⭐ ${P.xp} XP`+(ready?` · 🎁 ${ready} kart açılmayı bekliyor!`:next>=0?` · Sonraki kart için ${PRIZE_COST[next]-P.xp} XP daha`:own>=20?' · Tüm kartlar sende! 🎉':'');
+ $('#pgrid').innerHTML=PRIZE_COST.map((c,k)=>{const i=k+1,n=cNN(i);
+  if(P.cards[i])return `<div class="pc own" data-i="${i}">${cardImg(i)}</div>`;
+  if(P.xp>=c)return `<div class="pc ready" data-i="${i}"><span class="n">${n}</span><span class="big2">🎁</span>AÇ!<small>${c} XP</small></div>`;
+  return `<div class="pc" data-i="${i}"><span class="n">${n}</span><span class="big2">🔒</span><small>${c} XP</small></div>`}).join('');
+ $('#pgrid').querySelectorAll('.pc.own').forEach(e=>e.onclick=()=>zoomCard(+e.dataset.i));
+ $('#pgrid').querySelectorAll('.pc.ready').forEach(e=>e.onclick=()=>{const i=+e.dataset.i;if(P.xp<PRIZE_COST[i-1])return;P.cards[i]=1;save();sfx('applause');confetti();renderPrize();zoomCard(i)})}
+function zoomCard(i){$('#zoom').innerHTML=cardImg(i);$('#zoom').hidden=false}
+$('#zoom').onclick=()=>{$('#zoom').hidden=true};
+$('#prz').onclick=()=>{renderPrize();$('#prize').hidden=false};
+$('#px').onclick=()=>{$('#prize').hidden=true};
 
 loadUnits().then(renderMap).catch(e=>{$('#map').innerHTML='<p style="margin:60px 20px">Yükleme hatası. Siteyi Netlify veya yerel sunucuda aç.</p>'});
 window.speechSynthesis&&speechSynthesis.getVoices();
