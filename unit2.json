@@ -1,0 +1,1783 @@
+{
+ "unit": 2,
+ "title": "Theme 2: Classroom Life",
+ "color": "#1cb0f6",
+ "emoji": "🎒",
+ "sections": [
+  {
+   "id": "s1",
+   "title": "Resim Eşleştirme",
+   "emoji": "🖼️",
+   "questions": [
+    {
+     "id": "q1_1",
+     "type": "choice",
+     "prompt": "Görseldeki sınıf eşyasını seçiniz.",
+     "image": "images/bookshelf.jpg",
+     "emoji": "📚",
+     "options": [
+      "Locker",
+      "Bookshelf",
+      "Basket",
+      "Teacher's chair"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_2",
+     "type": "choice",
+     "prompt": "Görseldeki sınıf eşyasını seçiniz.",
+     "image": "images/locker.jpg",
+     "emoji": "🗄️",
+     "options": [
+      "Locker",
+      "Bookshelf",
+      "Student's desk",
+      "Bin"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_3",
+     "type": "choice",
+     "prompt": "Görseldeki ders aracını seçiniz.",
+     "image": "images/paintbrush.jpg",
+     "emoji": "🖌️",
+     "options": [
+      "Ruler",
+      "Duster",
+      "Paintbrush",
+      "Pen"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_4",
+     "type": "choice",
+     "prompt": "Görseldeki sınıf nesnesini seçiniz.",
+     "image": "images/duster.jpg",
+     "emoji": "🧽",
+     "options": [
+      "Duster",
+      "Flashcard",
+      "Workbook",
+      "Map"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_5",
+     "type": "choice",
+     "prompt": "Görseldeki sınıf nesnesini seçiniz.",
+     "image": "images/map.jpg",
+     "emoji": "🗺️",
+     "options": [
+      "Coursebook",
+      "Map",
+      "Blackboard",
+      "Card"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_6",
+     "type": "choice",
+     "prompt": "Görseldeki teknolojik cihazı seçiniz.",
+     "image": "images/keyboard.jpg",
+     "emoji": "⌨️",
+     "options": [
+      "Microphone",
+      "Mouse",
+      "Keyboard",
+      "Lights"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_7",
+     "type": "choice",
+     "prompt": "Görseldeki cihazı seçiniz.",
+     "image": "images/microphone.jpg",
+     "emoji": "🎤",
+     "options": [
+      "Microphone",
+      "Keyboard",
+      "Mouse",
+      "Basket"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_8",
+     "type": "choice",
+     "prompt": "Görseldeki bilgisayar parçasını seçiniz.",
+     "image": "images/mouse.jpg",
+     "emoji": "🖱️",
+     "options": [
+      "Keyboard",
+      "Mouse",
+      "Microphone",
+      "Ruler"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_9",
+     "type": "choice",
+     "prompt": "Görseldeki okul gerecini seçiniz.",
+     "image": "images/ruler.jpg",
+     "emoji": "📏",
+     "options": [
+      "Pen",
+      "Paintbrush",
+      "Ruler",
+      "Duster"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_10",
+     "type": "choice",
+     "prompt": "Görseldeki eşyayı seçiniz.",
+     "image": "images/school_bag.jpg",
+     "emoji": "🎒",
+     "options": [
+      "School bag",
+      "Locker",
+      "Basket",
+      "Bookshelf"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_11",
+     "type": "choice",
+     "prompt": "Görseldeki hava durumunu seçiniz.",
+     "image": "images/sunny.jpg",
+     "emoji": "☀️",
+     "options": [
+      "Snowing",
+      "Raining",
+      "Sunny",
+      "Windy"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_12",
+     "type": "choice",
+     "prompt": "Görseldeki hava durumunu seçiniz.",
+     "image": "images/snowing.jpg",
+     "emoji": "❄️",
+     "options": [
+      "Sunny",
+      "Warm",
+      "Windy",
+      "Snowing"
+     ],
+     "answer": 3
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "title": "Çeviri",
+   "emoji": "✍️",
+   "questions": [
+    {
+     "id": "q2_1",
+     "type": "choice",
+     "prompt": "\"Kitaplarınızı açın, lütfen!\" yönergesinin İngilizcesi nedir?",
+     "options": [
+      "Open your books, please!",
+      "Close your books, please!",
+      "Take your seat, please!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_2",
+     "type": "choice",
+     "prompt": "\"Yerine otur, lütfen!\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "Say it again, please!",
+      "Take your seat, please!",
+      "Speak louder, please!"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_3",
+     "type": "choice",
+     "prompt": "\"Benden sonra tekrar edin, lütfen!\" yönergesinin İngilizcesi nedir?",
+     "options": [
+      "Repeat after me, please!",
+      "Watch the video, please!",
+      "Work in pairs, please!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_4",
+     "type": "choice",
+     "prompt": "\"Kelimeyi harf harf kodla, lütfen!\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "Match the words, please!",
+      "Spell the word, please!",
+      "Circle it, please!"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_5",
+     "type": "choice",
+     "prompt": "\"Daha yüksek sesle konuş, lütfen!\" yönergesinin İngilizcesi nedir?",
+     "options": [
+      "Speak louder, please!",
+      "Listen and repeat, please!",
+      "Colour it, please!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_6",
+     "type": "choice",
+     "prompt": "\"İçeri girebilir miyim?\" sorusunun İngilizcesi nedir?",
+     "options": [
+      "May I come in?",
+      "Have you finished?",
+      "What's missing?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_7",
+     "type": "choice",
+     "prompt": "\"Saat kaç? Saat dokuz.\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "What time is it? It's nine o'clock.",
+      "What lesson is it now? It's Maths.",
+      "How many rulers are there?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_8",
+     "type": "choice",
+     "prompt": "\"Şimdi hangi ders var? Matematik dersi var.\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "What lesson is it now? It's Maths.",
+      "What time is it? It's ten o'clock.",
+      "Is there a Maths lesson on Monday?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_9",
+     "type": "choice",
+     "prompt": "\"Bugün hava nasıl? Bugün yağmur yağıyor.\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "How is the weather today? It's raining today.",
+      "What nice weather! It's sunny today.",
+      "Look outside! It's snowing today."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_10",
+     "type": "choice",
+     "prompt": "\"Masada kaç tane cetvel var?\" sorusunun İngilizcesi nedir?",
+     "options": [
+      "How many rulers are there on the table?",
+      "How many pencils have you got?",
+      "What are they? They are rulers."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_11",
+     "type": "choice",
+     "prompt": "\"Kaç tane kurşun kalemin var? İki kurşun kalemim var.\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "How many pencils have you got? I've got two pencils.",
+      "How many pens are there on the desk?",
+      "You've got six paintbrushes."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_12",
+     "type": "choice",
+     "prompt": "\"Pazartesi günü Türkçe dersi var mı?\" sorusunun İngilizcesi nedir?",
+     "options": [
+      "Is there a Turkish lesson on Monday?",
+      "What lesson is it now? It's Turkish.",
+      "We have an English lesson now."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_13",
+     "type": "choice",
+     "prompt": "\"Işıkları açın!\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "Turn on the lights!",
+      "Look outside!",
+      "Let's start the lesson!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_14",
+     "type": "choice",
+     "prompt": "\"Bitirdiniz mi? Son beş dakika!\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "Have you finished? Last five minutes!",
+      "Try again, please! Great job!",
+      "Open page forty-nine in your books!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_15",
+     "type": "choice",
+     "prompt": "\"Hava buz gibi (dondurucu)!\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "It's freezing!",
+      "What nice weather!",
+      "Everything is all right!"
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "title": "Dinle ve Seç",
+   "emoji": "🎧",
+   "questions": [
+    {
+     "id": "q3_1",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Derse başlayalım!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Let's start the lesson!",
+      "Take your seat, please!",
+      "Turn on the lights!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_2",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Harika görünüyorsun!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Everything is all right!",
+      "You look great!",
+      "That's right!"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_3",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Ne güzel bir hava!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "It's freezing!",
+      "Look outside!",
+      "What nice weather!"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q3_4",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Her şey yolunda!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Everything is all right!",
+      "Try again, please!",
+      "Last five minutes!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_5",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Bu doğru! Harika iş!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "That's correct! Great job!",
+      "Say it again, please!",
+      "May I come in?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_6",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Dışarıya bakın! Kar yağıyor.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Look outside! It's snowing.",
+      "Look outside! It's sunny.",
+      "Turn on the lights! It's dark."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_7",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Soruyu cevapla, lütfen!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Answer the question, please!",
+      "Spell the word, please!",
+      "Match the words, please!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_8",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Tekrar dene, lütfen!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Try again, please!",
+      "Circle it, please!",
+      "Colour it, please!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_9",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "İkili çalışın, lütfen!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Work in pairs, please!",
+      "Watch the video, please!",
+      "Close your book, please!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_10",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Onlar nedir? Onlar ders kitaplarıdır.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "What are they? They are coursebooks.",
+      "What is this? It is a workbook.",
+      "Where are the exercise books?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_11",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Saat on.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "It's ten o'clock.",
+      "It's nine o'clock.",
+      "It's five o'clock."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_12",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Benim üç tükenmez kalemim var.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I've got three pens.",
+      "There are three rulers.",
+      "You've got six paintbrushes."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_13",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Okul çantam koyu mavi.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "My school bag is dark blue.",
+      "His school bag is light blue.",
+      "The teacher's chair is green."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_14",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Öğretmen masası açık kahverengi.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "The teacher's desk is light brown.",
+      "The student's desk is dark brown.",
+      "The bookshelf is yellow."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_15",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Sınıfta yirmi dokuz öğrenci var.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "There are twenty-nine pupils in the class.",
+      "There are thirty-five pupils in the class.",
+      "There are forty-two books on the shelf."
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "title": "Kelime Sırala",
+   "emoji": "🧩",
+   "questions": [
+    {
+     "id": "q4_1",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"What time is it?\"",
+     "audio": {
+      "text": "What time is it?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Saat",
+      "kaç?",
+      "Hangi",
+      "ders?"
+     ],
+     "answer": [
+      "Saat",
+      "kaç?"
+     ]
+    },
+    {
+     "id": "q4_2",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"What lesson is it now?\"",
+     "audio": {
+      "text": "What lesson is it now?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Şimdi",
+      "hangi",
+      "ders",
+      "var?",
+      "saat"
+     ],
+     "answer": [
+      "Şimdi",
+      "hangi",
+      "ders",
+      "var?"
+     ]
+    },
+    {
+     "id": "q4_3",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"How is the weather today?\"",
+     "audio": {
+      "text": "How is the weather today?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Bugün",
+      "hava",
+      "nasıl?",
+      "nerede?"
+     ],
+     "answer": [
+      "Bugün",
+      "hava",
+      "nasıl?"
+     ]
+    },
+    {
+     "id": "q4_4",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"It is sunny and warm.\"",
+     "audio": {
+      "text": "It is sunny and warm.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Hava",
+      "güneşli",
+      "ve",
+      "ılık.",
+      "karlı."
+     ],
+     "answer": [
+      "Hava",
+      "güneşli",
+      "ve",
+      "ılık."
+     ]
+    },
+    {
+     "id": "q4_5",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"Open your books, please!\"",
+     "audio": {
+      "text": "Open your books, please!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Kitaplarınızı",
+      "açın,",
+      "lütfen!",
+      "kapatın,"
+     ],
+     "answer": [
+      "Kitaplarınızı",
+      "açın,",
+      "lütfen!"
+     ]
+    },
+    {
+     "id": "q4_6",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"Take your seat, please!\"",
+     "audio": {
+      "text": "Take your seat, please!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Yerine",
+      "otur,",
+      "lütfen!",
+      "koş,"
+     ],
+     "answer": [
+      "Yerine",
+      "otur,",
+      "lütfen!"
+     ]
+    },
+    {
+     "id": "q4_7",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"How many pens have you got?\"",
+     "audio": {
+      "text": "How many pens have you got?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Kaç tane",
+      "tükenmez kalemin",
+      "var?",
+      "cetvelin"
+     ],
+     "answer": [
+      "Kaç tane",
+      "tükenmez kalemin",
+      "var?"
+     ]
+    },
+    {
+     "id": "q4_8",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"I have got two rulers.\"",
+     "audio": {
+      "text": "I have got two rulers.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "İki",
+      "cetvelim",
+      "var.",
+      "çantam"
+     ],
+     "answer": [
+      "İki",
+      "cetvelim",
+      "var."
+     ]
+    },
+    {
+     "id": "q4_9",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"Is there a Music lesson on Monday?\"",
+     "audio": {
+      "text": "Is there a Music lesson on Monday?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Pazartesi",
+      "müzik dersi",
+      "var mı?",
+      "resim dersi"
+     ],
+     "answer": [
+      "Pazartesi",
+      "müzik dersi",
+      "var mı?"
+     ]
+    },
+    {
+     "id": "q4_10",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"Turn on the lights!\"",
+     "audio": {
+      "text": "Turn on the lights!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Işıkları",
+      "açın!",
+      "Kitapları",
+      "boya!"
+     ],
+     "answer": [
+      "Işıkları",
+      "açın!"
+     ]
+    },
+    {
+     "id": "q4_11",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"What nice weather!\"",
+     "audio": {
+      "text": "What nice weather!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Ne",
+      "güzel",
+      "hava!",
+      "soğuk"
+     ],
+     "answer": [
+      "Ne",
+      "güzel",
+      "hava!"
+     ]
+    },
+    {
+     "id": "q4_12",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"They are exercise books.\"",
+     "audio": {
+      "text": "They are exercise books.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Onlar",
+      "alıştırma",
+      "defterleridir.",
+      "haritalardır."
+     ],
+     "answer": [
+      "Onlar",
+      "alıştırma",
+      "defterleridir."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "title": "Eşleştir",
+   "emoji": "🔗",
+   "questions": [
+    {
+     "id": "q5_1",
+     "type": "match",
+     "prompt": "Sınıf mobilyalarını Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Teacher's desk",
+       "right": "Öğretmen masası"
+      },
+      {
+       "left": "Student's desk",
+       "right": "Öğrenci sırası"
+      },
+      {
+       "left": "Bookshelf",
+       "right": "Kitaplık"
+      },
+      {
+       "left": "Locker",
+       "right": "Öğrenci dolabı"
+      }
+     ]
+    },
+    {
+     "id": "q5_2",
+     "type": "match",
+     "prompt": "Sınıf eşyalarını Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Teacher's chair",
+       "right": "Öğretmen sandalyesi"
+      },
+      {
+       "left": "Basket",
+       "right": "Sepet"
+      },
+      {
+       "left": "Bin",
+       "right": "Çöp kutusu"
+      },
+      {
+       "left": "Duster",
+       "right": "Tahta silgisi"
+      }
+     ]
+    },
+    {
+     "id": "q5_3",
+     "type": "match",
+     "prompt": "Kitap, defter ve kart türlerini eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Coursebook",
+       "right": "Ders kitabı"
+      },
+      {
+       "left": "Workbook",
+       "right": "Çalışma kitabı"
+      },
+      {
+       "left": "Exercise book",
+       "right": "Alıştırma defteri"
+      },
+      {
+       "left": "Flashcard",
+       "right": "Kelime kartı"
+      }
+     ]
+    },
+    {
+     "id": "q5_4",
+     "type": "match",
+     "prompt": "Ders araç gereçlerini Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Pen",
+       "right": "Tükenmez kalem"
+      },
+      {
+       "left": "Ruler",
+       "right": "Cetvel"
+      },
+      {
+       "left": "Paintbrush",
+       "right": "Boya fırçası"
+      },
+      {
+       "left": "Map",
+       "right": "Harita"
+      }
+     ]
+    },
+    {
+     "id": "q5_5",
+     "type": "match",
+     "prompt": "Sınıftaki cihazları ve donanımları eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Keyboard",
+       "right": "Klavye"
+      },
+      {
+       "left": "Mouse",
+       "right": "Bilgisayar faresi"
+      },
+      {
+       "left": "Microphone",
+       "right": "Mikrofon"
+      },
+      {
+       "left": "Lights",
+       "right": "Işıklar"
+      }
+     ]
+    },
+    {
+     "id": "q5_6",
+     "type": "match",
+     "prompt": "Okul derslerini Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Life Study",
+       "right": "Hayat Bilgisi"
+      },
+      {
+       "left": "Maths",
+       "right": "Matematik"
+      },
+      {
+       "left": "Turkish",
+       "right": "Türkçe"
+      },
+      {
+       "left": "English",
+       "right": "İngilizce"
+      }
+     ]
+    },
+    {
+     "id": "q5_7",
+     "type": "match",
+     "prompt": "Diğer okul derslerini eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Music",
+       "right": "Müzik"
+      },
+      {
+       "left": "PE",
+       "right": "Beden Eğitimi"
+      },
+      {
+       "left": "Science",
+       "right": "Fen Bilimleri"
+      },
+      {
+       "left": "Art",
+       "right": "Görsel Sanatlar / Resim"
+      }
+     ]
+    },
+    {
+     "id": "q5_8",
+     "type": "match",
+     "prompt": "Mevsimleri Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Spring",
+       "right": "İlkbahar"
+      },
+      {
+       "left": "Summer",
+       "right": "Yaz"
+      },
+      {
+       "left": "Autumn",
+       "right": "Sonbahar"
+      },
+      {
+       "left": "Winter",
+       "right": "Kış"
+      }
+     ]
+    },
+    {
+     "id": "q5_9",
+     "type": "match",
+     "prompt": "Soru ve cevapları eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "What time is it?",
+       "right": "It is nine o'clock."
+      },
+      {
+       "left": "What lesson is it now?",
+       "right": "It is Life Study."
+      },
+      {
+       "left": "How is the weather today?",
+       "right": "It is sunny and warm."
+      },
+      {
+       "left": "What are they?",
+       "right": "They are rulers."
+      }
+     ]
+    },
+    {
+     "id": "q5_10",
+     "type": "match",
+     "prompt": "Sınıf içi soru ve cevapları eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "May I come in?",
+       "right": "Come in. Take your seat!"
+      },
+      {
+       "left": "How many pens have you got?",
+       "right": "I have got three pens."
+      },
+      {
+       "left": "Is there Maths on Monday?",
+       "right": "Yes, there is."
+      },
+      {
+       "left": "Spell the word, please!",
+       "right": "M - A - P!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "title": "Cümle Kur",
+   "emoji": "🔤",
+   "questions": [
+    {
+     "id": "q6_1",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "What",
+      "time",
+      "is",
+      "it",
+      "?"
+     ],
+     "answer": [
+      "What",
+      "time",
+      "is",
+      "it",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_2",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "What",
+      "lesson",
+      "is",
+      "it",
+      "now",
+      "?"
+     ],
+     "answer": [
+      "What",
+      "lesson",
+      "is",
+      "it",
+      "now",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_3",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "How",
+      "is",
+      "the",
+      "weather",
+      "today",
+      "?"
+     ],
+     "answer": [
+      "How",
+      "is",
+      "the",
+      "weather",
+      "today",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_4",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "Is",
+      "there",
+      "a",
+      "Music",
+      "lesson",
+      "on",
+      "Monday",
+      "?"
+     ],
+     "answer": [
+      "Is",
+      "there",
+      "a",
+      "Music",
+      "lesson",
+      "on",
+      "Monday",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_5",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "How",
+      "many",
+      "rulers",
+      "are",
+      "there",
+      "?"
+     ],
+     "answer": [
+      "How",
+      "many",
+      "rulers",
+      "are",
+      "there",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_6",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "How",
+      "many",
+      "pencils",
+      "have",
+      "you",
+      "got",
+      "?"
+     ],
+     "answer": [
+      "How",
+      "many",
+      "pencils",
+      "have",
+      "you",
+      "got",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_7",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce cümle kurun.",
+     "tokens": [
+      "I",
+      "have",
+      "got",
+      "three",
+      "pens"
+     ],
+     "answer": [
+      "I",
+      "have",
+      "got",
+      "three",
+      "pens"
+     ]
+    },
+    {
+     "id": "q6_8",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce yönerge cümlesi kurun.",
+     "tokens": [
+      "Open",
+      "your",
+      "books",
+      "please"
+     ],
+     "answer": [
+      "Open",
+      "your",
+      "books",
+      "please"
+     ]
+    },
+    {
+     "id": "q6_9",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce yönerge cümlesi kurun.",
+     "tokens": [
+      "Repeat",
+      "after",
+      "me",
+      "please"
+     ],
+     "answer": [
+      "Repeat",
+      "after",
+      "me",
+      "please"
+     ]
+    },
+    {
+     "id": "q6_10",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce yönerge cümlesi kurun.",
+     "tokens": [
+      "Take",
+      "your",
+      "seat",
+      "please"
+     ],
+     "answer": [
+      "Take",
+      "your",
+      "seat",
+      "please"
+     ]
+    },
+    {
+     "id": "q6_11",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce cümle kurun.",
+     "tokens": [
+      "My",
+      "school",
+      "bag",
+      "is",
+      "dark",
+      "blue"
+     ],
+     "answer": [
+      "My",
+      "school",
+      "bag",
+      "is",
+      "dark",
+      "blue"
+     ]
+    },
+    {
+     "id": "q6_12",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce cümle kurun.",
+     "tokens": [
+      "There",
+      "are",
+      "two",
+      "rulers",
+      "on",
+      "the",
+      "desk"
+     ],
+     "answer": [
+      "There",
+      "are",
+      "two",
+      "rulers",
+      "on",
+      "the",
+      "desk"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "title": "Eşleştir 2",
+   "emoji": "🌟",
+   "questions": [
+    {
+     "id": "q7_1",
+     "type": "match",
+     "prompt": "Hava durumu kelimelerini Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Sunny",
+       "right": "Güneşli"
+      },
+      {
+       "left": "Raining",
+       "right": "Yağmurlu"
+      },
+      {
+       "left": "Snowing",
+       "right": "Kar yağışlı"
+      },
+      {
+       "left": "Windy",
+       "right": "Rüzgârlı"
+      },
+      {
+       "left": "Warm",
+       "right": "Ilık"
+      }
+     ]
+    },
+    {
+     "id": "q7_2",
+     "type": "match",
+     "prompt": "20-50 arası onluk sayıları Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Twenty",
+       "right": "20 (Yirmi)"
+      },
+      {
+       "left": "Thirty",
+       "right": "30 (Otuz)"
+      },
+      {
+       "left": "Forty",
+       "right": "40 (Kırk)"
+      },
+      {
+       "left": "Fifty",
+       "right": "50 (Elli)"
+      },
+      {
+       "left": "Twenty-five",
+       "right": "25 (Yirmi beş)"
+      }
+     ]
+    },
+    {
+     "id": "q7_3",
+     "type": "match",
+     "prompt": "20-50 arası ara sayıları Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Twenty-nine",
+       "right": "29 (Yirmi dokuz)"
+      },
+      {
+       "left": "Thirty-five",
+       "right": "35 (Otuz beş)"
+      },
+      {
+       "left": "Thirty-seven",
+       "right": "37 (Otuz yedi)"
+      },
+      {
+       "left": "Forty-two",
+       "right": "42 (Kırk iki)"
+      },
+      {
+       "left": "Forty-eight",
+       "right": "48 (Kırk sekiz)"
+      }
+     ]
+    },
+    {
+     "id": "q7_4",
+     "type": "match",
+     "prompt": "Renkleri ve tonlarını Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Dark blue",
+       "right": "Koyu mavi"
+      },
+      {
+       "left": "Light brown",
+       "right": "Açık kahverengi"
+      },
+      {
+       "left": "Purple",
+       "right": "Mor"
+      },
+      {
+       "left": "Grey",
+       "right": "Gri"
+      },
+      {
+       "left": "Pink",
+       "right": "Pembe"
+      }
+     ]
+    },
+    {
+     "id": "q7_5",
+     "type": "match",
+     "prompt": "İyelik sıfatlarını (Possessive Adjectives) eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "My",
+       "right": "Benim"
+      },
+      {
+       "left": "Your",
+       "right": "Senin / Sizin"
+      },
+      {
+       "left": "His",
+       "right": "Onun (erkek)"
+      },
+      {
+       "left": "Her",
+       "right": "Onun (kız)"
+      },
+      {
+       "left": "Our / Their",
+       "right": "Bizim / Onların"
+      }
+     ]
+    },
+    {
+     "id": "q7_6",
+     "type": "match",
+     "prompt": "Sınıf yönergelerini Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Open your book",
+       "right": "Kitabını aç"
+      },
+      {
+       "left": "Close your book",
+       "right": "Kitabını kapat"
+      },
+      {
+       "left": "Circle it",
+       "right": "Yuvarlak içine al"
+      },
+      {
+       "left": "Colour it",
+       "right": "Onu boya"
+      },
+      {
+       "left": "Match the words",
+       "right": "Kelimeleri eşleştir"
+      }
+     ]
+    },
+    {
+     "id": "q7_7",
+     "type": "match",
+     "prompt": "Diğer sınıf yönergelerini Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Listen and repeat",
+       "right": "Dinle ve tekrar et"
+      },
+      {
+       "left": "Watch the video",
+       "right": "Videoyu izle"
+      },
+      {
+       "left": "Work in pairs",
+       "right": "İkili çalış"
+      },
+      {
+       "left": "Speak louder",
+       "right": "Daha yüksek sesle konuş"
+      },
+      {
+       "left": "Spell the word",
+       "right": "Kelimeyi harf harf kodla"
+      }
+     ]
+    },
+    {
+     "id": "q7_8",
+     "type": "match",
+     "prompt": "Sosyal dil ifadelerini Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "You look great!",
+       "right": "Harika görünüyorsun!"
+      },
+      {
+       "left": "What nice weather!",
+       "right": "Ne güzel bir hava!"
+      },
+      {
+       "left": "It's freezing!",
+       "right": "Hava buz gibi!"
+      },
+      {
+       "left": "Everything is all right!",
+       "right": "Her şey yolunda!"
+      },
+      {
+       "left": "That's right!",
+       "right": "Bu doğru!"
+      }
+     ]
+    },
+    {
+     "id": "q7_9",
+     "type": "match",
+     "prompt": "Sınıf içi oyun ve yarışma kelimelerini eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Word",
+       "right": "Kelime"
+      },
+      {
+       "left": "Letter",
+       "right": "Harf"
+      },
+      {
+       "left": "Point",
+       "right": "Puan"
+      },
+      {
+       "left": "Winner",
+       "right": "Kazanan"
+      },
+      {
+       "left": "Prize",
+       "right": "Ödül"
+      }
+     ]
+    },
+    {
+     "id": "q7_10",
+     "type": "match",
+     "prompt": "Mevsimleri ve özel günleri İngilizce özellikleriyle eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Winter",
+       "right": "Snowing and freezing"
+      },
+      {
+       "left": "Summer",
+       "right": "Sunny and hot"
+      },
+      {
+       "left": "Spring",
+       "right": "Warm and nice"
+      },
+      {
+       "left": "Autumn",
+       "right": "Windy and rainy"
+      },
+      {
+       "left": "24 November",
+       "right": "Teachers' Day"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "title": "Konuş",
+   "emoji": "🎙️",
+   "questions": [
+    {
+     "id": "q8_1",
+     "type": "speak",
+     "prompt": "Ekranda görünen İngilizce cümleyi mikrofona sesli okuyunuz.",
+     "display": "What time is it? It's nine o'clock.",
+     "accepted": [
+      "What time is it? It's nine o'clock.",
+      "What time is it? It is nine o'clock.",
+      "What time is it it's 9 o'clock"
+     ]
+    },
+    {
+     "id": "q8_2",
+     "type": "speak",
+     "prompt": "Dinlediğiniz İngilizce cümleyi mikrofona tekrar ediniz.",
+     "audio": {
+      "text": "What lesson is it now? It's Maths.",
+      "lang": "en-US"
+     },
+     "display": "What lesson is it now? It's Maths.",
+     "accepted": [
+      "What lesson is it now? It's Maths.",
+      "What lesson is it now? It is Maths.",
+      "What lesson is it now it's math"
+     ]
+    },
+    {
+     "id": "q8_3",
+     "type": "speak",
+     "prompt": "Türkçe verilen soruyu İngilizceye çevirerek mikrofona söyleyiniz: \"İçeri girebilir miyim?\"",
+     "display": "May I come in?",
+     "accepted": [
+      "May I come in?",
+      "Can I come in?"
+     ]
+    },
+    {
+     "id": "q8_4",
+     "type": "speak",
+     "prompt": "Görseldeki ders aracını İngilizce olarak mikrofona söyleyiniz.",
+     "image": "images/paintbrush.jpg",
+     "emoji": "🖌️",
+     "display": "Paintbrush",
+     "accepted": [
+      "Paintbrush",
+      "A paintbrush",
+      "Paint brush"
+     ]
+    },
+    {
+     "id": "q8_5",
+     "type": "choice",
+     "prompt": "Dinlediğiniz soruya en uygun yanıtı seçip mikrofona sesli okuyunuz.",
+     "audio": {
+      "text": "How is the weather today?",
+      "lang": "en-US"
+     },
+     "options": [
+      "It's sunny and warm.",
+      "It's ten o'clock.",
+      "They are rulers."
+     ],
+     "answer": 0,
+     "speakAfter": true
+    },
+    {
+     "id": "q8_6",
+     "type": "speak",
+     "prompt": "Ekranda görünen İngilizce cümleyi mikrofona sesli okuyunuz.",
+     "display": "How many pens have you got? I've got three pens.",
+     "accepted": [
+      "How many pens have you got? I've got three pens.",
+      "How many pens have you got? I have got three pens.",
+      "How many pens have you got I've got 3 pens"
+     ]
+    },
+    {
+     "id": "q8_7",
+     "type": "speak",
+     "prompt": "Dinlediğiniz İngilizce yönergeyi mikrofona tekrar ediniz.",
+     "audio": {
+      "text": "Open your books and take your seat, please!",
+      "lang": "en-US"
+     },
+     "display": "Open your books and take your seat, please!",
+     "accepted": [
+      "Open your books and take your seat, please!"
+     ]
+    },
+    {
+     "id": "q8_8",
+     "type": "speak",
+     "prompt": "Ekranda görünen sosyal dil ifadesini mikrofona sesli okuyunuz.",
+     "display": "What nice weather! You look great!",
+     "accepted": [
+      "What nice weather! You look great!"
+     ]
+    },
+    {
+     "id": "q8_9",
+     "type": "speak",
+     "prompt": "Görseldeki sınıf eşyasını İngilizce olarak mikrofona söyleyiniz.",
+     "image": "images/bookshelf.jpg",
+     "emoji": "📚",
+     "display": "Bookshelf",
+     "accepted": [
+      "Bookshelf",
+      "A bookshelf",
+      "Book shelf"
+     ]
+    },
+    {
+     "id": "q8_10",
+     "type": "choice",
+     "prompt": "Dinlediğiniz soruya en uygun yanıtı seçip sesli okuyunuz.",
+     "audio": {
+      "text": "What are they?",
+      "lang": "en-US"
+     },
+     "options": [
+      "They are rulers.",
+      "It is windy today.",
+      "Yes, there is."
+     ],
+     "answer": 0,
+     "speakAfter": true
+    },
+    {
+     "id": "q8_11",
+     "type": "speak",
+     "prompt": "Dinlediğiniz İngilizce soru ve cevabı mikrofona tekrar ediniz.",
+     "audio": {
+      "text": "Is there a Turkish lesson on Monday? Yes, there is.",
+      "lang": "en-US"
+     },
+     "display": "Is there a Turkish lesson on Monday? Yes, there is.",
+     "accepted": [
+      "Is there a Turkish lesson on Monday? Yes, there is."
+     ]
+    },
+    {
+     "id": "q8_12",
+     "type": "speak",
+     "prompt": "Dinlediğiniz İngilizce cümleyi mikrofona tekrar ediniz.",
+     "audio": {
+      "text": "Look outside! It's snowing. It's freezing!",
+      "lang": "en-US"
+     },
+     "display": "Look outside! It's snowing. It's freezing!",
+     "accepted": [
+      "Look outside! It's snowing. It's freezing!",
+      "Look outside! It is snowing. It is freezing!"
+     ]
+    },
+    {
+     "id": "q8_13",
+     "type": "speak",
+     "prompt": "Türkçe yönergeyi İngilizceye çevirip sesli söyleyiniz: \"Kelimeyi harf harf kodla, lütfen!\"",
+     "display": "Spell the word, please!",
+     "accepted": [
+      "Spell the word, please!"
+     ]
+    },
+    {
+     "id": "q8_14",
+     "type": "speak",
+     "prompt": "Görseldeki cihazı İngilizce olarak mikrofona söyleyiniz.",
+     "image": "images/microphone.jpg",
+     "emoji": "🎤",
+     "display": "Microphone",
+     "accepted": [
+      "Microphone",
+      "A microphone"
+     ]
+    }
+   ]
+  }
+ ]
+}
