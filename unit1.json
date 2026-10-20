@@ -16,10 +16,10 @@
      "image": "images/librarian.jpg",
      "emoji": "📚",
      "options": [
-      "A school nurse",
-      "A librarian",
-      "A caretaker",
-      "A classmate"
+      "School nurse",
+      "Librarian",
+      "Caretaker",
+      "Classmate"
      ],
      "answer": 1
     },
@@ -30,10 +30,10 @@
      "image": "images/school_nurse.jpg",
      "emoji": "🩺",
      "options": [
-      "A headteacher",
-      "A librarian",
-      "A school nurse",
-      "A caretaker"
+      "Headteacher",
+      "Librarian",
+      "School nurse",
+      "Caretaker"
      ],
      "answer": 2
     },
@@ -44,10 +44,10 @@
      "image": "images/caretaker.jpg",
      "emoji": "🧹",
      "options": [
-      "A caretaker",
-      "A classmate",
-      "A headteacher",
-      "A school nurse"
+      "Caretaker",
+      "Classmate",
+      "Headteacher",
+      "School nurse"
      ],
      "answer": 0
     },
@@ -58,10 +58,10 @@
      "image": "images/headteacher.jpg",
      "emoji": "👨‍💼",
      "options": [
-      "A pupil",
-      "A caretaker",
-      "A headteacher",
-      "A librarian"
+      "Pupil",
+      "Caretaker",
+      "Headteacher",
+      "Librarian"
      ],
      "answer": 2
     },
@@ -72,10 +72,10 @@
      "image": "images/classmate.jpg",
      "emoji": "🧑‍🤝‍🧑",
      "options": [
-      "A classmate",
-      "A school nurse",
-      "A caretaker",
-      "A headteacher"
+      "Classmate",
+      "School nurse",
+      "Caretaker",
+      "Headteacher"
      ],
      "answer": 0
     },
@@ -86,10 +86,10 @@
      "image": "images/gym.jpg",
      "emoji": "🤸",
      "options": [
-      "An office",
-      "A gym",
-      "A library",
-      "A meeting room"
+      "Office",
+      "Gym",
+      "Library",
+      "Meeting room"
      ],
      "answer": 1
     },
@@ -100,10 +100,10 @@
      "image": "images/art_room.jpg",
      "emoji": "🎨",
      "options": [
-      "A music room",
-      "A sports field",
-      "An art room",
-      "A corridor"
+      "Music room",
+      "Sports field",
+      "Art room",
+      "Corridor"
      ],
      "answer": 2
     },
@@ -114,10 +114,10 @@
      "image": "images/music_room.jpg",
      "emoji": "🎸",
      "options": [
-      "A music room",
-      "An art room",
-      "An office",
-      "A gym"
+      "Music room",
+      "Art room",
+      "Office",
+      "Gym"
      ],
      "answer": 0
     },
@@ -128,10 +128,10 @@
      "image": "images/sports_field.jpg",
      "emoji": "⚽",
      "options": [
-      "A meeting room",
-      "A sports field",
-      "A library",
-      "An office"
+      "Meeting room",
+      "Sports field",
+      "Library",
+      "Office"
      ],
      "answer": 1
     },
@@ -142,10 +142,10 @@
      "image": "images/meeting_room.jpg",
      "emoji": "👥",
      "options": [
-      "A corridor",
-      "A gym",
-      "A meeting room",
-      "A sports field"
+      "Corridor",
+      "Gym",
+      "Meeting room",
+      "Sports field"
      ],
      "answer": 2
     },
@@ -156,10 +156,10 @@
      "image": "images/corridor.jpg",
      "emoji": "🚪",
      "options": [
-      "A corridor",
-      "An art room",
-      "A music room",
-      "A library"
+      "Corridor",
+      "Art room",
+      "Music room",
+      "Library"
      ],
      "answer": 0
     },
@@ -170,10 +170,10 @@
      "image": "images/cake.jpg",
      "emoji": "🎂",
      "options": [
-      "A balloon",
-      "A gift",
-      "A candle",
-      "A cake"
+      "Balloon",
+      "Gift",
+      "Candle",
+      "Cake"
      ],
      "answer": 3
     }
@@ -838,19 +838,19 @@
      "prompt": "Okuldaki kişileri Türkçe karşılıklarıyla eşleştiriniz.",
      "pairs": [
       {
-       "left": "A classmate",
+       "left": "Classmate",
        "right": "Sınıf arkadaşı"
       },
       {
-       "left": "A librarian",
+       "left": "Librarian",
        "right": "Kütüphaneci"
       },
       {
-       "left": "A school nurse",
+       "left": "School nurse",
        "right": "Okul hemşiresi"
       },
       {
-       "left": "A headteacher",
+       "left": "Headteacher",
        "right": "Okul müdürü"
       }
      ]
@@ -861,19 +861,19 @@
      "prompt": "Okuldaki mekanları Türkçe karşılıklarıyla eşleştiriniz.",
      "pairs": [
       {
-       "left": "An art room",
+       "left": "Art room",
        "right": "Resim odası"
       },
       {
-       "left": "A music room",
+       "left": "Music room",
        "right": "Müzik odası"
       },
       {
-       "left": "A meeting room",
+       "left": "Meeting room",
        "right": "Toplantı odası"
       },
       {
-       "left": "An office",
+       "left": "Office",
        "right": "Ofis / İdare"
       }
      ]
@@ -884,19 +884,19 @@
      "prompt": "Diğer okul alanlarını ve kişileri eşleştiriniz.",
      "pairs": [
       {
-       "left": "A sports field",
+       "left": "Sports field",
        "right": "Spor sahası"
       },
       {
-       "left": "A corridor",
+       "left": "Corridor",
        "right": "Koridor"
       },
       {
-       "left": "A gym",
+       "left": "Gym",
        "right": "Spor salonu"
       },
       {
-       "left": "A caretaker",
+       "left": "Caretaker",
        "right": "Temizlik görevlisi"
       }
      ]
@@ -907,19 +907,19 @@
      "prompt": "Doğum günü kavramlarını eşleştiriniz.",
      "pairs": [
       {
-       "left": "A birthday party",
+       "left": "Birthday party",
        "right": "Doğum günü partisi"
       },
       {
-       "left": "A candle",
+       "left": "Candle",
        "right": "Mum"
       },
       {
-       "left": "A balloon",
+       "left": "Balloon",
        "right": "Balon"
       },
       {
-       "left": "A gift",
+       "left": "Gift",
        "right": "Hediye"
       }
      ]
@@ -930,11 +930,11 @@
      "prompt": "Kutlama ve tatil kavramlarını eşleştiriniz.",
      "pairs": [
       {
-       "left": "A cake",
+       "left": "Cake",
        "right": "Pasta"
       },
       {
-       "left": "A surprise",
+       "left": "Surprise",
        "right": "Sürpriz"
       },
       {
@@ -1539,27 +1539,27 @@
     {
      "id": "q7_9",
      "type": "match",
-     "prompt": "Okuldaki kişileri bulundukları yerlerle eşleştiriniz.",
+     "prompt": "Okuldaki kişileri görev yaptıkları yerlerle eşleştiriniz.",
      "pairs": [
       {
-       "left": "The librarian",
-       "right": "In the library"
+       "left": "Librarian",
+       "right": "Library"
       },
       {
-       "left": "The music teacher",
-       "right": "In the music room"
+       "left": "Music teacher",
+       "right": "Music room"
       },
       {
-       "left": "The art teacher",
-       "right": "In the art room"
+       "left": "Art teacher",
+       "right": "Art room"
       },
       {
-       "left": "The headteacher",
-       "right": "In the office"
+       "left": "Headteacher",
+       "right": "Office"
       },
       {
-       "left": "The pupils",
-       "right": "In the classroom"
+       "left": "Pupils",
+       "right": "Classroom"
       }
      ]
     },
@@ -1636,10 +1636,10 @@
      "prompt": "Görseldeki okul bölümünü İngilizce olarak mikrofona söyleyiniz.",
      "image": "images/sports_field.jpg",
      "emoji": "⚽",
-     "display": "A sports field",
+     "display": "Sports field",
      "accepted": [
-      "A sports field",
-      "Sports field"
+      "Sports field",
+      "A sports field"
      ]
     },
     {
@@ -1697,10 +1697,10 @@
      "prompt": "Görseldeki okul görevlisini İngilizce olarak mikrofona söyleyiniz.",
      "image": "images/school_nurse.jpg",
      "emoji": "🩺",
-     "display": "A school nurse",
+     "display": "School nurse",
      "accepted": [
-      "A school nurse",
-      "School nurse"
+      "School nurse",
+      "A school nurse"
      ]
     },
     {
@@ -1761,10 +1761,10 @@
      "prompt": "Görseldeki okul odasını İngilizce olarak mikrofona söyleyiniz.",
      "image": "images/art_room.jpg",
      "emoji": "🎨",
-     "display": "An art room",
+     "display": "Art room",
      "accepted": [
-      "An art room",
-      "Art room"
+      "Art room",
+      "An art room"
      ]
     }
    ]
