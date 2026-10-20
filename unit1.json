@@ -1,0 +1,1773 @@
+{
+ "unit": 1,
+ "title": "Theme 1: School Life",
+ "color": "#58cc02",
+ "emoji": "🏫",
+ "sections": [
+  {
+   "id": "s1",
+   "title": "Resim Eşleştirme",
+   "emoji": "🖼️",
+   "questions": [
+    {
+     "id": "q1_1",
+     "type": "choice",
+     "prompt": "Görseldeki okul görevlisini seçiniz.",
+     "image": "images/librarian.jpg",
+     "emoji": "📚",
+     "options": [
+      "A school nurse",
+      "A librarian",
+      "A caretaker",
+      "A classmate"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_2",
+     "type": "choice",
+     "prompt": "Görseldeki okul çalışanını seçiniz.",
+     "image": "images/school_nurse.jpg",
+     "emoji": "🩺",
+     "options": [
+      "A headteacher",
+      "A librarian",
+      "A school nurse",
+      "A caretaker"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_3",
+     "type": "choice",
+     "prompt": "Görseldeki okul görevlisini seçiniz.",
+     "image": "images/caretaker.jpg",
+     "emoji": "🧹",
+     "options": [
+      "A caretaker",
+      "A classmate",
+      "A headteacher",
+      "A school nurse"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_4",
+     "type": "choice",
+     "prompt": "Görseldeki kişiyi seçiniz.",
+     "image": "images/headteacher.jpg",
+     "emoji": "👨‍💼",
+     "options": [
+      "A pupil",
+      "A caretaker",
+      "A headteacher",
+      "A librarian"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_5",
+     "type": "choice",
+     "prompt": "Görseldeki kişiyi seçiniz.",
+     "image": "images/classmate.jpg",
+     "emoji": "🧑‍🤝‍🧑",
+     "options": [
+      "A classmate",
+      "A school nurse",
+      "A caretaker",
+      "A headteacher"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_6",
+     "type": "choice",
+     "prompt": "Görseldeki okul bölümünü seçiniz.",
+     "image": "images/gym.jpg",
+     "emoji": "🤸",
+     "options": [
+      "An office",
+      "A gym",
+      "A library",
+      "A meeting room"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_7",
+     "type": "choice",
+     "prompt": "Görseldeki okul odasını seçiniz.",
+     "image": "images/art_room.jpg",
+     "emoji": "🎨",
+     "options": [
+      "A music room",
+      "A sports field",
+      "An art room",
+      "A corridor"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_8",
+     "type": "choice",
+     "prompt": "Görseldeki okul odasını seçiniz.",
+     "image": "images/music_room.jpg",
+     "emoji": "🎸",
+     "options": [
+      "A music room",
+      "An art room",
+      "An office",
+      "A gym"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_9",
+     "type": "choice",
+     "prompt": "Görseldeki okul alanını seçiniz.",
+     "image": "images/sports_field.jpg",
+     "emoji": "⚽",
+     "options": [
+      "A meeting room",
+      "A sports field",
+      "A library",
+      "An office"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q1_10",
+     "type": "choice",
+     "prompt": "Görseldeki okul bölümünü seçiniz.",
+     "image": "images/meeting_room.jpg",
+     "emoji": "👥",
+     "options": [
+      "A corridor",
+      "A gym",
+      "A meeting room",
+      "A sports field"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q1_11",
+     "type": "choice",
+     "prompt": "Görseldeki okul bölümünü seçiniz.",
+     "image": "images/corridor.jpg",
+     "emoji": "🚪",
+     "options": [
+      "A corridor",
+      "An art room",
+      "A music room",
+      "A library"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q1_12",
+     "type": "choice",
+     "prompt": "Görseldeki doğum günü kutlaması nesnesini seçiniz.",
+     "image": "images/cake.jpg",
+     "emoji": "🎂",
+     "options": [
+      "A balloon",
+      "A gift",
+      "A candle",
+      "A cake"
+     ],
+     "answer": 3
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "title": "Çeviri",
+   "emoji": "✍️",
+   "questions": [
+    {
+     "id": "q2_1",
+     "type": "choice",
+     "prompt": "\"Yardıma ihtiyacın var mı?\" sorusunun İngilizcesi nedir?",
+     "options": [
+      "Do you need help?",
+      "What's the matter?",
+      "Who wants to tell me?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_2",
+     "type": "choice",
+     "prompt": "\"Sorun nedir? / Ne oldu?\" sorusunun İngilizcesi nedir?",
+     "options": [
+      "Why not?",
+      "What's the matter?",
+      "How old are you?"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_3",
+     "type": "choice",
+     "prompt": "\"Kulağa harika geliyor!\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "It sounds great!",
+      "I have an idea!",
+      "Take care!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_4",
+     "type": "choice",
+     "prompt": "\"Bir fikrim var!\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "Maybe!",
+      "I have an idea!",
+      "Why not?"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q2_5",
+     "type": "choice",
+     "prompt": "\"Okulda bir hemşire var mı?\" sorusunun İngilizcesi nedir?",
+     "options": [
+      "Is there a nurse at school?",
+      "Where is the school nurse?",
+      "Who is the school nurse?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_6",
+     "type": "choice",
+     "prompt": "\"Okulda iki görevli (temizlik görevlisi) var.\" cümlesinin İngilizcesi nedir?",
+     "options": [
+      "There are two caretakers at school.",
+      "There is a caretaker at school.",
+      "Who is the caretaker at school?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_7",
+     "type": "choice",
+     "prompt": "\"Okulda kurallara uymalısın.\" cümlesinin İngilizcesi nedir?",
+     "options": [
+      "You must follow the rules at school.",
+      "You mustn't follow the rules at school.",
+      "You mustn't run in the corridor."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_8",
+     "type": "choice",
+     "prompt": "\"Koridorda koşmamalısın.\" uyarısının İngilizcesi nedir?",
+     "options": [
+      "You mustn't run in the corridor.",
+      "You must run in the corridor.",
+      "You must be quiet in the library."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_9",
+     "type": "choice",
+     "prompt": "\"Sessiz olmalısın!\" uyarısının İngilizcesi nedir?",
+     "options": [
+      "You must be quiet!",
+      "You mustn't be quiet!",
+      "It sounds great!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_10",
+     "type": "choice",
+     "prompt": "\"Kimin doğum günü Ekim ayında?\" sorusunun İngilizcesi nedir?",
+     "options": [
+      "Whose birthday is in October?",
+      "When is your birthday?",
+      "What month is it now?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_11",
+     "type": "choice",
+     "prompt": "\"Defne nerede? O, kütüphanede.\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "Where is Defne? She is in the library.",
+      "Who is Defne? She is a librarian.",
+      "When is Defne's birthday? It's in May."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_12",
+     "type": "choice",
+     "prompt": "\"Şimdi hangi aydayız? Eylül ayındayız.\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "What month is it now? It's September.",
+      "When is your birthday? It's in September.",
+      "Whose birthday is in September?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_13",
+     "type": "choice",
+     "prompt": "\"Seni görmek çok güzel.\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "It's good to see you.",
+      "Have a nice weekend!",
+      "See you later!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_14",
+     "type": "choice",
+     "prompt": "\"Sınıfta futbol oynamamalısın.\" uyarısının İngilizcesi nedir?",
+     "options": [
+      "You mustn't play football in the classroom.",
+      "You must play football in the classroom.",
+      "Let's play football in the sports field."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q2_15",
+     "type": "choice",
+     "prompt": "\"29 Ekim Cumhuriyet Bayramı\" ifadesinin İngilizcesi nedir?",
+     "options": [
+      "29 October Republic Day",
+      "23 April National Sovereignty and Children's Day",
+      "30 August Victory Day"
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "title": "Dinle ve Seç",
+   "emoji": "🎧",
+   "questions": [
+    {
+     "id": "q3_1",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Nasılsın? İyiyim, teşekkürler!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "How are you? I'm good, thanks!",
+      "How old are you? I'm eight.",
+      "Where are you? I'm at school."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_2",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "İyi akşamlar!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Good afternoon!",
+      "Good evening!",
+      "Good night!"
+     ],
+     "answer": 1
+    },
+    {
+     "id": "q3_3",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "İyi geceler!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Good morning!",
+      "Good evening!",
+      "Good night!"
+     ],
+     "answer": 2
+    },
+    {
+     "id": "q3_4",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Tünaydın!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Good afternoon!",
+      "Good morning!",
+      "Goodbye!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_5",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Ben sekiz yaşındayım.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "I'm eight years old.",
+      "It's in October.",
+      "There are eight candles."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_6",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Doğum günün ne zaman?",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "When is your birthday?",
+      "Whose birthday is it?",
+      "How old are you?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_7",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Temmuz ayında.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "It's in July.",
+      "It's in June.",
+      "It's in January."
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_8",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Dikkatli ol!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Be careful!",
+      "Maybe!",
+      "Why not?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_9",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Neden olmasın?",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Why not?",
+      "What's the matter?",
+      "Do you need help?"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_10",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Sonra görüşürüz!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "See you later!",
+      "It's good to see you.",
+      "Happy birthday!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_11",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "İyi günler!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Have a nice day!",
+      "Have a nice weekend!",
+      "Good night!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_12",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "İyi hafta sonları!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Have a nice weekend!",
+      "Have a nice day!",
+      "See you later!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_13",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Kendine iyi bak!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Take care!",
+      "Cool!",
+      "Maybe!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_14",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "İyi ki doğdun!",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "Happy Birthday!",
+      "It sounds great!",
+      "Good afternoon!"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "q3_15",
+     "type": "choice",
+     "prompt": "Dinlediğiniz Türkçe ifadenin İngilizcesini seçiniz.",
+     "audio": {
+      "text": "Pastanın üzerinde üç mum var.",
+      "lang": "tr-TR"
+     },
+     "options": [
+      "There are three candles on the cake.",
+      "There is a candle on the cake.",
+      "There are three cakes on the table."
+     ],
+     "answer": 0
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "title": "Kelime Sırala",
+   "emoji": "🧩",
+   "questions": [
+    {
+     "id": "q4_1",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"Who is this?\"",
+     "audio": {
+      "text": "Who is this?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Bu",
+      "kim?",
+      "nerede?",
+      "ne?"
+     ],
+     "answer": [
+      "Bu",
+      "kim?"
+     ]
+    },
+    {
+     "id": "q4_2",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"She is in the library.\"",
+     "audio": {
+      "text": "She is in the library.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "O,",
+      "kütüphanede.",
+      "spor salonunda.",
+      "bahçede."
+     ],
+     "answer": [
+      "O,",
+      "kütüphanede."
+     ]
+    },
+    {
+     "id": "q4_3",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"What month is it now?\"",
+     "audio": {
+      "text": "What month is it now?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Şimdi",
+      "hangi",
+      "aydayız?",
+      "neredeyiz?"
+     ],
+     "answer": [
+      "Şimdi",
+      "hangi",
+      "aydayız?"
+     ]
+    },
+    {
+     "id": "q4_4",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"How old are you?\"",
+     "audio": {
+      "text": "How old are you?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Kaç",
+      "yaşındasın?",
+      "Adın",
+      "ne?"
+     ],
+     "answer": [
+      "Kaç",
+      "yaşındasın?"
+     ]
+    },
+    {
+     "id": "q4_5",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"When is your birthday?\"",
+     "audio": {
+      "text": "When is your birthday?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Doğum günün",
+      "ne",
+      "zaman?",
+      "nerede?"
+     ],
+     "answer": [
+      "Doğum günün",
+      "ne",
+      "zaman?"
+     ]
+    },
+    {
+     "id": "q4_6",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"Do you need help?\"",
+     "audio": {
+      "text": "Do you need help?",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Yardıma",
+      "ihtiyacın",
+      "var mı?",
+      "yok mu?"
+     ],
+     "answer": [
+      "Yardıma",
+      "ihtiyacın",
+      "var mı?"
+     ]
+    },
+    {
+     "id": "q4_7",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"You must be quiet!\"",
+     "audio": {
+      "text": "You must be quiet!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Sessiz",
+      "olmalısın!",
+      "koşmalısın!",
+      "konuşmalısın!"
+     ],
+     "answer": [
+      "Sessiz",
+      "olmalısın!"
+     ]
+    },
+    {
+     "id": "q4_8",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"You mustn't run in the corridor.\"",
+     "audio": {
+      "text": "You mustn't run in the corridor.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Koridorda",
+      "koşmamalısın.",
+      "koşmalısın.",
+      "Sınıfta"
+     ],
+     "answer": [
+      "Koridorda",
+      "koşmamalısın."
+     ]
+    },
+    {
+     "id": "q4_9",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"There is an art room at school.\"",
+     "audio": {
+      "text": "There is an art room at school.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Okulda",
+      "bir",
+      "resim odası",
+      "var.",
+      "müzik odası"
+     ],
+     "answer": [
+      "Okulda",
+      "bir",
+      "resim odası",
+      "var."
+     ]
+    },
+    {
+     "id": "q4_10",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"It is good to see you.\"",
+     "audio": {
+      "text": "It is good to see you.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Seni",
+      "görmek",
+      "güzel.",
+      "Sonra"
+     ],
+     "answer": [
+      "Seni",
+      "görmek",
+      "güzel."
+     ]
+    },
+    {
+     "id": "q4_11",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"Have a nice weekend!\"",
+     "audio": {
+      "text": "Have a nice weekend!",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "İyi",
+      "hafta",
+      "sonları!",
+      "akşamlar!"
+     ],
+     "answer": [
+      "İyi",
+      "hafta",
+      "sonları!"
+     ]
+    },
+    {
+     "id": "q4_12",
+     "type": "arrange",
+     "prompt": "Türkçe karşılığını sıraya dizin: \"That is the gym.\"",
+     "audio": {
+      "text": "That is the gym.",
+      "lang": "en-US"
+     },
+     "tokens": [
+      "Şurası",
+      "spor",
+      "salonu.",
+      "kütüphane."
+     ],
+     "answer": [
+      "Şurası",
+      "spor",
+      "salonu."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "title": "Eşleştir",
+   "emoji": "🔗",
+   "questions": [
+    {
+     "id": "q5_1",
+     "type": "match",
+     "prompt": "Okuldaki kişileri Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "A classmate",
+       "right": "Sınıf arkadaşı"
+      },
+      {
+       "left": "A librarian",
+       "right": "Kütüphaneci"
+      },
+      {
+       "left": "A school nurse",
+       "right": "Okul hemşiresi"
+      },
+      {
+       "left": "A headteacher",
+       "right": "Okul müdürü"
+      }
+     ]
+    },
+    {
+     "id": "q5_2",
+     "type": "match",
+     "prompt": "Okuldaki mekanları Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "An art room",
+       "right": "Resim odası"
+      },
+      {
+       "left": "A music room",
+       "right": "Müzik odası"
+      },
+      {
+       "left": "A meeting room",
+       "right": "Toplantı odası"
+      },
+      {
+       "left": "An office",
+       "right": "Ofis / İdare"
+      }
+     ]
+    },
+    {
+     "id": "q5_3",
+     "type": "match",
+     "prompt": "Diğer okul alanlarını ve kişileri eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "A sports field",
+       "right": "Spor sahası"
+      },
+      {
+       "left": "A corridor",
+       "right": "Koridor"
+      },
+      {
+       "left": "A gym",
+       "right": "Spor salonu"
+      },
+      {
+       "left": "A caretaker",
+       "right": "Temizlik görevlisi"
+      }
+     ]
+    },
+    {
+     "id": "q5_4",
+     "type": "match",
+     "prompt": "Doğum günü kavramlarını eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "A birthday party",
+       "right": "Doğum günü partisi"
+      },
+      {
+       "left": "A candle",
+       "right": "Mum"
+      },
+      {
+       "left": "A balloon",
+       "right": "Balon"
+      },
+      {
+       "left": "A gift",
+       "right": "Hediye"
+      }
+     ]
+    },
+    {
+     "id": "q5_5",
+     "type": "match",
+     "prompt": "Kutlama ve tatil kavramlarını eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "A cake",
+       "right": "Pasta"
+      },
+      {
+       "left": "A surprise",
+       "right": "Sürpriz"
+      },
+      {
+       "left": "Summer holiday",
+       "right": "Yaz tatili"
+      },
+      {
+       "left": "Birthday",
+       "right": "Doğum günü"
+      }
+     ]
+    },
+    {
+     "id": "q5_6",
+     "type": "match",
+     "prompt": "Selamlaşma ifadelerini eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Good morning!",
+       "right": "Günaydın!"
+      },
+      {
+       "left": "Good afternoon!",
+       "right": "Tünaydın!"
+      },
+      {
+       "left": "Good evening!",
+       "right": "İyi akşamlar!"
+      },
+      {
+       "left": "Good night!",
+       "right": "İyi geceler!"
+      }
+     ]
+    },
+    {
+     "id": "q5_7",
+     "type": "match",
+     "prompt": "Soru ve cevapları eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Who is she?",
+       "right": "She is the librarian."
+      },
+      {
+       "left": "Where is Defne?",
+       "right": "She is in the library."
+      },
+      {
+       "left": "What month is it?",
+       "right": "It is September."
+      },
+      {
+       "left": "When is your birthday?",
+       "right": "It is in July."
+      }
+     ]
+    },
+    {
+     "id": "q5_8",
+     "type": "match",
+     "prompt": "Günlük diyalog ifadelerini eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Do you need help?",
+       "right": "No, thank you."
+      },
+      {
+       "left": "What's the matter?",
+       "right": "It's my leg. Ouch!"
+      },
+      {
+       "left": "Let's play a game!",
+       "right": "It sounds great!"
+      },
+      {
+       "left": "You must be quiet!",
+       "right": "Sorry."
+      }
+     ]
+    },
+    {
+     "id": "q5_9",
+     "type": "match",
+     "prompt": "Sosyal dil ifadelerini eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "See you later!",
+       "right": "Sonra görüşürüz!"
+      },
+      {
+       "left": "Have a nice day!",
+       "right": "İyi günler!"
+      },
+      {
+       "left": "Take care!",
+       "right": "Kendine iyi bak!"
+      },
+      {
+       "left": "Cool!",
+       "right": "Harika / Çok havalı!"
+      }
+     ]
+    },
+    {
+     "id": "q5_10",
+     "type": "match",
+     "prompt": "Millî bayramlarımızı tarihleriyle eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "29 October",
+       "right": "Republic Day"
+      },
+      {
+       "left": "23 April",
+       "right": "Children's Day"
+      },
+      {
+       "left": "19 May",
+       "right": "Youth and Sports Day"
+      },
+      {
+       "left": "30 August",
+       "right": "Victory Day"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "title": "Cümle Kur",
+   "emoji": "🔤",
+   "questions": [
+    {
+     "id": "q6_1",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "What",
+      "month",
+      "is",
+      "it",
+      "now",
+      "?"
+     ],
+     "answer": [
+      "What",
+      "month",
+      "is",
+      "it",
+      "now",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_2",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "When",
+      "is",
+      "your",
+      "birthday",
+      "?"
+     ],
+     "answer": [
+      "When",
+      "is",
+      "your",
+      "birthday",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_3",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "Where",
+      "is",
+      "Defne",
+      "?"
+     ],
+     "answer": [
+      "Where",
+      "is",
+      "Defne",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_4",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "Who",
+      "is",
+      "the",
+      "caretaker",
+      "?"
+     ],
+     "answer": [
+      "Who",
+      "is",
+      "the",
+      "caretaker",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_5",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "Is",
+      "there",
+      "a",
+      "librarian",
+      "at",
+      "school",
+      "?"
+     ],
+     "answer": [
+      "Is",
+      "there",
+      "a",
+      "librarian",
+      "at",
+      "school",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_6",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce cümle kurun.",
+     "tokens": [
+      "There",
+      "are",
+      "two",
+      "caretakers",
+      "at",
+      "school"
+     ],
+     "answer": [
+      "There",
+      "are",
+      "two",
+      "caretakers",
+      "at",
+      "school"
+     ]
+    },
+    {
+     "id": "q6_7",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce cümle kurun.",
+     "tokens": [
+      "You",
+      "must",
+      "listen",
+      "to",
+      "the",
+      "teacher"
+     ],
+     "answer": [
+      "You",
+      "must",
+      "listen",
+      "to",
+      "the",
+      "teacher"
+     ]
+    },
+    {
+     "id": "q6_8",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce uyarı cümlesi kurun.",
+     "tokens": [
+      "You",
+      "mustn't",
+      "run",
+      "in",
+      "the",
+      "corridor"
+     ],
+     "answer": [
+      "You",
+      "mustn't",
+      "run",
+      "in",
+      "the",
+      "corridor"
+     ]
+    },
+    {
+     "id": "q6_9",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce cümle kurun.",
+     "tokens": [
+      "There",
+      "are",
+      "balloons",
+      "in",
+      "the",
+      "room"
+     ],
+     "answer": [
+      "There",
+      "are",
+      "balloons",
+      "in",
+      "the",
+      "room"
+     ]
+    },
+    {
+     "id": "q6_10",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "Whose",
+      "birthday",
+      "is",
+      "in",
+      "October",
+      "?"
+     ],
+     "answer": [
+      "Whose",
+      "birthday",
+      "is",
+      "in",
+      "October",
+      "?"
+     ]
+    },
+    {
+     "id": "q6_11",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce cümle kurun.",
+     "tokens": [
+      "It",
+      "is",
+      "good",
+      "to",
+      "see",
+      "you"
+     ],
+     "answer": [
+      "It",
+      "is",
+      "good",
+      "to",
+      "see",
+      "you"
+     ]
+    },
+    {
+     "id": "q6_12",
+     "type": "arrange",
+     "prompt": "Anlamlı İngilizce soru cümlesi kurun.",
+     "tokens": [
+      "Do",
+      "you",
+      "need",
+      "help",
+      "?"
+     ],
+     "answer": [
+      "Do",
+      "you",
+      "need",
+      "help",
+      "?"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "title": "Eşleştir 2",
+   "emoji": "🌟",
+   "questions": [
+    {
+     "id": "q7_1",
+     "type": "match",
+     "prompt": "Yılın ilk 5 ayını Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "January",
+       "right": "Ocak"
+      },
+      {
+       "left": "February",
+       "right": "Şubat"
+      },
+      {
+       "left": "March",
+       "right": "Mart"
+      },
+      {
+       "left": "April",
+       "right": "Nisan"
+      },
+      {
+       "left": "May",
+       "right": "Mayıs"
+      }
+     ]
+    },
+    {
+     "id": "q7_2",
+     "type": "match",
+     "prompt": "Yaz ve sonbahar aylarını Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "June",
+       "right": "Haziran"
+      },
+      {
+       "left": "July",
+       "right": "Temmuz"
+      },
+      {
+       "left": "August",
+       "right": "Ağustos"
+      },
+      {
+       "left": "September",
+       "right": "Eylül"
+      },
+      {
+       "left": "October",
+       "right": "Ekim"
+      }
+     ]
+    },
+    {
+     "id": "q7_3",
+     "type": "match",
+     "prompt": "Ayları ve zaman ifadelerini eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "November",
+       "right": "Kasım"
+      },
+      {
+       "left": "December",
+       "right": "Aralık"
+      },
+      {
+       "left": "Summer holiday",
+       "right": "Yaz tatili"
+      },
+      {
+       "left": "Afternoon",
+       "right": "Öğleden sonra"
+      },
+      {
+       "left": "Evening",
+       "right": "Akşam"
+      }
+     ]
+    },
+    {
+     "id": "q7_4",
+     "type": "match",
+     "prompt": "Temadaki hedef fiilleri Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Prepare",
+       "right": "Hazırlamak"
+      },
+      {
+       "left": "Decorate",
+       "right": "Süslemek"
+      },
+      {
+       "left": "Bring",
+       "right": "Getirmek"
+      },
+      {
+       "left": "Find",
+       "right": "Bulmak"
+      },
+      {
+       "left": "Help",
+       "right": "Yardım etmek"
+      }
+     ]
+    },
+    {
+     "id": "q7_5",
+     "type": "match",
+     "prompt": "Temadaki eylemleri Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Ask",
+       "right": "Sormak"
+      },
+      {
+       "left": "Run",
+       "right": "Koşmak"
+      },
+      {
+       "left": "Play the guitar",
+       "right": "Gitar çalmak"
+      },
+      {
+       "left": "Write a song",
+       "right": "Şarkı yazmak"
+      },
+      {
+       "left": "Paint",
+       "right": "Boyamak"
+      }
+     ]
+    },
+    {
+     "id": "q7_6",
+     "type": "match",
+     "prompt": "Soru kelimelerini Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "What",
+       "right": "Ne"
+      },
+      {
+       "left": "Where",
+       "right": "Nerede"
+      },
+      {
+       "left": "Who",
+       "right": "Kim"
+      },
+      {
+       "left": "When",
+       "right": "Ne zaman"
+      },
+      {
+       "left": "Whose",
+       "right": "Kimin"
+      }
+     ]
+    },
+    {
+     "id": "q7_7",
+     "type": "match",
+     "prompt": "Kişi zamirlerini Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "I",
+       "right": "Ben"
+      },
+      {
+       "left": "You",
+       "right": "Sen / Siz"
+      },
+      {
+       "left": "We",
+       "right": "Biz"
+      },
+      {
+       "left": "They",
+       "right": "Onlar"
+      },
+      {
+       "left": "He / She",
+       "right": "O (erkek / kız)"
+      }
+     ]
+    },
+    {
+     "id": "q7_8",
+     "type": "match",
+     "prompt": "İletişim ifadelerini Türkçe karşılıklarıyla eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Maybe!",
+       "right": "Belki!"
+      },
+      {
+       "left": "Why not?",
+       "right": "Neden olmasın?"
+      },
+      {
+       "left": "I have an idea!",
+       "right": "Bir fikrim var!"
+      },
+      {
+       "left": "It sounds great!",
+       "right": "Kulağa harika geliyor!"
+      },
+      {
+       "left": "Be careful!",
+       "right": "Dikkatli ol!"
+      }
+     ]
+    },
+    {
+     "id": "q7_9",
+     "type": "match",
+     "prompt": "Okuldaki kişileri bulundukları yerlerle eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "The librarian",
+       "right": "In the library"
+      },
+      {
+       "left": "The music teacher",
+       "right": "In the music room"
+      },
+      {
+       "left": "The art teacher",
+       "right": "In the art room"
+      },
+      {
+       "left": "The headteacher",
+       "right": "In the office"
+      },
+      {
+       "left": "The pupils",
+       "right": "In the classroom"
+      }
+     ]
+    },
+    {
+     "id": "q7_10",
+     "type": "match",
+     "prompt": "Tekrar (Revision) okul kelimelerini eşleştiriniz.",
+     "pairs": [
+      {
+       "left": "Teacher",
+       "right": "Öğretmen"
+      },
+      {
+       "left": "Pupil",
+       "right": "Öğrenci"
+      },
+      {
+       "left": "Classroom",
+       "right": "Sınıf"
+      },
+      {
+       "left": "Playground",
+       "right": "Oyun bahçesi"
+      },
+      {
+       "left": "Library",
+       "right": "Kütüphane"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "title": "Konuş",
+   "emoji": "🎙️",
+   "questions": [
+    {
+     "id": "q8_1",
+     "type": "speak",
+     "prompt": "Ekranda görünen İngilizce cümleyi mikrofona sesli okuyunuz.",
+     "display": "Good morning! How are you today?",
+     "accepted": [
+      "Good morning! How are you today?",
+      "Good morning how are you today"
+     ]
+    },
+    {
+     "id": "q8_2",
+     "type": "speak",
+     "prompt": "Dinlediğiniz İngilizce cümleyi mikrofona tekrar ediniz.",
+     "audio": {
+      "text": "The librarian is in the library.",
+      "lang": "en-US"
+     },
+     "display": "The librarian is in the library.",
+     "accepted": [
+      "The librarian is in the library."
+     ]
+    },
+    {
+     "id": "q8_3",
+     "type": "speak",
+     "prompt": "Türkçe verilen cümleyi İngilizceye çevirerek mikrofona söyleyiniz: \"İyi hafta sonları!\"",
+     "display": "Have a nice weekend!",
+     "accepted": [
+      "Have a nice weekend!",
+      "Have a good weekend!"
+     ]
+    },
+    {
+     "id": "q8_4",
+     "type": "speak",
+     "prompt": "Görseldeki okul bölümünü İngilizce olarak mikrofona söyleyiniz.",
+     "image": "images/sports_field.jpg",
+     "emoji": "⚽",
+     "display": "A sports field",
+     "accepted": [
+      "A sports field",
+      "Sports field"
+     ]
+    },
+    {
+     "id": "q8_5",
+     "type": "choice",
+     "prompt": "Dinlediğiniz soruya en uygun yanıtı seçip mikrofona sesli okuyunuz.",
+     "audio": {
+      "text": "When is your birthday?",
+      "lang": "en-US"
+     },
+     "options": [
+      "It's in July.",
+      "She is in the library.",
+      "Yes, there is."
+     ],
+     "answer": 0,
+     "speakAfter": true
+    },
+    {
+     "id": "q8_6",
+     "type": "speak",
+     "prompt": "Ekranda görünen İngilizce cümleyi mikrofona sesli okuyunuz.",
+     "display": "Is there a nurse at school? Yes, there is.",
+     "accepted": [
+      "Is there a nurse at school? Yes, there is."
+     ]
+    },
+    {
+     "id": "q8_7",
+     "type": "speak",
+     "prompt": "Dinlediğiniz İngilizce cümleyi mikrofona tekrar ediniz.",
+     "audio": {
+      "text": "There are two caretakers at school.",
+      "lang": "en-US"
+     },
+     "display": "There are two caretakers at school.",
+     "accepted": [
+      "There are two caretakers at school.",
+      "There are 2 caretakers at school."
+     ]
+    },
+    {
+     "id": "q8_8",
+     "type": "speak",
+     "prompt": "Ekranda görünen İngilizce kuralı mikrofona sesli okuyunuz.",
+     "display": "Be careful! You mustn't run in the corridor.",
+     "accepted": [
+      "Be careful! You mustn't run in the corridor.",
+      "Be careful! You must not run in the corridor."
+     ]
+    },
+    {
+     "id": "q8_9",
+     "type": "speak",
+     "prompt": "Görseldeki okul görevlisini İngilizce olarak mikrofona söyleyiniz.",
+     "image": "images/school_nurse.jpg",
+     "emoji": "🩺",
+     "display": "A school nurse",
+     "accepted": [
+      "A school nurse",
+      "School nurse"
+     ]
+    },
+    {
+     "id": "q8_10",
+     "type": "choice",
+     "prompt": "Dinlediğiniz soruya en uygun yanıtı seçip sesli okuyunuz.",
+     "audio": {
+      "text": "How old are you?",
+      "lang": "en-US"
+     },
+     "options": [
+      "I am eight years old.",
+      "It is September.",
+      "That is the gym."
+     ],
+     "answer": 0,
+     "speakAfter": true
+    },
+    {
+     "id": "q8_11",
+     "type": "speak",
+     "prompt": "Dinlediğiniz İngilizce ifadeyi mikrofona tekrar ediniz.",
+     "audio": {
+      "text": "Do you need help? It sounds great!",
+      "lang": "en-US"
+     },
+     "display": "Do you need help? It sounds great!",
+     "accepted": [
+      "Do you need help? It sounds great!"
+     ]
+    },
+    {
+     "id": "q8_12",
+     "type": "speak",
+     "prompt": "Dinlediğiniz kutlama cümlesini mikrofona tekrar ediniz.",
+     "audio": {
+      "text": "It's great to see you! Happy birthday!",
+      "lang": "en-US"
+     },
+     "display": "It's great to see you! Happy birthday!",
+     "accepted": [
+      "It's great to see you! Happy birthday!",
+      "It is great to see you! Happy birthday!"
+     ]
+    },
+    {
+     "id": "q8_13",
+     "type": "speak",
+     "prompt": "Türkçe ifadeyi İngilizceye çevirip sesli söyleyiniz: \"Sessiz olmalısın!\"",
+     "display": "You must be quiet!",
+     "accepted": [
+      "You must be quiet!"
+     ]
+    },
+    {
+     "id": "q8_14",
+     "type": "speak",
+     "prompt": "Görseldeki okul odasını İngilizce olarak mikrofona söyleyiniz.",
+     "image": "images/art_room.jpg",
+     "emoji": "🎨",
+     "display": "An art room",
+     "accepted": [
+      "An art room",
+      "Art room"
+     ]
+    }
+   ]
+  }
+ ]
+}
