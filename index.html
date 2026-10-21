@@ -167,33 +167,158 @@ const anyCardReady=()=>Array.from({length:TOTAL_CARDS},(_,k)=>k+1).some(isCardRe
 
 const save=()=>{localStorage.setItem('lr2',JSON.stringify(P));$('#xp').textContent=P.xp;const b=$('#prz');b&&b.classList.toggle('dot',anyCardReady())};
 
+/* ---------- iOS Safari & Mobil Ses Kilidi Açma + Ortak AudioContext ---------- */
+const IS_IOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+let actx=null,audioUnlocked=false,speechPrimed=false,hasMp3=false;
+/* iOS Safari'de asenkron yedek seslerin engellenmemesi için tek bir kalıcı Audio nesnesi kullan */
+const ttsAudio=new Audio();
+ttsAudio.preload='auto';
+const SILENT_WAV='data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
+
+/* sounds/correct.mp3 gerçekten var mı bir kez kontrol et; yoksa 404 Audio() oluşturup iOS ses kanalını bozma */
+fetch('sounds/correct.mp3',{method:'HEAD'}).then(r=>{if(r.ok&&/^audio/i.test(r.headers.get('content-type')||''))hasMp3=true}).catch(()=>{});
+
+function getAudioCtx(){
+ if(!actx){const C=window.AudioContext||window.webkitAudioContext;if(C)actx=new C({latencyHint:'interactive'})}
+ if(actx&&actx.state!=='running'){try{actx.resume().catch(()=>{})}catch(e){}}
+ return actx;
+}
+
+function unlockAudio(){
+ /* iOS 16.4+ / 17+ fiziksel Sessiz Tuşu (Silent Switch) açık olsa bile seslerin çıkmasını sağlar */
+ try{if(navigator.audioSession&&navigator.audioSession.type!=='playback')navigator.audioSession.type='playback'}catch(e){}
+ try{
+  const c=getAudioCtx();
+  if(c&&!audioUnlocked){
+   const b=c.createBuffer(1,1,22050),s=c.createBufferSource();
+   s.buffer=b;s.connect(c.destination);s.start(0);
+  }
+ }catch(e){}
+ if(!audioUnlocked){
+  audioUnlocked=true;
+  /* Kalıcı ttsAudio nesnesini ilk kullanıcı dokunuşunda (touchend/click) sessiz WAV ile yetkilendir */
+  try{
+   ttsAudio.volume=0.01;ttsAudio.src=SILENT_WAV;
+   const p=ttsAudio.play();if(p&&p.catch)p.catch(()=>{});
+  }catch(e){}
+ }
+ /* Bu dokunuş doğrudan bir say() çağrısı başlatmadıysa speechSynthesis motorunu mikro-görev sonunda uyandır */
+ if(!speechPrimed&&window.speechSynthesis){
+  const tok0=sayTok;
+  setTimeout(()=>{
+   if(!speechPrimed&&sayTok===tok0&&!speechSynthesis.speaking&&!speechSynthesis.pending){
+    try{
+     speechPrimed=true;
+     const u=new SpeechSynthesisUtterance(' ');u.volume=0;u.rate=2;speechSynthesis.speak(u);
+    }catch(e){}
+   }
+  },0);
+ }
+}
+['touchend','click','keydown'].forEach(ev=>addEventListener(ev,unlockAudio,{passive:true,capture:true}));
+
 /* ---------- Ses efektleri: sounds/*.mp3 varsa onlar, yoksa yerleşik sesler ---------- */
 let SND=localStorage.getItem('lr_snd')!=='0';   // doğru/yanlış/alkış efektleri
-function sfx(n){if(!SND)return;const a=new Audio('sounds/'+n+'.mp3');a.play().catch(()=>beep(n))}
-function beep(n){try{const c=new(window.AudioContext||webkitAudioContext)(),t=c.currentTime;
- if(n=='applause'||n=='applauseunit'){const b=c.createBuffer(1,c.sampleRate*2,c.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.max(0,1-i/d.length)*(Math.random()>.7?1:.15);const s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start();return}
- (n=='correct'?[660,880]:[200,150]).forEach((h,i)=>{const o=c.createOscillator(),g=c.createGain();o.type=n=='correct'?'sine':'sawtooth';o.frequency.value=h;g.gain.setValueAtTime(.2,t+i*.15);g.gain.exponentialRampToValueAtTime(.001,t+i*.15+.3);o.connect(g);g.connect(c.destination);o.start(t+i*.15);o.stop(t+i*.15+.3)})}catch(e){}}
+function sfx(n){
+ if(!SND)return;
+ if(hasMp3){const a=new Audio('sounds/'+n+'.mp3');a.play().catch(()=>beep(n))}
+ else beep(n);
+}
+function beep(n){try{
+ try{if(navigator.audioSession)navigator.audioSession.type='playback'}catch(e){}
+ const c=getAudioCtx();if(!c)return;
+ const playTone=()=>{
+  const t=c.currentTime;
+  if(n=='applause'||n=='applauseunit'){
+   const b=c.createBuffer(1,c.sampleRate*1.6,c.sampleRate),d=b.getChannelData(0);
+   for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.max(0,1-i/d.length)*(Math.random()>.7?.6:.1);
+   const s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start();return;
+  }
+  (n=='correct'?[660,880]:[200,150]).forEach((h,i)=>{
+   const o=c.createOscillator(),g=c.createGain();
+   o.type=n=='correct'?'sine':'sawtooth';o.frequency.value=h;
+   g.gain.setValueAtTime(.24,t+i*.15);g.gain.exponentialRampToValueAtTime(.001,t+i*.15+.3);
+   o.connect(g);g.connect(c.destination);o.start(t+i*.15);o.stop(t+i*.15+.3);
+  });
+ };
+ if(c.state!=='running'&&c.resume)c.resume().then(playTone).catch(playTone);
+ else playTone();
+}catch(e){}}
 
-/* ---------- Sesli okuma: tarayıcının kendi konuşma sentezi (Android'de Google sesleri) ---------- */
+/* ---------- Sesli okuma: iOS Safari, Android ve Masaüstü Uyumlu Konuşma Sentezi ---------- */
 let VOICES=[];const loadVoices=()=>{VOICES=window.speechSynthesis?speechSynthesis.getVoices():[]};
 if(window.speechSynthesis){loadVoices();speechSynthesis.addEventListener&&speechSynthesis.addEventListener('voiceschanged',loadVoices)}
-const vl=v=>v.lang.toLowerCase().replace('_','-');
-function pickVoice(lang){const L=lang.toLowerCase(),vs=VOICES.filter(v=>vl(v).startsWith(L.slice(0,2)));   // yalnızca aynı dilin sesleri
- return vs.find(v=>vl(v)===L&&/google/i.test(v.name))||vs.find(v=>vl(v)===L)||vs.find(v=>/google/i.test(v.name))||vs[0]||null}
-function stopSpeech(){window.speechSynthesis&&speechSynthesis.cancel()}
+const vl=v=>(v.lang||'').toLowerCase().replace('_','-');
+const BAD_VOICE=/albert|bad news|bahh|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|fred|junior|kathy|ralph/i;
+function pickVoice(lang){
+ if(!VOICES.length)loadVoices();
+ const L=lang.toLowerCase(),p2=L.slice(0,2);
+ const vs=VOICES.filter(v=>vl(v).startsWith(p2)&&!BAD_VOICE.test(v.name||''));
+ if(!vs.length)return null;
+ if(p2==='tr'){
+  return vs.find(v=>/yelda|cem|empar|filiz|google/i.test(v.name))||vs.find(v=>vl(v)===L&&v.default)||vs.find(v=>vl(v)===L&&v.localService)||vs.find(v=>vl(v)===L)||vs[0];
+ }
+ return vs.find(v=>vl(v)===L&&/google|samantha|daniel|karen|moira|martha|arthur|aaron|nicky|tessa|siri/i.test(v.name))
+  ||vs.find(v=>/samantha|daniel|karen|moira|google/i.test(v.name))
+  ||vs.find(v=>vl(v)===L&&v.default)
+  ||vs.find(v=>vl(v)===L&&v.localService)
+  ||vs.find(v=>vl(v)===L)
+  ||vs[0];
+}
+function stopSpeech(){
+ try{ttsAudio.pause()}catch(e){}
+ try{if(window.speechSynthesis&&(speechSynthesis.speaking||speechSynthesis.pending))speechSynthesis.cancel()}catch(e){}
+}
 let sayTok=0;
-function say(text,lang){text=(text||'').trim();if(!text||!window.speechSynthesis)return;stopSpeech();const my=++sayTok;
- const l=/^tr/i.test(lang||'')?'tr-TR':(/^en-us/i.test(lang||'')?'en-US':'en-GB');let retried=false;
- const go=again=>{if(my!==sayTok)return;
-  const u=new SpeechSynthesisUtterance(text);u.lang=l;u.rate=.85;
-  if(!VOICES.length)loadVoices();const v=pickVoice(l);if(v){u.voice=v;u.lang=v.lang}
-  let started=false;u.onstart=()=>{started=true};
-  const retry=()=>{if(again||retried||my!==sayTok)return;retried=true;try{speechSynthesis.cancel()}catch(e){}setTimeout(()=>go(true),150)};
-  u.onerror=e=>{if(!started&&!/cancel|interrupt/i.test((e&&e.error)||''))retry()};
-  try{speechSynthesis.resume()}catch(e){}speechSynthesis.speak(u);
-  if(!again)setTimeout(()=>{if(!started&&!speechSynthesis.speaking)retry()},1000)};
- setTimeout(()=>go(false),60)}
-addEventListener('pointerdown',()=>{try{const u=new SpeechSynthesisUtterance(' ');u.volume=0;speechSynthesis.speak(u)}catch(e){}},{once:true});
+function fallbackCloudTTS(text,lang,my){
+ if(my!==sayTok)return;
+ try{
+  const tl=/^tr/i.test(lang)?'tr':'en';
+  ttsAudio.volume=1;
+  ttsAudio.src='https://translate.googleapis.com/translate_tts?ie=UTF-8&client=tw-ob&tl='+tl+'&q='+encodeURIComponent(text);
+  const p=ttsAudio.play();if(p&&p.catch)p.catch(()=>{});
+ }catch(e){}
+}
+function say(text,lang){
+ text=(text||'').trim();if(!text)return;
+ speechPrimed=true;
+ unlockAudio();
+ const my=++sayTok;
+ const l=/^tr/i.test(lang||'')?'tr-TR':(/^en-us/i.test(lang||'')?'en-US':'en-GB');
+ if(!window.speechSynthesis)return fallbackCloudTTS(text,l,my);
+ try{ttsAudio.pause()}catch(e){}
+ const wasBusy=!!(speechSynthesis.speaking||speechSynthesis.pending);
+ if(wasBusy){try{speechSynthesis.cancel()}catch(e){}}
+ let retriedNoVoice=false;
+ const speakNow=(useVoice)=>{
+  if(my!==sayTok)return;
+  try{
+   const u=new SpeechSynthesisUtterance(text);
+   u.lang=l;u.rate=IS_IOS?.9:.85;u.volume=1;
+   if(useVoice){const v=pickVoice(l);if(v){u.voice=v;u.lang=v.lang}}
+   let started=false;
+   u.onstart=()=>{started=true};
+   u.onerror=()=>{
+    if(my!==sayTok||started)return;
+    if(!retriedNoVoice){retriedNoVoice=true;setTimeout(()=>speakNow(false),60)}
+    else fallbackCloudTTS(text,l,my);
+   };
+   try{if(speechSynthesis.paused)speechSynthesis.resume()}catch(e){}
+   speechSynthesis.speak(u);
+   /* iOS Safari'de ses başlamazsa önce özel ses atamasız dene, yine başlamazsa bulut sesini çal */
+   setTimeout(()=>{
+    if(my===sayTok&&!started&&!speechSynthesis.speaking){
+     try{speechSynthesis.cancel()}catch(e){}
+     if(!retriedNoVoice){retriedNoVoice=true;speakNow(false)}
+     else fallbackCloudTTS(text,l,my);
+    }
+   },750);
+  }catch(e){fallbackCloudTTS(text,l,my)}
+ };
+ /* iOS Safari'de önceki konuşma iptal edildiyse 45ms bekleyip kuyruk temizlenince konuş, değilse anında senkron konuş */
+ if(IS_IOS&&!wasBusy)speakNow(true);
+ else setTimeout(()=>speakNow(true),IS_IOS?45:30);
+}
 /* Dil tahmini: Türkçe belirtisi (harf / sık kelime) varsa Türkçe, yoksa İngilizce */
 const TRW=new Set('ben sen biz siz onlar bu şu bir ve ile için mi mı mu mü değil var yok evet hayır ne nerede kim kimin nasıl çok az ama de da ki gibi ev kedi köpek elma su süt ekmek okul kitap kalem anne baba kardeş merhaba günaydın tünaydın teşekkürler lütfen kırmızı mavi sarı yeşil siyah beyaz pembe mor kahverengi gri araba top masa sandalye adım benim senin onun bizim iyi kötü büyük küçük görüşürüz kız erkek çocuk arkadaş öğretmen sınıf rica ederim teşekkür hoş geldin geldiniz güle tanıştığımıza memnun oldum kendine bak iyiyim nasılsın günler akşamlar geceler adın yaşındasın yaşındayım kaç sekiz dokuz yedi altı beş dört üç iki bugün şimdi dede nene amca dayı teyze hala kuzen torun mutlu üzgün aç susamış yorgun koridor ofis idare spor salonu sahası resim müzik odası toplantı kütüphane kütüphaneci kantin yemekhane bahçe müdür hemşire görevli balon mum pasta hediye sürpriz parti yaz tatili ocak şubat mart nisan mayıs haziran temmuz ağustos eylül ekim kasım aralık hazırlamak süslemek getirmek bulmak sormak koşmak boyamak çizmek gitar çalmak şarkı yazmak okumak dinlemek kapatmak açmak tekrar etmek eşleştirmek harita mikrofon klavye fare matematik fen hayat bilgisi beden eğitimi dolap sepet sıra tahta silgisi defter cetvel boya fırçası ödül puan sayfa ders mevsim ilkbahar sonbahar kış hava güneşli yağmurlu karlı rüzgarlı ılık elbise ceket palto mont kazak etek pantolon ayakkabı bot çorap gözlük kolye küpe çanta üniforma saç göz kulak burun ağız diş çene kaş kirpik sırt kol el bacak ayak uzun kısa zayıf güçlü güzel yakışıklı çalışkan tembel genç yaşlı kahvaltı öğle akşam yemeği uyarım uyanmak yıkamak fırçalamak giyinmek ödev yapmak uyumak yüzmek satranç piyano keman futbol basketbol yemek pişirmek ütü temizlemek yatak toplamak çöp atmak çiftlik köy ahır kulübe tarla traktör ot bitki inek eşek tavuk keçi at koyun ördek hindi tavşan beslemek sulamak sağmak dikmek peynir tereyağ zeytin makarna pilav çorba salata sandviç krep tost çay meyve suyu balık et garson restoran kafe menü fatura tuz tokum leziz afiyet olsun buyurun belki neden olmasın fikir harika dikkatli sessiz kurallara'.split(' '));
 const ENW=new Set("i you he she it we they is am are the a an my your his her this that to in on at have has do does like can what where who when whose how name hello thanks thank please yes no and or of with for from it's i'm don't big small red blue green yellow black white librarian library nurse caretaker headteacher classmate office gym corridor music art room sports field meeting cake candle balloon gift birthday".split(' '));
@@ -2054,11 +2179,11 @@ function rec(ok){if(Q.admin)return;const q=Q.cur;
  else{P.wrong[q._id]=1;if(Q.review||!q._r)Q.qs.push({...q,_r:1})}
  save()}
 function fb(ok,msg){rec(ok);sfx(ok?'correct':'wrong');$('#ft').className=ok?'good':'bad';$('#msg').innerHTML=(ok?'🎉 Harika!':'😕 Olmadı')+(msg?'<br><small>'+msg+'</small>':'');setBtn('DEVAM',()=>{Q.i++;next()})}
-const spk=(a,auto)=>{const b=$('.spk');b.onclick=()=>say(a.text,a.lang);if(auto)setTimeout(()=>say(a.text,a.lang),400)};
+const spk=(a,auto)=>{const b=$('.spk');b.onclick=()=>say(a.text,a.lang);if(auto){if(IS_IOS)say(a.text,a.lang);else setTimeout(()=>say(a.text,a.lang),250)}};
 const pic=q=>q.image?`<img class="pic" src="${q.image}" alt="" onerror="this.outerHTML='<div class=em>${q.emoji||'🖼️'}</div>'">`:'';
 const tag=q=>(q._r||Q.review)?'<div class="rt">🔁 Tekrar</div>':'';
 
-function show(q){stopSpeech();$('#ft').className='';$('#msg').innerHTML='';const e=$('#q');e.style.animation='none';void e.offsetWidth;e.style.animation='';
+function show(q){if(!q.audio)stopSpeech();$('#ft').className='';$('#msg').innerHTML='';const e=$('#q');e.style.animation='none';void e.offsetWidth;e.style.animation='';
  ({choice,arrange,match,speak})[q.type](q)}
 
 function choice(q){let sel=-1;
